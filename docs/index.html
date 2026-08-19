@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>牛投马面 · 应届岗位公开预览</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <style>
+    .demo-notice{margin:0;padding:10px 24px;text-align:center;background:#d7ff43;color:#1d2a08;font-size:13px}.demo-meta{color:var(--muted);font-size:12px}.job-foot{gap:10px}.static-source{color:#315600;font-weight:700;text-decoration:none}.directory-help{line-height:1.6}
+  </style>
+</head>
+<body>
+  <p class="demo-notice">GitHub Pages 公开预览 · 岗位为定期导出的只读快照，最终信息以企业官网为准</p>
+  <header class="hero">
+    <nav class="nav" aria-label="主导航"><a class="brand" href="./">牛投马面</a><div class="badge">公开岗位快照</div></nav>
+    <div class="hero-copy"><p class="eyebrow">CAMPUS JOBS, ONE PLACE</p><h1>先完整看见岗位，<br><span>再决定如何筛选。</span></h1><p class="subtitle">搜索企业官方校招岗位，查看地点、招聘类型、学历要求、职位描述和官方投递入口。</p></div>
+    <div class="search-wrap"><input id="keyword" placeholder="搜索岗位、公司、技能或描述，例如：算法 / 嵌入式 / 产品经理" /><button id="searchBtn">搜索岗位</button></div>
+  </header>
+  <main>
+    <section class="stats"><div><strong id="total">0</strong><span>快照岗位</span></div><div><strong id="companyCount">0</strong><span>已同步公司</span></div><div><strong id="cityCount">0</strong><span>工作地点</span></div></section>
+    <section class="workspace">
+      <aside class="filters">
+        <div class="filter-title"><h2>筛选岗位</h2><button id="resetBtn" class="text-btn">重置</button></div>
+        <label>公司<select id="company"><option value="">全部公司</option></select></label>
+        <label>城市<select id="city"><option value="">全部城市</option></select></label>
+        <label>职能<select id="category"><option value="">全部职能</option></select></label>
+        <label>岗位族<select id="jobFamily"><option value="">全部岗位族</option></select></label>
+        <label>招聘类型<select id="jobNature"><option value="">全部类型</option></select></label>
+        <label>学历<select id="degree"><option value="">全部学历</option></select></label>
+        <div class="source-note"><strong>演示版边界</strong><p>本页只有搜索和查看功能。简历 AI、收藏、采集管理和自动更新仍在本地开发版中。</p></div>
+      </aside>
+      <section class="results">
+        <div class="results-head"><div><p class="eyebrow dark">PUBLIC PREVIEW</p><h2>应届岗位</h2></div><div><span id="resultCount">0 个结果</span><p id="snapshotTime" class="demo-meta"></p></div></div>
+        <div id="jobs" class="job-grid"></div>
+        <div class="load-more-wrap"><button id="loadMore" class="load-more" type="button" hidden>加载更多岗位</button><span id="loadMoreStatus"></span></div>
+        <div id="empty" class="empty" hidden><h3>暂时没有匹配岗位</h3><p>换一组筛选条件再试试。</p></div>
+      </section>
+    </section>
+  </main>
+  <template id="jobTemplate"><article class="job-card"><div class="job-top"><div><div class="company"></div><h3 class="title"></h3></div><div class="category"></div></div><div class="chips"></div><details class="job-details"><summary>查看职位描述与要求</summary><div class="job-section description-section"><h4>职位描述</h4><p class="description"></p></div><div class="job-section requirements-section"><h4>职位要求</h4><p class="requirements"></p></div></details><div class="job-foot"><span class="updated"></span><a class="apply static-source" target="_blank" rel="noopener noreferrer">官网投递 ↗</a></div></article></template>
+  <script src="./app.js"></script>
+</body>
+</html>

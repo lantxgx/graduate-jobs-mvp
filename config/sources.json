@@ -1,0 +1,84 @@
+[
+  {
+    "id": "envision-campus",
+    "company": "远景科技集团",
+    "name": "远景校园招聘",
+    "url": "https://envision-career.com/campus-recruitment/envisiongroup/43123/#/jobs",
+    "mode": "browser_json",
+    "campus_only": true,
+    "enabled": true
+  },
+  {
+    "id": "xiaomi-campus",
+    "company": "小米集团",
+    "name": "小米实习生招聘（具体岗位）",
+    "url": "https://xiaomi.jobs.f.mioffice.cn/internship/",
+    "mode": "xiaomi_jobs_browser",
+    "max_pages": 2,
+    "page_delay_ms": 1200,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "enabled": true
+  },
+  {
+    "id": "xiaopeng-campus",
+    "company": "小鹏集团",
+    "name": "小鹏集团校园招聘（最小验证单元）",
+    "url": "https://xiaopeng.jobs.feishu.cn/campus/position/list",
+    "mode": "feishu_jobs_browser",
+    "max_jobs": 5,
+    "job_delay_ms": 1200,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "enabled": true
+  },
+  {
+    "id": "papegames-campus",
+    "company": "叠纸",
+    "name": "叠纸游戏校园招聘（公开岗位列表）",
+    "url": "https://career.papegames.com/campus/position/list?keywords=&category=&location=&project=&type=&job_hot_flag=&current=1&limit=20&functionCategory=&tag=",
+    "mode": "papegames",
+    "max_jobs": 20,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "enabled": true
+  },
+  {
+    "id": "oppo-campus",
+    "company": "OPPO",
+    "name": "OPPO校园招聘（公开岗位列表）",
+    "url": "https://careers.oppo.com/university/oppo/campus/post",
+    "mode": "oppo",
+    "max_jobs": 20,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "enabled": true
+  },
+  {
+    "id": "mihoyo-campus",
+    "company": "米哈游",
+    "name": "米哈游校园招聘（公开岗位列表）",
+    "url": "https://jobs.mihoyo.com/#/campus/position",
+    "mode": "mihoyo",
+    "adapter": "mihoyo",
+    "max_jobs": 20,
+    "job_delay_ms": 1200,
+    "channel_detail_ids": [1],
+    "hire_type": 1,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "enabled": true
+  },
+  {
+    "id": "minimax-campus",
+    "company": "MiniMax",
+    "name": "MiniMax 校园招聘（飞书公开入口，受控验证）",
+    "url": "https://vrfi1sk8a0.jobs.feishu.cn/s/i6nd8qwp",
+    "mode": "feishu_jobs_browser",
+    "max_jobs": 5,
+    "job_delay_ms": 1500,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "enabled": true
+  }
+]

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>我的画像 · 应届生招聘雷达</title><link rel="stylesheet" href="/static/styles.css" /></head>
+<body>
+  <header class="page-header"><nav class="nav" aria-label="主导航"><a class="brand" href="/">Graduate Radar</a><div class="nav-links"><a class="nav-link" href="/">找岗位</a><a class="nav-link active" href="/profile">我的画像</a><a class="nav-link" href="/admin/sources">数据管理</a></div><div class="badge">仅保存结构化信息</div></nav></header>
+  <main class="narrow-main">
+    <section class="page-intro"><p class="eyebrow dark">PROFILE + INTENT</p><h1>建立你的求职画像</h1><p>简历只提供能力证据，求职方向由你主动确认。你也可以跳过简历，直接手动填写。</p></section>
+    <section class="profile-panel standalone-panel">
+      <div class="profile-flow"><div><b>1. 可选上传简历</b><span>只在当前请求中解析，不保存原文件。</span></div><div><b>2. 检查并确认</b><span>分析结果只是候选值，必须由你确认。</span></div><div><b>3. 补充求职意愿</b><span>目标岗位、企业、城市和排除项不会由简历代填。</span></div></div>
+      <div class="results-head"><div><h2>能力证据与求职意愿</h2></div><span id="profileStatus">仅保存结构化信息</span></div>
+      <div class="profile-grid"><div class="profile-group-label">能力证据（简历可以辅助，最终由你确认）</div><label>能力证据<input id="profileSkills" placeholder="Python, SQL, Linux" /></label><label>学历<input id="profileEducation" placeholder="本科 / 硕士" /></label><label>毕业年份<input id="profileYear" placeholder="2027" /></label><label>专业<input id="profileMajor" placeholder="计算机科学" /></label><div class="profile-group-label intent-label">求职意愿（必须由你自己填写）</div><label>主攻岗位<input id="profileTargetRoles" placeholder="算法工程师, 后端开发" /></label><label>可接受相邻岗位<input id="profileAdjacentRoles" placeholder="数据分析, 测试开发" /></label><label>目标企业<input id="profileCompanies" placeholder="企业名称，用逗号分隔" /></label><label>目标城市<input id="profileCities" placeholder="北京, 上海" /></label><label>城市偏好<select id="profileCityMode"><option value="preference">偏好城市（影响排序）</option><option value="hard">仅限这些城市（硬条件）</option></select></label><label>明确排除岗位<input id="profileExcludedRoles" placeholder="销售, 电话销售" /></label><div class="profile-group-label intent-label">推荐组合（只影响展示比例，不隐藏全部岗位）</div><label>主攻比例（%）<input id="mixMain" type="number" min="0" max="100" value="50" /></label><label>目标企业比例（%）<input id="mixCompany" type="number" min="0" max="100" value="25" /></label><label>相邻比例（%）<input id="mixAdjacent" type="number" min="0" max="100" value="20" /></label><label>探索比例（%）<input id="mixExplore" type="number" min="0" max="100" value="5" /></label></div>
+      <div class="profile-actions"><input id="resumeFile" type="file" accept=".pdf,.docx" /><button id="previewResume" class="recommend-btn" type="button">解析简历预览</button><label class="check-label"><input type="checkbox" id="externalAiConsent" /> 同意发送给配置的 AI</label><button id="analyzeResume" class="recommend-btn" type="button">AI 结构化分析</button><button id="applyResumeProfile" class="text-btn" type="button" hidden>采用分析结果</button><label class="check-label"><input type="checkbox" id="profileSave" checked /> 保存结构化画像</label><button id="saveProfile" class="dark-btn" type="button">保存画像</button><button id="clearProfile" class="text-btn" type="button">删除已保存画像</button></div>
+      <pre id="resumePreview" class="resume-preview" hidden></pre>
+    </section>
+  </main>
+  <script src="/static/profile.js?v=20260815-1"></script>
+</body>
+</html>

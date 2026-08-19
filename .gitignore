@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+.venv-server/
+venv/
+.env
+data/*.db
+data/*.sqlite*
+playwright-report/
+.pytest_cache/
+.tmp/
+outputs/
+*.log
+*.pid
+.DS_Store

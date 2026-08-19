@@ -1,0 +1,20 @@
+[
+  {
+    "id": "lever-001",
+    "text": "Data Engineering Intern",
+    "categories": {"location": "Shanghai, China", "commitment": "Internship", "team": "Engineering"},
+    "descriptionPlain": "Build data pipelines with Python and SQL.",
+    "lists": [{"text": "Bachelor degree or above"}],
+    "hostedUrl": "https://jobs.lever.co/example/lever-001",
+    "applyUrl": "https://jobs.lever.co/example/lever-001/apply",
+    "createdAt": 1776000000000
+  },
+  {
+    "id": "lever-002",
+    "text": "Customer Success Associate",
+    "categories": {"location": "Beijing, China", "commitment": "Full-time", "team": "Customer Success"},
+    "descriptionPlain": "Support customer onboarding and retention.",
+    "hostedUrl": "https://jobs.lever.co/example/lever-002",
+    "applyUrl": "https://jobs.lever.co/example/lever-002/apply"
+  }
+]

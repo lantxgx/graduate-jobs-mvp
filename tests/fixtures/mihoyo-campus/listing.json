@@ -1,0 +1,18 @@
+{
+  "data": {
+    "records": [
+      {
+        "id": "9148",
+        "title": "AIGC Algorithm Research Intern",
+        "addressDetailList": [{"addressDetail": "Shanghai"}],
+        "competencyType": "AI/Algorithm",
+        "jobNature": "Intern",
+        "projectName": "2027 Campus Recruitment",
+        "jobSummary": "",
+        "objectId": "19",
+        "objectName": "2027 graduates"
+      }
+    ],
+    "total": 1
+  }
+}

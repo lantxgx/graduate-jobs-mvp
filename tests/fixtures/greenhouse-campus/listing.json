@@ -1,0 +1,25 @@
+{
+  "meta": {"total": 2},
+  "jobs": [
+    {
+      "id": 88101,
+      "title": "Software Engineering Intern",
+      "updated_at": "2026-08-14T10:00:00Z",
+      "location": {"name": "Shanghai, China"},
+      "departments": [{"name": "Engineering"}],
+      "employment_type": "Internship",
+      "absolute_url": "https://boards.greenhouse.io/example/jobs/88101",
+      "content": "Build internal tools with Python. Qualifications: Bachelor degree or above."
+    },
+    {
+      "id": 88102,
+      "title": "Sales Representative",
+      "updated_at": "2026-08-14T10:00:00Z",
+      "location": {"name": "Beijing, China"},
+      "departments": [{"name": "Sales"}],
+      "employment_type": "Full-time",
+      "absolute_url": "https://boards.greenhouse.io/example/jobs/88102",
+      "content": "Support customer development. Bachelor degree or above."
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>找岗位 · 应届生招聘雷达</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav" aria-label="主导航">
+      <a class="brand" href="/">Graduate Radar</a>
+      <div class="nav-links">
+        <a class="nav-link active" href="/">找岗位</a>
+        <a class="nav-link" href="/profile">我的画像</a>
+        <a class="nav-link" href="/admin/sources">数据管理</a>
+      </div>
+      <div class="badge">官网直达 · 应届优先</div>
+    </nav>
+    <div class="hero-copy">
+      <p class="eyebrow">CAMPUS JOBS, ONE PLACE</p>
+      <h1>先完整看见岗位，<br><span>再让推荐帮你筛选。</span></h1>
+      <p class="subtitle">聚合企业官方校招岗位，保留地点、招聘类型、岗位描述和官方投递入口。无需填写画像也可以直接搜索。</p>
+    </div>
+    <div class="search-wrap">
+      <input id="keyword" placeholder="搜索岗位、技能或关键词，例如：算法 / 嵌入式 / 产品经理" />
+      <button id="searchBtn">搜索岗位</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="stats">
+      <div><strong id="total">0</strong><span>活动岗位</span></div>
+      <div><strong id="companyCount">0</strong><span>已同步公司</span></div>
+      <div><strong id="cityCount">0</strong><span>工作地点</span></div>
+    </section>
+
+    <section class="workspace">
+      <aside class="filters">
+        <div class="filter-title">
+          <h2>筛选岗位</h2>
+          <button id="resetBtn" class="text-btn">重置</button>
+        </div>
+        <label>公司<select id="company"><option value="">全部公司</option></select></label>
+        <label>城市<select id="city"><option value="">全部城市</option></select></label>
+        <label>职能<select id="category"><option value="">全部职能</option></select></label>
+        <label>岗位族<select id="jobFamily"><option value="">全部岗位族</option></select></label>
+        <label>招聘类型<select id="jobNature"><option value="">全部类型</option></select></label>
+        <label>学历<select id="degree"><option value="">全部学历</option></select></label>
+        <div class="source-note">
+          <strong>数据原则</strong>
+          <p>只展示通过具体岗位质量门槛的公开招聘信息；详情和最终投递以公司官方页面为准。</p>
+        </div>
+        <div class="company-directory">
+          <div class="directory-heading"><strong>企业目录</strong><span id="directoryCount">0 家</span></div>
+          <p class="directory-help">这里只显示已经同步到岗位库的企业；完整企业注册表、待验证入口和暂停原因请到“数据管理”查看。</p>
+          <div id="companyDirectoryList" class="company-directory-list"></div>
+        </div>
+      </aside>
+
+      <section class="results">
+        <div class="panel-purpose workspace-purpose"><strong>岗位工作台</strong><span>这里展示具体可投递岗位。企业注册表和画像设置分别放在数据管理、我的画像页面。</span></div>
+        <div class="results-head">
+          <div><p class="eyebrow dark">LATEST OPENINGS</p><h2>应届岗位</h2></div>
+          <div class="results-actions"><span id="resultCount">0 个结果</span><button id="recommendBtn" class="recommend-btn">按我的画像推荐</button></div>
+        </div>
+        <div class="view-tabs" role="tablist" aria-label="岗位视图">
+          <button class="view-tab active" data-view="all" type="button">全部岗位</button>
+          <button class="view-tab" data-view="favorite" type="button">收藏</button>
+          <button class="view-tab" data-view="ignore" type="button">不感兴趣</button>
+          <button class="view-tab" data-view="applied" type="button">已投递</button>
+        </div>
+        <div id="recommendationHint" class="recommendation-hint" hidden>
+          <strong>先建立画像，再看个性化推荐</strong>
+          <span>全部岗位仍然完整可查；画像只负责帮助你降低筛选成本。</span>
+          <a href="/profile">去我的画像 →</a>
+        </div>
+        <div id="jobs" class="job-grid"></div>
+        <div class="load-more-wrap"><button id="loadMore" class="load-more" type="button" hidden>加载更多岗位</button><span id="loadMoreStatus"></span></div>
+        <div id="empty" class="empty" hidden><h3>暂时没有匹配岗位</h3><p>换一组筛选条件，或稍后查看新的官方岗位。</p></div>
+      </section>
+    </section>
+  </main>
+
+  <template id="jobTemplate">
+    <article class="job-card">
+      <div class="job-top"><div><div class="company"></div><h3 class="title"></h3></div><div class="category"></div></div>
+      <div class="chips"></div><div class="match-summary"></div>
+      <details class="job-details"><summary>查看职位描述与要求</summary><div class="job-section description-section"><h4>职位描述</h4><p class="description"></p></div><div class="job-section requirements-section"><h4>职位要求</h4><p class="requirements"></p></div></details>
+      <div class="job-foot"><span class="updated"></span><button class="favorite" type="button">收藏</button><button class="job-action" data-action="ignore" type="button">不感兴趣</button><button class="job-action" data-action="applied" type="button">已投递</button><a class="apply" target="_blank" rel="noopener noreferrer">官网投递 ↗</a></div>
+    </article>
+  </template>
+  <script src="/static/app.js?v=20260815-5"></script>
+</body>
+</html>
