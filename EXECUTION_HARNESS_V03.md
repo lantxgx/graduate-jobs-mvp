@@ -532,3 +532,15 @@
 - Validation: full unittest discovery 91/91 passed.
 - Safety: one source only, bounded sample, serial access, no retry escalation, no proxy, no CAPTCHA/login bypass, no guessed URLs, no deletion.
 - Next unit: pause external collection for review; remaining due sources should not be processed in bulk. Continue with offline product improvements or explicitly approve another single-source refresh.
+
+## RUN-V03-056 / GitHub Pages public preview publication
+
+- Date: 2026-08-19
+- Status: Completed; the read-only public preview is deployed.
+- Scope: export active public job fields to `docs/jobs.json`, publish `docs/` through GitHub Actions, and keep the local FastAPI application and database private.
+- Result: repository `lantxgx/graduate-jobs-mvp` is public; GitHub Pages serves 641 active jobs with keyword search, company/city/category/job-family/recruitment-type/degree filters, details, and official apply links.
+- Privacy boundary: `.env`, SQLite databases, logs, PID files, resume data, user profiles, favorites, and local action state are excluded from Git and the Pages snapshot.
+- CI finding and fix: the first Pages run failed because the repository Pages site had not been initialized. Pages was enabled with `build_type=workflow`; the manually dispatched run then completed successfully.
+- Validation: public page HTTP 200; public `jobs.json` contains 641 items; page title content is present; local JavaScript syntax check and prior browser search verification passed.
+- Public URL: `https://lantxgx.github.io/graduate-jobs-mvp/`
+- Next unit: collect product feedback against the public preview; refresh the snapshot only through `scripts/export_github_pages.py` and a reviewed Git commit.
