@@ -64,6 +64,7 @@ main { max-width:1280px; margin:0 auto; padding:0 24px 80px; }
 .stats div:last-child { border-right:0; }
 .stats strong { font-size:28px; }
 .stats span { font-size:13px; color:#344111; }
+.stats-note { margin:10px 4px 0; color:var(--muted); font-size:12px; line-height:1.6; }
 .directory-panel { margin-top:48px; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:24px; }
 .panel-purpose { display:flex; gap:10px; align-items:baseline; border-radius:12px; padding:12px 14px; font-size:12px; line-height:1.6; }
 .panel-purpose strong { white-space:nowrap; }

@@ -201,7 +201,7 @@ async function loadFacets() {
   ]);
   $("total").textContent = data.total || 0;
   $("companyCount").textContent = coverage.registered_companies ?? (data.companies || []).length;
-  $("sourceCountHome").textContent = coverage.integrated_sources || 0;
+  $("cityCount").textContent = (data.cities || []).length;
   optionize(fields.company, data.companies);
   locationHierarchy = data.locations || [];
   optionize(fields.country, unique(locationHierarchy.map(item => item.country)));
