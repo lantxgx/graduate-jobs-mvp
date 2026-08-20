@@ -200,7 +200,7 @@ async function loadFacets() {
     fetch("/api/coverage-summary").then(r => r.json()),
   ]);
   $("total").textContent = data.total || 0;
-  $("companyCount").textContent = coverage.registered_companies ?? (data.companies || []).length;
+  $("companyCount").textContent = coverage.active_job_companies ?? (data.companies || []).length;
   $("cityCount").textContent = (data.cities || []).length;
   optionize(fields.company, data.companies);
   locationHierarchy = data.locations || [];
