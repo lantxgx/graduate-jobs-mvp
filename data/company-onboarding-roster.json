@@ -1,0 +1,3636 @@
+{
+  "updated_at": "2026-08-20",
+  "target": 363,
+  "companies": [
+    {
+      "rank": 1,
+      "company": "阿里巴巴",
+      "official_url": "https://campus-talent.alibaba.com/campus/index",
+      "url_status": "已验证",
+      "method": "自动优先",
+      "status": "录入成功",
+      "success_jobs": 10,
+      "failed_reason": null
+    },
+    {
+      "rank": 2,
+      "company": "腾讯",
+      "official_url": "https://join.qq.com/post.html?query=p_1",
+      "url_status": "已验证",
+      "method": "自动优先",
+      "status": "录入成功",
+      "success_jobs": 10,
+      "failed_reason": null
+    },
+    {
+      "rank": 3,
+      "company": "百度",
+      "official_url": "https://talent.baidu.com/jobs/list?recruitType=GRADUATE",
+      "url_status": "待验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_concrete_visible_job_cards"
+    },
+    {
+      "rank": 4,
+      "company": "字节跳动",
+      "official_url": "https://jobs.bytedance.com/zh/position",
+      "url_status": "待验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_concrete_visible_job_cards"
+    },
+    {
+      "rank": 5,
+      "company": "京东",
+      "official_url": "https://campus.jd.com",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "录入成功",
+      "success_jobs": 216,
+      "failed_reason": null
+    },
+    {
+      "rank": 6,
+      "company": "美团",
+      "official_url": "https://zhaopin.meituan.com/web/campus",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "录入成功",
+      "success_jobs": 29,
+      "failed_reason": null
+    },
+    {
+      "rank": 7,
+      "company": "拼多多",
+      "official_url": "https://careers.pddglobalhr.com/campus/grad",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "录入成功",
+      "success_jobs": 22,
+      "failed_reason": null
+    },
+    {
+      "rank": 8,
+      "company": "小米",
+      "official_url": "https://xiaomi.jobs.f.mioffice.cn/internship/",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "录入成功",
+      "success_jobs": 598,
+      "failed_reason": null
+    },
+    {
+      "rank": 9,
+      "company": "华为",
+      "official_url": "https://career.huawei.com/reccampportal/portal5/campus-recruitment.html",
+      "url_status": "待验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_concrete_visible_job_cards"
+    },
+    {
+      "rank": 10,
+      "company": "网易",
+      "official_url": "https://game.campus.163.com/position",
+      "url_status": "待验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_concrete_visible_job_cards"
+    },
+    {
+      "rank": 11,
+      "company": "快手",
+      "official_url": "https://campus.kuaishou.cn",
+      "url_status": "待验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_concrete_visible_job_cards"
+    },
+    {
+      "rank": 12,
+      "company": "滴滴",
+      "official_url": "https://talent.didiglobal.com/campus",
+      "url_status": "已验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_concrete_visible_job_cards"
+    },
+    {
+      "rank": 13,
+      "company": "携程",
+      "official_url": "https://careers.ctrip.com/#/campus",
+      "url_status": "已验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方列表当前仅返回测试岗位（请勿投递），无可入库的有效岗位"
+    },
+    {
+      "rank": 14,
+      "company": "蚂蚁集团",
+      "official_url": "https://talent.antgroup.com/campus-full-list?type=campus_graduates",
+      "url_status": "待验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_concrete_visible_job_cards"
+    },
+    {
+      "rank": 15,
+      "company": "京东物流",
+      "official_url": "https://campus.jd.com",
+      "url_status": "已验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方入口为京东集团统一校招页，当前没有可独立归属京东物流的公开岗位来源"
+    },
+    {
+      "rank": 16,
+      "company": "菜鸟网络",
+      "official_url": "https://campus-talent.alibaba.com/campus/index",
+      "url_status": "已验证",
+      "method": "自动优先",
+      "status": "录入成功",
+      "success_jobs": 10,
+      "failed_reason": null
+    },
+    {
+      "rank": 17,
+      "company": "苏宁易购",
+      "official_url": "https://careers.suning.cn/rps-web/ftl/campus/index.htm",
+      "url_status": "已验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方1200招聘页面当前明确显示没有相关职位信息"
+    },
+    {
+      "rank": 18,
+      "company": "唯品会",
+      "official_url": "https://app-tc.mokahr.com/campus-recruitment/vipshophr/10039",
+      "url_status": "已验证",
+      "method": "自动优先",
+      "status": "录入成功",
+      "success_jobs": 3,
+      "failed_reason": null
+    },
+    {
+      "rank": 19,
+      "company": "得物",
+      "official_url": "https://campus.dewu.com/578078",
+      "url_status": "已验证",
+      "method": "自动优先",
+      "status": "录入成功",
+      "success_jobs": 10,
+      "failed_reason": null
+    },
+    {
+      "rank": 20,
+      "company": "小红书",
+      "official_url": "https://job.xiaohongshu.com/campus/position",
+      "url_status": "已验证",
+      "method": "自动优先",
+      "status": "录入成功",
+      "success_jobs": 10,
+      "failed_reason": null
+    },
+    {
+      "rank": 21,
+      "company": "哔哩哔哩",
+      "official_url": "https://jobs.bilibili.com/campus/positions?type=1",
+      "url_status": "待验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方 positionList 接口当前返回 total=0，页面无可入库岗位"
+    },
+    {
+      "rank": 22,
+      "company": "知乎",
+      "official_url": "https://www.zhihu.com/careers",
+      "url_status": "待验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_concrete_visible_job_cards"
+    },
+    {
+      "rank": 23,
+      "company": "喜马拉雅",
+      "official_url": "http://jobs.ximalaya.com/campus",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "部分失败",
+      "success_jobs": 2,
+      "failed_reason": "官方校园招聘页当前无校招职位，仅有2条实习职位；低于首批自动接入3条岗位门槛，已保留为手动复核队列"
+    },
+    {
+      "rank": 24,
+      "company": "虎牙",
+      "official_url": "https://hr.huya.com/campusRecruit/index",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "录入成功",
+      "success_jobs": 3,
+      "failed_reason": null
+    },
+    {
+      "rank": 25,
+      "company": "斗鱼",
+      "official_url": "https://zhaopin.douyu.com/intern",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方招聘接口 position/list 在校招和实习招聘模式下均返回 total=0，当前无可入库具体岗位"
+    },
+    {
+      "rank": 26,
+      "company": "网易游戏",
+      "official_url": "https://game.campus.163.com/position",
+      "url_status": "已验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方校招页面可访问，但脚本资源 /umi.js 和 /preload_helper.js 当前均返回入口 HTML，未形成可见具体岗位列表或详情"
+    },
+    {
+      "rank": 27,
+      "company": "完美世界",
+      "official_url": "https://recruit.games.wanmei.com/campus-recruitment/perfect-world/94767",
+      "url_status": "待验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_concrete_visible_job_cards"
+    },
+    {
+      "rank": 28,
+      "company": "米哈游",
+      "official_url": "https://jobs.mihoyo.com/#/campus/position",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "录入成功",
+      "success_jobs": 39,
+      "failed_reason": null
+    },
+    {
+      "rank": 29,
+      "company": "莉莉丝",
+      "official_url": "https://jobs.lilith.com",
+      "url_status": "已验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_concrete_visible_job_cards"
+    },
+    {
+      "rank": 30,
+      "company": "叠纸游戏",
+      "official_url": null,
+      "url_status": "待核验",
+      "method": "待判定（自动优先，失败转手动）",
+      "status": "录入成功",
+      "success_jobs": 21,
+      "failed_reason": null
+    },
+    {
+      "rank": 31,
+      "company": "巨人网络",
+      "official_url": "https://hr.ztgame.com/campus/",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "录入成功",
+      "success_jobs": 3,
+      "failed_reason": null
+    },
+    {
+      "rank": 32,
+      "company": "三七互娱",
+      "official_url": "https://zhaopin.37.com/index.php?m=Home&c=campus&a=index",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "录入成功",
+      "success_jobs": 8,
+      "failed_reason": null
+    },
+    {
+      "rank": 33,
+      "company": "世纪华通",
+      "official_url": "https://www.sjhuatong.com/Join/Index.aspx",
+      "url_status": "已验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "企业官网明确链接官方Moka校园招聘页，但本轮公开页面未渲染出可抽取的具体岗位卡片，自动采集未通过质量门禁"
+    },
+    {
+      "rank": 34,
+      "company": "吉比特",
+      "official_url": "https://hr.g-bits.com/",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "部分失败",
+      "success_jobs": 1,
+      "failed_reason": "官方公开岗位接口当前仅返回1条校招正式岗位，低于首批自动接入3条门槛，暂不写入岗位库，转人工复核"
+    },
+    {
+      "rank": 35,
+      "company": "网龙",
+      "official_url": "https://nd.zhiye.com/campus",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "录入成功",
+      "success_jobs": 5,
+      "failed_reason": null
+    },
+    {
+      "rank": 36,
+      "company": "祖龙娱乐",
+      "official_url": "https://campus.zulong.com/",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "录入成功",
+      "success_jobs": 3,
+      "failed_reason": null
+    },
+    {
+      "rank": 37,
+      "company": "心动公司",
+      "official_url": null,
+      "url_status": "已验证",
+      "method": "自动优先",
+      "status": "失败",
+      "success_jobs": null,
+      "failed_reason": "未能从心动公司官方站点核验公开校园招聘入口；未写入岗位，转人工核验。"
+    },
+    {
+      "rank": 38,
+      "company": "盛趣游戏",
+      "official_url": "https://app.mokahr.com/campus-recruitment/shengqu/96336",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "录入成功",
+      "success_jobs": 13,
+      "failed_reason": null
+    },
+    {
+      "rank": 39,
+      "company": "金山软件",
+      "official_url": "https://join.wps.cn/campus-recruitment/wps/41436",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "录入成功",
+      "success_jobs": 2,
+      "failed_reason": null
+    },
+    {
+      "rank": 40,
+      "company": "360",
+      "official_url": "https://360campus.zhiye.com/jobs",
+      "url_status": "待验证",
+      "method": "自动优先（beisen）",
+      "status": "录入成功",
+      "success_jobs": 102,
+      "failed_reason": null
+    },
+    {
+      "rank": 41,
+      "company": "联想",
+      "official_url": "https://talent.lenovo.com.cn",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "录入成功",
+      "success_jobs": 85,
+      "failed_reason": null
+    },
+    {
+      "rank": 42,
+      "company": "OPPO",
+      "official_url": "https://careers.oppo.com/university/oppo/campus/post",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "录入成功",
+      "success_jobs": 7,
+      "failed_reason": null
+    },
+    {
+      "rank": 43,
+      "company": "vivo",
+      "official_url": "https://hr.vivo.com",
+      "url_status": "待验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_concrete_visible_job_cards"
+    },
+    {
+      "rank": 44,
+      "company": "荣耀",
+      "official_url": "https://www.honor.com/cn/career/",
+      "url_status": "已验证",
+      "method": "自动失败，转手动",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方校招页可见97个岗位，但页面为动态渲染列表，通用HTML适配器未能取得稳定详情数据；转专用接口/人工录入。"
+    },
+    {
+      "rank": 45,
+      "company": "魅族",
+      "official_url": null,
+      "url_status": "待核验",
+      "method": "待判定（自动优先，失败转手动）",
+      "status": "失败",
+      "success_jobs": null,
+      "failed_reason": "已检查魅族官方站点及公开招聘域名，未核验到公开校园岗位列表和详情入口；转人工核验。"
+    },
+    {
+      "rank": 46,
+      "company": "传音控股",
+      "official_url": null,
+      "url_status": "待核验",
+      "method": "待判定（自动优先，失败转手动）",
+      "status": "失败",
+      "success_jobs": null,
+      "failed_reason": "本轮无法从传音官方站点获得可访问的公开校园岗位列表；官方域名返回500，未猜测招聘入口，转人工核验。"
+    },
+    {
+      "rank": 47,
+      "company": "TCL",
+      "official_url": "https://campus.tcl.com/campus",
+      "url_status": "已验证",
+      "method": "自动失败，转手动",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "TCL官方校园页已确认并指向HotJob门户，但本轮未取得可稳定解析的公开岗位详情；转HotJob专用适配器/人工录入。"
+    },
+    {
+      "rank": 48,
+      "company": "海信",
+      "official_url": "https://hisense.zhiye.com/campus",
+      "url_status": "访问异常",
+      "method": "待判定（自动优先，失败转手动）",
+      "status": "失败",
+      "success_jobs": null,
+      "failed_reason": "候选北森域名当前返回Not Found，未能核验有效公开岗位列表；转人工核验。"
+    },
+    {
+      "rank": 49,
+      "company": "创维",
+      "official_url": "https://www.skyworth.com/",
+      "url_status": "已验证",
+      "method": "自动失败，转手动",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "创维官网招聘链接确认HotJob门户，但本轮未取得稳定公开岗位详情；转HotJob专用适配器/人工录入。"
+    },
+    {
+      "rank": 50,
+      "company": "长虹",
+      "official_url": "https://www.changhong.com/",
+      "url_status": "已验证",
+      "method": "自动失败，转手动",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "长虹官网招聘入口确认使用动态HotJob门户，本轮未取得稳定公开岗位详情；转HotJob专用适配器/人工录入。"
+    },
+    {
+      "rank": 51,
+      "company": "格力电器",
+      "official_url": "https://www.gree.com/",
+      "url_status": "已核验官网，未找到校招入口",
+      "method": "待判定（自动优先，失败转手动）",
+      "status": "失败",
+      "success_jobs": null,
+      "failed_reason": "已检查格力官网及常见招聘域名，未发现可核验的公开校园岗位列表和详情入口；转人工核验。"
+    },
+    {
+      "rank": 52,
+      "company": "美的集团",
+      "official_url": "https://careers.midea.com/",
+      "url_status": "已验证",
+      "method": "自动失败，转专用接口",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "美的官方校园招聘页已确认，但岗位通过自建前端接口加载，当前没有可复用适配器；转专用接口开发。"
+    },
+    {
+      "rank": 53,
+      "company": "海尔智家",
+      "official_url": "https://www.haier.com/careers/",
+      "url_status": "已验证",
+      "method": "自动失败，转专用接口",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "海尔官网确认校园入口指向maker.haier.net，但当前公开页面主要为活动/动态内容，未取得稳定具体岗位详情；转专用接口/人工录入。"
+    },
+    {
+      "rank": 54,
+      "company": "科大讯飞",
+      "official_url": "https://campus.iflytek.com/official-pc/jobList",
+      "url_status": "待验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_concrete_visible_job_cards"
+    },
+    {
+      "rank": 55,
+      "company": "海康威视",
+      "official_url": "https://campushr.hikvision.com/school?schoolType=nozxf&activeTab=0",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "录入成功",
+      "success_jobs": 20,
+      "failed_reason": null
+    },
+    {
+      "rank": 56,
+      "company": "大华股份",
+      "official_url": "https://dahua.zhiye.com/campus",
+      "url_status": "已验证",
+      "method": "自动（北森）",
+      "status": "录入成功",
+      "success_jobs": 68,
+      "failed_reason": null
+    },
+    {
+      "rank": 57,
+      "company": "宇视科技",
+      "official_url": "https://www.uniview.com/",
+      "url_status": "已核验官网，未找到校招入口",
+      "method": "自动失败，转手动",
+      "status": "失败",
+      "success_jobs": null,
+      "failed_reason": "已检查宇视官网及常见招聘域名，未发现可核验的公开校园岗位列表和详情入口；转人工核验。"
+    },
+    {
+      "rank": 58,
+      "company": "紫光股份",
+      "official_url": "https://www.unigroup.com.cn/",
+      "url_status": "已核验官网，未找到校招入口",
+      "method": "自动失败，转手动",
+      "status": "失败",
+      "success_jobs": null,
+      "failed_reason": "已检查紫光集团官网及常见招聘域名，未发现可核验的公开校园岗位列表和详情入口；转人工核验。"
+    },
+    {
+      "rank": 59,
+      "company": "浪潮信息",
+      "official_url": "http://career.inspur.com/campus2027/",
+      "url_status": "已验证",
+      "method": "自动失败，转专用接口",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "浪潮官网确认2027届校招入口，岗位跳转HCMCloud招聘门户；当前没有HCMCloud适配器，转专用适配器/人工录入。"
+    },
+    {
+      "rank": 60,
+      "company": "中兴通讯",
+      "official_url": "https://job.zte.com.cn/content/zte-job/cn/campus-recruitment/Recruitment_positions/freshstudent.html",
+      "url_status": "已验证",
+      "method": "自动（Moka）",
+      "status": "录入成功",
+      "success_jobs": 5,
+      "failed_reason": null
+    },
+    {
+      "rank": 61,
+      "company": "烽火通信",
+      "official_url": "https://www.fiberhome.com/",
+      "url_status": "已验证",
+      "method": "自动失败，转专用接口",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官网确认官方Moka校园门户，但本轮通用Moka适配器未取得合格具体岗位；保留失败记录并转专用接口/人工核验。"
+    },
+    {
+      "rank": 62,
+      "company": "中国移动",
+      "official_url": "https://job.10086.cn/personal/job/",
+      "url_status": "已验证",
+      "method": "自动失败，转专用接口",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "中国移动官方招聘网站可访问并有职位列表，但接口需要动态签名参数，当前无适配器；转专用接口/人工核验。"
+    },
+    {
+      "rank": 63,
+      "company": "中国联通",
+      "official_url": "https://chinaunicom.zhiye.com/",
+      "url_status": "候选区域入口",
+      "method": "人工核验",
+      "status": "失败",
+      "success_jobs": null,
+      "failed_reason": "仅发现广州联通北森门户，无法证明为中国联通全国校园招聘入口；未将区域岗位冒充全国岗位入库，转人工核验。"
+    },
+    {
+      "rank": 64,
+      "company": "中国电信",
+      "official_url": "https://job.chinatelecom.com.cn/",
+      "url_status": "已验证",
+      "method": "自动失败，转专用接口",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方招聘SPA可访问，但岗位数据由自建前端和安全脚本动态加载，当前无稳定适配器；转专用接口/人工核验。"
+    },
+    {
+      "rank": 65,
+      "company": "中国铁塔",
+      "official_url": "https://zhaopin.chinatowercom.cn/",
+      "url_status": "已验证",
+      "method": "自动失败，转专用接口",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方HCM Cloud招聘入口可访问，但岗位列表由动态接口加载，当前无HCMCloud适配器；转专用接口/人工核验。"
+    },
+    {
+      "rank": 66,
+      "company": "中国电子",
+      "official_url": "https://campus.cec.com.cn/",
+      "url_status": "已验证",
+      "method": "自动失败，转专用接口",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "中国电子官方校园招聘SPA可访问，但岗位由自建前端动态接口加载，当前无稳定适配器；转专用接口/人工核验。"
+    },
+    {
+      "rank": 67,
+      "company": "中国电科",
+      "official_url": "https://www.cetc.com.cn/",
+      "url_status": "已验证",
+      "method": "自动失败，转HotJob专用接口",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官网确认校园招聘入口使用HotJob门户，项目当前无HotJob适配器；转专用接口/人工录入。"
+    },
+    {
+      "rank": 68,
+      "company": "中国航天科技",
+      "official_url": "http://www.spacechina.com/n25/n2014703/n2014708/index.html",
+      "url_status": "已验证",
+      "method": "自动失败，转人工复核",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官网加入我们入口跳转至 spacetalent.com.cn；目标站点启用 BotD 刷新频率/反自动化校验，未在不绕过安全验证的前提下获得公开岗位列表和详情。"
+    },
+    {
+      "rank": 69,
+      "company": "中国航天科工",
+      "official_url": "http://www.casic.com.cn/n27219851/index.html",
+      "url_status": "已验证",
+      "method": "静态公告核验，转人工录入",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方人才招聘页公开的是招聘公告列表，未提供可逐岗位标准化的具体岗位卡片/详情字段；公告详情需人工核对后再录入，当前不自动入库。"
+    },
+    {
+      "rank": 70,
+      "company": "中国航空工业",
+      "official_url": "https://www.avic.com/sycd/rczp/",
+      "url_status": "已验证",
+      "method": "静态官网核验，转人工复核",
+      "status": "失败",
+      "success_jobs": null,
+      "failed_reason": "官网人才招聘页当前仅展示人才理念/薪酬等宣传内容，未提供公开可核验的校园岗位列表或具体岗位详情。"
+    },
+    {
+      "rank": 71,
+      "company": "中国兵器工业",
+      "official_url": "http://www.norincogroup.com.cn/",
+      "url_status": "已验证",
+      "method": "官网核验，转人工复核",
+      "status": "失败",
+      "success_jobs": null,
+      "failed_reason": "官方集团首页可访问，但当前页面未发现公开校园招聘入口、具体岗位列表或岗位详情。"
+    },
+    {
+      "rank": 72,
+      "company": "中国船舶",
+      "official_url": "http://www.cssc.net.cn/",
+      "url_status": "已验证",
+      "method": "官网核验，转人工复核",
+      "status": "失败",
+      "success_jobs": null,
+      "failed_reason": "官方集团首页可访问，但当前页面未发现公开校园招聘入口、具体岗位列表或岗位详情。"
+    },
+    {
+      "rank": 73,
+      "company": "中国兵器装备",
+      "official_url": "http://www.chinasouth.com.cn/",
+      "url_status": "已验证",
+      "method": "官网访问失败，转人工核验",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "候选官方域名当前返回 502，未取得公开招聘页面或岗位证据；未猜测其他投递地址。"
+    },
+    {
+      "rank": 74,
+      "company": "中国核工业",
+      "official_url": "http://www.cnnc.com.cn/",
+      "url_status": "已验证",
+      "method": "官网访问受限，转人工核验",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方域名返回 412 Precondition Failed，未在不绕过访问控制的前提下取得公开岗位列表。"
+    },
+    {
+      "rank": 75,
+      "company": "中国石油",
+      "official_url": "http://www.cnpc.com.cn/",
+      "url_status": "已验证",
+      "method": "官网访问受限，转人工核验",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方域名返回 412 Precondition Failed，未取得公开校招岗位列表或详情。"
+    },
+    {
+      "rank": 76,
+      "company": "中国石化",
+      "official_url": "http://www.sinopec.com/",
+      "url_status": "已验证",
+      "method": "官网核验，转人工复核",
+      "status": "失败",
+      "success_jobs": null,
+      "failed_reason": "官方首页可访问，但当前页面未发现公开校园岗位列表、岗位详情或明确投递入口。"
+    },
+    {
+      "rank": 77,
+      "company": "中国海油",
+      "official_url": "http://www.cnooc.com.cn/",
+      "url_status": "已验证",
+      "method": "官网访问异常，转人工核验",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方域名当前仅返回异常短页面，未取得公开招聘入口和具体岗位证据。"
+    },
+    {
+      "rank": 78,
+      "company": "国家电网",
+      "official_url": "http://www.sgcc.com.cn/",
+      "url_status": "已验证",
+      "method": "官网访问受限，转人工核验",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方域名返回 412 Precondition Failed，未绕过访问控制，暂未取得公开校招岗位列表。"
+    },
+    {
+      "rank": 79,
+      "company": "南方电网",
+      "official_url": "http://zhaopin.csg.cn/",
+      "url_status": "已验证",
+      "method": "官方SPA核验，转专用接口/人工",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官网招聘入口可访问，但岗位由动态SPA加载，当前未取得稳定公开岗位列表/详情接口；不反向猜测接口。"
+    },
+    {
+      "rank": 80,
+      "company": "中国华能",
+      "official_url": "https://www.chng.com.cn/list_zpxx/-/article/cQQKaBtwslFy/list/23524/",
+      "url_status": "已验证",
+      "method": "静态公告核验，转人工录入",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方招聘信息页公开 29 条招聘公告，但当前不是逐岗位列表；无法从公告可靠提取统一的城市、学历、专业、职责和投递字段，暂不自动入库。"
+    },
+    {
+      "rank": 81,
+      "company": "国家能源集团",
+      "official_url": "https://zhaopin.chnenergy.com.cn/",
+      "url_status": "已验证",
+      "method": "官方招聘系统核验，转人工/专用适配器",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官网人才招聘入口可访问，但招聘系统首页要求登录；公开页面仅显示公告导航，未取得无需登录的具体校园岗位列表和详情。"
+    },
+    {
+      "rank": 82,
+      "company": "中国大唐",
+      "official_url": "https://zhaopin.china-cdt.com/zpgg_index.html",
+      "url_status": "已验证",
+      "method": "官方招聘系统核验，转人工/专用适配器",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方招聘系统公开校园招聘分类和公告列表，但公告详情在当前访问状态下提示需要登录；未取得无需登录的逐岗位字段和投递详情。"
+    },
+    {
+      "rank": 83,
+      "company": "华电集团",
+      "official_url": "https://rencaishichang.chd.com.cn/",
+      "url_status": "已验证",
+      "method": "官方招聘平台核验，转专用接口/人工",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "中国华电官网确认招聘平台入口；平台当前跳转到动态招聘系统，未在静态入口中取得无需登录、可逐条核验的岗位详情。"
+    },
+    {
+      "rank": 84,
+      "company": "中国电建",
+      "official_url": "https://zhaopin.powerchina.cn/index",
+      "url_status": "已验证",
+      "method": "官方招聘SPA核验，转专用接口/人工",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "中国电建官网人才招聘入口跳转至官方招聘SPA；当前静态页面只有应用壳，未取得无需登录的具体岗位列表和详情契约。"
+    },
+    {
+      "rank": 85,
+      "company": "中国能建",
+      "official_url": "https://www.ceec.net.cn/",
+      "url_status": "已验证",
+      "method": "官网公告核验，转人工复核",
+      "status": "失败",
+      "success_jobs": null,
+      "failed_reason": "官方首页可访问，但当前可见招聘内容为公告/海外高层次人才信息，未发现公开校园岗位列表和逐岗位详情。"
+    },
+    {
+      "rank": 86,
+      "company": "中国建筑",
+      "official_url": "https://recruit.cscec.com/recruit#/",
+      "url_status": "已验证",
+      "method": "官方校园招聘SPA核验，转专用接口/人工",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "中国建筑官网明确链接该校园招聘平台；当前入口为动态应用壳，未取得无需登录的具体岗位列表和详情契约。"
+    },
+    {
+      "rank": 87,
+      "company": "中国中铁",
+      "official_url": "https://www.crec.cn/web/rlzy65/rczp11/index.html",
+      "url_status": "已验证",
+      "method": "官网招聘栏目核验，转人工复核",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方人才招聘栏目公开招聘公告，但当前可见内容为社会/公开招聘公告，未形成可确认的校园岗位列表。"
+    },
+    {
+      "rank": 88,
+      "company": "中国铁建",
+      "official_url": "https://www.crcc.cn/",
+      "url_status": "已验证",
+      "method": "官网访问异常，转人工核验",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方域名当前 SSL 连接异常，未取得公开校园招聘入口或岗位证据。"
+    },
+    {
+      "rank": 89,
+      "company": "中国交建",
+      "official_url": "https://www.ccccltd.cn/",
+      "url_status": "已验证",
+      "method": "官网访问受限，转人工核验",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方域名当前返回 521，未取得公开校园招聘入口或岗位证据。"
+    },
+    {
+      "rank": 90,
+      "company": "中国中冶",
+      "official_url": "https://www.mcc.com.cn/",
+      "url_status": "已验证",
+      "method": "官网公告核验，转人工复核",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方首页公开招聘公告，但当前可见为社会/公开招聘公告，未形成可确认的校园岗位列表和标准详情。"
+    },
+    {
+      "rank": 91,
+      "company": "中国五矿",
+      "official_url": "https://www.minmetals.com.cn/",
+      "url_status": "已验证",
+      "method": "官网核验，转人工复核",
+      "status": "失败",
+      "success_jobs": null,
+      "failed_reason": "官方首页可访问，但当前页面未发现公开校园招聘入口、具体岗位列表或详情。"
+    },
+    {
+      "rank": 92,
+      "company": "招商局集团",
+      "official_url": "https://www.cmhk.com/",
+      "url_status": "已验证",
+      "method": "官网访问异常，转人工核验",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方候选域名当前仅返回极短页面，未取得公开招聘入口或岗位证据。"
+    },
+    {
+      "rank": 93,
+      "company": "保利集团",
+      "official_url": "https://www.poly.com.cn/poly/rlzy/rczp/A044008002Gone1.html",
+      "url_status": "已验证",
+      "method": "自动（官网链接北森）",
+      "status": "录入成功",
+      "success_jobs": 12,
+      "failed_reason": null
+    },
+    {
+      "rank": 94,
+      "company": "华润集团",
+      "official_url": "https://runjob.crc.com.cn/#/complex/homepage?id=1769554545615040514",
+      "url_status": "已验证",
+      "method": "官方招聘SPA核验，转专用接口/人工",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "华润官网人才引进链接指向动态招聘SPA，静态入口未提供可直接读取的岗位列表和详情。"
+    },
+    {
+      "rank": 95,
+      "company": "中粮集团",
+      "official_url": "https://www.cofco.com/",
+      "url_status": "已验证",
+      "method": "官网访问异常，转人工核验",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方候选域名当前仅返回异常短页面，未取得公开校园招聘入口或岗位证据。"
+    },
+    {
+      "rank": 96,
+      "company": "中国远洋海运",
+      "official_url": "https://www.coscoshipping.com/",
+      "url_status": "已验证",
+      "method": "官网核验，转人工复核",
+      "status": "失败",
+      "success_jobs": null,
+      "failed_reason": "官方首页可访问，但当前页面未发现公开校园岗位列表或具体详情。"
+    },
+    {
+      "rank": 97,
+      "company": "中国邮政",
+      "official_url": "https://www.chinapost.com.cn/",
+      "url_status": "已验证",
+      "method": "官网公告核验，转人工复核",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方首页可见社会招聘公告，但未发现统一公开校园岗位列表和逐岗位详情。"
+    },
+    {
+      "rank": 98,
+      "company": "顺丰",
+      "official_url": "https://campus.sf-express.com",
+      "url_status": "已验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_concrete_visible_job_cards"
+    },
+    {
+      "rank": 99,
+      "company": "圆通",
+      "official_url": "https://www.yto.net.cn/",
+      "url_status": "已验证",
+      "method": "官网核验，转人工复核",
+      "status": "失败",
+      "success_jobs": null,
+      "failed_reason": "官方首页可访问，但当前页面未发现公开校园招聘入口或具体岗位详情。"
+    },
+    {
+      "rank": 100,
+      "company": "申通",
+      "official_url": "https://www.sto.cn/",
+      "url_status": "已验证",
+      "method": "官网核验，转人工复核",
+      "status": "失败",
+      "success_jobs": null,
+      "failed_reason": "官方首页为前端应用壳，当前未发现公开校园招聘入口或具体岗位详情。"
+    },
+    {
+      "rank": 101,
+      "company": "韵达",
+      "official_url": "https://www.yundaex.com/",
+      "url_status": "已验证",
+      "method": "官网核验，转人工复核",
+      "status": "失败",
+      "success_jobs": null,
+      "failed_reason": "官方首页仅显示人才计划/在线招聘入口，校园招聘链接被注释且对应页面不存在，未取得具体校招岗位。"
+    },
+    {
+      "rank": 102,
+      "company": "德邦",
+      "official_url": "https://www.deppon.com/",
+      "url_status": "已验证",
+      "method": "官网核验，转人工复核",
+      "status": "失败",
+      "success_jobs": null,
+      "failed_reason": "官方首页可访问，但当前未发现公开校园招聘入口、岗位列表或详情。"
+    },
+    {
+      "rank": 103,
+      "company": "极兔速递",
+      "official_url": "https://www.jtexpress.com/",
+      "url_status": "已验证",
+      "method": "官网核验，转人工复核",
+      "status": "失败",
+      "success_jobs": null,
+      "failed_reason": "官方首页可访问，但当前未发现公开校园招聘入口、岗位列表或详情。"
+    },
+    {
+      "rank": 104,
+      "company": "京东健康",
+      "official_url": "https://campus.jd.com/",
+      "url_status": "已验证",
+      "method": "集团统一校招入口核验，转人工归属复核",
+      "status": "失败",
+      "success_jobs": null,
+      "failed_reason": "当前可确认的是京东集团统一校招入口，未发现可独立归属京东健康的公开岗位来源。"
+    },
+    {
+      "rank": 105,
+      "company": "平安科技",
+      "official_url": "https://campus.pingan.com/pab",
+      "url_status": "已验证",
+      "method": "官方校园SPA核验，转专用接口/人工",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "平安官方校园招聘SPA可访问，但岗位由前端脚本动态加载，当前无稳定适配器；未猜测接口。"
+    },
+    {
+      "rank": 106,
+      "company": "平安银行",
+      "official_url": "https://campus.pingan.com/pab",
+      "url_status": "待验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_concrete_visible_job_cards"
+    },
+    {
+      "rank": 107,
+      "company": "招商银行",
+      "official_url": "https://career.cmbchina.com/positionlist",
+      "url_status": "待验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_concrete_visible_job_cards"
+    },
+    {
+      "rank": 108,
+      "company": "中信银行",
+      "official_url": "https://job.citicbank.com/",
+      "url_status": "已验证",
+      "method": "官方招聘平台核验，转专用接口/人工",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方招聘官网明确包含校园招聘入口，但岗位内容由动态脚本加载，当前未取得稳定公开列表/详情适配器。"
+    },
+    {
+      "rank": 109,
+      "company": "浦发银行",
+      "official_url": "https://job.spdb.com.cn/campusJob",
+      "url_status": "已验证",
+      "method": "官方招聘平台核验，转人工/专用接口",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方招聘平台公开校园招聘入口，但当前页面未提供无需登录的具体岗位列表和详情。"
+    },
+    {
+      "rank": 110,
+      "company": "兴业银行",
+      "official_url": "https://www.cib.com.cn/",
+      "url_status": "已验证",
+      "method": "官网核验，转人工复核",
+      "status": "失败",
+      "success_jobs": null,
+      "failed_reason": "官方首页可访问，但当前未发现公开校园岗位列表或具体岗位详情。"
+    },
+    {
+      "rank": 111,
+      "company": "民生银行",
+      "official_url": "https://career.cmbc.com.cn/",
+      "url_status": "已验证",
+      "method": "官方招聘SPA核验，转专用接口/人工",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方招聘入口为动态应用壳，当前未取得无需登录的稳定岗位列表和详情适配器。"
+    },
+    {
+      "rank": 112,
+      "company": "光大银行",
+      "official_url": "https://zhaopin.cebbank.com/",
+      "url_status": "已验证",
+      "method": "官网访问异常，转人工核验",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方候选招聘域名 SSL 连接异常，未取得公开岗位证据。"
+    },
+    {
+      "rank": 113,
+      "company": "华夏银行",
+      "official_url": "https://zhaopin.hxb.com.cn/",
+      "url_status": "已验证",
+      "method": "官网访问异常，转人工核验",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方候选招聘域名 SSL 连接异常，未取得公开岗位证据。"
+    },
+    {
+      "rank": 114,
+      "company": "广发银行",
+      "official_url": "https://campus.cgbchina.com.cn/",
+      "url_status": "已验证",
+      "method": "官网访问异常，转人工核验",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方候选校园招聘域名 SSL 连接异常，未取得公开岗位证据。"
+    },
+    {
+      "rank": 115,
+      "company": "北京银行",
+      "official_url": "https://job.bankofbeijing.com.cn/",
+      "url_status": "已验证",
+      "method": "官网访问异常，转人工核验",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方候选招聘域名 SSL 连接异常，未取得公开岗位证据。"
+    },
+    {
+      "rank": 116,
+      "company": "宁波银行",
+      "official_url": "https://zhaopin.nbcb.com.cn/",
+      "url_status": "已验证",
+      "method": "官方招聘SPA核验，转专用接口/人工",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方招聘SPA可访问，但岗位由前端脚本加载并包含验证码组件，当前未取得稳定公开岗位详情。"
+    },
+    {
+      "rank": 117,
+      "company": "南京银行",
+      "official_url": "https://job.njcb.com.cn",
+      "url_status": "待验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_concrete_visible_job_cards"
+    },
+    {
+      "rank": 118,
+      "company": "杭州银行",
+      "official_url": "https://job.hzbank.com.cn/",
+      "url_status": "已验证",
+      "method": "官网访问异常，转人工核验",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方候选招聘域名 SSL 连接异常，未取得公开岗位证据。"
+    },
+    {
+      "rank": 119,
+      "company": "上海银行",
+      "official_url": "https://job.bosc.cn/",
+      "url_status": "已验证",
+      "method": "官网访问异常，转人工核验",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方候选招聘域名 SSL 连接异常，未取得公开岗位证据。"
+    },
+    {
+      "rank": 120,
+      "company": "江苏银行",
+      "official_url": "https://hr.jsbchina.cn/",
+      "url_status": "已验证",
+      "method": "官网访问受限，转人工核验",
+      "status": "部分失败",
+      "success_jobs": null,
+      "failed_reason": "官方候选招聘域名返回 412 Precondition Failed，未绕过访问控制。"
+    },
+    {
+      "rank": 121,
+      "company": "浙商银行",
+      "official_url": "https://zp.czbank.com.cn/zpweb/",
+      "url_status": "已核验",
+      "method": "自动（公开岗位接口）",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方岗位接口 /zpweb/planController/getPost.mvc?zpType=1 返回 dataList=[]、postTotalPage=0，当前无公开具体校招岗位"
+    },
+    {
+      "rank": 122,
+      "company": "中国银行",
+      "official_url": "https://campus.chinahr.com/pages/2024-boc-spring",
+      "url_status": "待验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_concrete_visible_job_cards"
+    },
+    {
+      "rank": 123,
+      "company": "工商银行",
+      "official_url": "https://job.icbc.com.cn/pc/index.html",
+      "url_status": "已验证",
+      "method": "公开接口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "public_post_api_returns_system_busy"
+    },
+    {
+      "rank": 124,
+      "company": "建设银行",
+      "official_url": "https://job2.ccb.com/cn/job/plan_index.html?planType=XY",
+      "url_status": "已核验",
+      "method": "自动（官网公开岗位接口）",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方页面可访问，但岗位接口本轮未返回可通过标准化质量门禁的具体岗位（crawl_produced_no_qualified_concrete_jobs）"
+    },
+    {
+      "rank": 125,
+      "company": "农业银行",
+      "official_url": "https://career.abchina.com/",
+      "url_status": "已验证",
+      "method": "官网动态应用探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "public_job_data_requires_session_or_dynamic_request"
+    },
+    {
+      "rank": 126,
+      "company": "交通银行",
+      "official_url": "https://job.bankcomm.com/",
+      "url_status": "已验证",
+      "method": "官网动态应用探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "campus_route_forbidden_or_dynamic_shell_only"
+    },
+    {
+      "rank": 127,
+      "company": "邮储银行",
+      "official_url": "https://zhaopin.psbc.com/",
+      "url_status": "访问错误",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "ssl_connection_eof"
+    },
+    {
+      "rank": 128,
+      "company": "平安保险",
+      "official_url": "https://campus.pingan.com/",
+      "url_status": "已验证",
+      "method": "官网动态应用探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "public_api_method_not_available_via_normal_http"
+    },
+    {
+      "rank": 129,
+      "company": "中国人寿",
+      "official_url": "https://job.chinalife.com.cn/",
+      "url_status": "访问错误",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "ssl_connection_eof"
+    },
+    {
+      "rank": 130,
+      "company": "中国人保",
+      "official_url": "https://zhaopin.picc.com.cn/",
+      "url_status": "访问错误",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "ssl_connection_eof"
+    },
+    {
+      "rank": 131,
+      "company": "太平洋保险",
+      "official_url": "https://www.cpic.com.cn/",
+      "url_status": "官网可访问，未找到公开校招岗位",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_public_campus_job_source_found"
+    },
+    {
+      "rank": 132,
+      "company": "新华保险",
+      "official_url": "https://www.newchinalife.com/",
+      "url_status": "官网可访问，未找到公开校招岗位",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_public_campus_job_source_found"
+    },
+    {
+      "rank": 133,
+      "company": "泰康保险",
+      "official_url": "https://www.taikang.com/",
+      "url_status": "官网可访问，未找到公开校招岗位",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_public_campus_job_source_found"
+    },
+    {
+      "rank": 134,
+      "company": "友邦保险",
+      "official_url": "https://www.aia.com.cn/zh-cn/join-us/eRecruitment",
+      "url_status": "官网招聘说明页可访问，无具体岗位详情",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_concrete_campus_job_details"
+    },
+    {
+      "rank": 135,
+      "company": "中信证券",
+      "official_url": "https://careers.citics.com/campus/headquarters",
+      "url_status": "已验证",
+      "method": "官网公开接口自动录入",
+      "status": "录入成功",
+      "success_jobs": 1,
+      "failed_reason": null
+    },
+    {
+      "rank": 136,
+      "company": "国泰海通证券",
+      "official_url": "https://www.gtht.com/",
+      "url_status": "官网动态/访问受限，未取得校招岗位详情",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "dynamic_shell_or_access_restricted"
+    },
+    {
+      "rank": 137,
+      "company": "华泰证券",
+      "official_url": "https://wecruit.hotjob.cn/SU6013d14e5d83dc11e4a8ae4d/pb/index.html",
+      "url_status": "公开招聘门户可访问，岗位接口待进一步核验",
+      "method": "官网链接门户探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_verified_public_detail_contract"
+    },
+    {
+      "rank": 138,
+      "company": "招商证券",
+      "official_url": "https://www.cmschina.com/",
+      "url_status": "官网可访问，校招入口未取得具体岗位详情",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_verified_public_detail_contract"
+    },
+    {
+      "rank": 139,
+      "company": "中金公司",
+      "official_url": "https://www.cicc.com/",
+      "url_status": "访问错误",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "http_521"
+    },
+    {
+      "rank": 140,
+      "company": "中信建投",
+      "official_url": "https://www.csc108.com/",
+      "url_status": "官网动态页可访问，未取得校招岗位详情",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_verified_public_detail_contract"
+    },
+    {
+      "rank": 141,
+      "company": "海通证券",
+      "official_url": "https://www.htsec.com/",
+      "url_status": "招聘入口访问受限",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 142,
+      "company": "申万宏源",
+      "official_url": "https://www.swhy.com.cn/",
+      "url_status": "访问错误",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "http_521"
+    },
+    {
+      "rank": 143,
+      "company": "国信证券",
+      "official_url": "https://www.guosen.com.cn/",
+      "url_status": "官网可访问，未取得具体校招岗位详情",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_verified_public_detail_contract"
+    },
+    {
+      "rank": 144,
+      "company": "广发证券",
+      "official_url": "https://www.gf.com.cn/",
+      "url_status": "招聘入口访问受限",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 145,
+      "company": "东方证券",
+      "official_url": "https://www.dfzq.com.cn/",
+      "url_status": "招聘入口访问受限",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 146,
+      "company": "国元证券",
+      "official_url": "https://www.gyzq.com.cn/",
+      "url_status": "官网页面无公开校招岗位详情",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_verified_public_detail_contract"
+    },
+    {
+      "rank": 147,
+      "company": "华安证券",
+      "official_url": "https://www.hazq.com/",
+      "url_status": "官网页面无公开校招岗位详情",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_verified_public_detail_contract"
+    },
+    {
+      "rank": 148,
+      "company": "长江证券",
+      "official_url": "https://www.cjsc.com.cn/",
+      "url_status": "官网页面无公开校招岗位详情",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_verified_public_detail_contract"
+    },
+    {
+      "rank": 149,
+      "company": "同花顺",
+      "official_url": "https://job.10jqka.com.cn/",
+      "url_status": "招聘应用壳可访问，无具体岗位详情",
+      "method": "招聘入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "dynamic_shell_only"
+    },
+    {
+      "rank": 150,
+      "company": "东方财富",
+      "official_url": "https://www.eastmoney.com/",
+      "url_status": "官网可访问，未取得具体校招岗位详情",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_verified_public_detail_contract"
+    },
+    {
+      "rank": 151,
+      "company": "陆金所",
+      "official_url": "https://www.lufax.com/",
+      "url_status": "官网可访问，未取得具体校招岗位详情",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_verified_public_detail_contract"
+    },
+    {
+      "rank": 152,
+      "company": "蚂蚁金服",
+      "official_url": "https://talent.antgroup.com/campus-full-list?type=campus_graduates",
+      "url_status": "官网入口已存在，公开岗位列表为空",
+      "method": "复用 custom_html 自动采集",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_concrete_visible_job_cards"
+    },
+    {
+      "rank": 153,
+      "company": "贝壳找房",
+      "official_url": "https://jobs.ke.com/",
+      "url_status": "访问错误",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 154,
+      "company": "链家",
+      "official_url": "https://jobs.ke.com/",
+      "url_status": "访问错误",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 155,
+      "company": "我爱我家",
+      "official_url": "https://www.5i5j.com/",
+      "url_status": "访问被拒",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "http_403"
+    },
+    {
+      "rank": 156,
+      "company": "房多多",
+      "official_url": "https://www.fangdd.com/",
+      "url_status": "官网可访问，未取得具体校招岗位详情",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_verified_public_detail_contract"
+    },
+    {
+      "rank": 157,
+      "company": "碧桂园",
+      "official_url": "https://job.bgy.com/",
+      "url_status": "访问错误",
+      "method": "官网招聘入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 158,
+      "company": "万科",
+      "official_url": "https://hr.vanke.com/",
+      "url_status": "访问错误",
+      "method": "官网招聘入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 159,
+      "company": "融创中国",
+      "official_url": "https://recruit.sunac.com/",
+      "url_status": "招聘入口超时/未取得岗位详情",
+      "method": "官网招聘入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "request_timeout"
+    },
+    {
+      "rank": 160,
+      "company": "龙湖集团",
+      "official_url": "https://jobs.longfor.com/",
+      "url_status": "访问错误",
+      "method": "官网招聘入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 161,
+      "company": "保利发展",
+      "official_url": "https://www.polycn.com/",
+      "url_status": "官网招聘入口未取得具体岗位详情",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "request_timeout"
+    },
+    {
+      "rank": 162,
+      "company": "中海地产",
+      "official_url": "https://www.cohl.com/",
+      "url_status": "官网可访问，未取得具体校招岗位详情",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_verified_public_detail_contract"
+    },
+    {
+      "rank": 163,
+      "company": "华润置地",
+      "official_url": "https://crc.zhiye.com/",
+      "url_status": "招聘域名返回404",
+      "method": "招聘入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "http_404"
+    },
+    {
+      "rank": 164,
+      "company": "绿地控股",
+      "official_url": "https://www.ldjt.com/",
+      "url_status": "访问错误",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 165,
+      "company": "旭辉集团",
+      "official_url": "https://cifixz.hotjob.cn/SU60865899bef57c312faeea42/pb/school.html",
+      "url_status": "官方招聘门户可访问，岗位接口待核验",
+      "method": "官网链接的 HotJob 门户探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "public_detail_contract_not_reached"
+    },
+    {
+      "rank": 166,
+      "company": "新城控股",
+      "official_url": "https://www.futureholdings.com.cn/",
+      "url_status": "访问错误",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 167,
+      "company": "金地集团",
+      "official_url": "https://www.gemdale.com/",
+      "url_status": "官网可访问，未取得具体校招岗位详情",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_verified_public_detail_contract"
+    },
+    {
+      "rank": 168,
+      "company": "远洋集团",
+      "official_url": "https://www.sinooceangroup.com/zh-cn/index.html",
+      "url_status": "官网可访问，未取得具体校招岗位详情",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_verified_public_detail_contract"
+    },
+    {
+      "rank": 169,
+      "company": "招商蛇口",
+      "official_url": "https://career.cmhk.com/",
+      "url_status": "访问错误",
+      "method": "官网招聘入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 170,
+      "company": "恒大汽车",
+      "official_url": "https://www.evergrandeauto.com/",
+      "url_status": "官网可访问，未取得具体校招岗位详情",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_verified_public_detail_contract"
+    },
+    {
+      "rank": 171,
+      "company": "理想汽车",
+      "official_url": "https://www.lixiang.com/career",
+      "url_status": "官网可访问，未取得具体校招岗位详情",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_verified_public_detail_contract"
+    },
+    {
+      "rank": 172,
+      "company": "蔚来",
+      "official_url": "https://nio.jobs.feishu.cn/campus/position/",
+      "url_status": "待验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "Feishu job detail failed the field quality gate: https://nio.jobs.feishu.cn/campus/position/7667520488911390986/detail"
+    },
+    {
+      "rank": 173,
+      "company": "小鹏汽车",
+      "official_url": "https://xiaopeng.jobs.feishu.cn/campus/position/list",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "录入成功",
+      "success_jobs": 12,
+      "failed_reason": null
+    },
+    {
+      "rank": 174,
+      "company": "比亚迪",
+      "official_url": "https://job.byd.com/portal/pc/",
+      "url_status": "官方招聘应用可访问，公开岗位接口待核验",
+      "method": "官网招聘应用探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "public_detail_contract_not_reached"
+    },
+    {
+      "rank": 175,
+      "company": "吉利汽车",
+      "official_url": "https://campus.geely.com/campus-recruitment/geely/78436",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "录入成功",
+      "success_jobs": 3,
+      "failed_reason": null
+    },
+    {
+      "rank": 176,
+      "company": "长城汽车",
+      "official_url": "https://job.gwm.cn/",
+      "url_status": "访问错误",
+      "method": "官网招聘入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 177,
+      "company": "长安汽车",
+      "official_url": "https://campus.changan.com.cn/",
+      "url_status": "访问错误",
+      "method": "官网招聘入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 178,
+      "company": "上汽集团",
+      "official_url": "https://campus.saicmotor.com/",
+      "url_status": "访问错误",
+      "method": "官网招聘入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 179,
+      "company": "广汽集团",
+      "official_url": "https://campus.gac.com.cn/",
+      "url_status": "访问错误",
+      "method": "官网招聘入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 180,
+      "company": "东风汽车",
+      "official_url": "https://campus.dfmc.com.cn/",
+      "url_status": "访问错误",
+      "method": "官网招聘入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 181,
+      "company": "一汽集团",
+      "official_url": "https://job.faw.com.cn/",
+      "url_status": "官网可访问但无具体校招岗位详情",
+      "method": "官网入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_verified_public_detail_contract"
+    },
+    {
+      "rank": 182,
+      "company": "奇瑞汽车",
+      "official_url": "https://campus.chery.cn/",
+      "url_status": "访问错误",
+      "method": "官网招聘入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 183,
+      "company": "江淮汽车",
+      "official_url": "https://job.jac.com.cn/",
+      "url_status": "访问错误",
+      "method": "官网招聘入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 184,
+      "company": "宇通集团",
+      "official_url": "https://job.yutong.com/",
+      "url_status": "访问错误",
+      "method": "官网招聘入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 185,
+      "company": "福田汽车",
+      "official_url": "https://campus.foton.com.cn/",
+      "url_status": "访问错误",
+      "method": "官网招聘入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 186,
+      "company": "北汽集团",
+      "official_url": "https://job.baicgroup.com.cn/",
+      "url_status": "访问错误",
+      "method": "官网招聘入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 187,
+      "company": "赛力斯",
+      "official_url": "https://career.seres.cn/",
+      "url_status": "访问错误",
+      "method": "官网招聘入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 188,
+      "company": "零跑汽车",
+      "official_url": "https://job.leapmotor.com/",
+      "url_status": "访问错误",
+      "method": "官网招聘入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 189,
+      "company": "哪吒汽车",
+      "official_url": "https://job.hozonauto.com/",
+      "url_status": "访问错误",
+      "method": "官网招聘入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 190,
+      "company": "宁德时代",
+      "official_url": "https://talent.catl.com/",
+      "url_status": "官方门户当前跳转社会招聘，未发现公开校招详情",
+      "method": "官网招聘入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "campus_source_not_available"
+    },
+    {
+      "rank": 191,
+      "company": "国轩高科",
+      "official_url": "https://job.gotion.com.cn/",
+      "url_status": "访问错误",
+      "method": "官网招聘入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 192,
+      "company": "亿纬锂能",
+      "official_url": "https://job.evebattery.com/",
+      "url_status": "访问错误",
+      "method": "官网招聘入口探测",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "connection_error"
+    },
+    {
+      "rank": 193,
+      "company": "欣旺达",
+      "official_url": "https://job.sunwoda.com/",
+      "url_status": "已核验（连接失败）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "RemoteProtocolError：官方招聘域名断开连接，未能取得公开岗位列表"
+    },
+    {
+      "rank": 194,
+      "company": "蜂巢能源",
+      "official_url": "https://job.svolt.cn/",
+      "url_status": "已核验（连接失败）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "ConnectError：官方招聘域名无法解析，未能取得公开岗位列表"
+    },
+    {
+      "rank": 195,
+      "company": "中创新航",
+      "official_url": "https://job.calb-tech.com/",
+      "url_status": "已核验（连接失败）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "ConnectError：官方招聘域名无法解析，未能取得公开岗位列表"
+    },
+    {
+      "rank": 196,
+      "company": "德赛西威",
+      "official_url": "https://job.desaysv.com/",
+      "url_status": "已核验（连接失败）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "ConnectError：官方招聘域名无法解析，未能取得公开岗位列表"
+    },
+    {
+      "rank": 197,
+      "company": "华域汽车",
+      "official_url": "https://job.hasco.com/",
+      "url_status": "已核验（连接失败）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "ConnectError：官方招聘域名无法解析，未能取得公开岗位列表"
+    },
+    {
+      "rank": 198,
+      "company": "均胜电子",
+      "official_url": "https://job.joyson.com/",
+      "url_status": "已核验（连接失败）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "ConnectError：官方招聘域名无法解析，未能取得公开岗位列表"
+    },
+    {
+      "rank": 199,
+      "company": "福耀玻璃",
+      "official_url": "https://job.fuyaogroup.com/fuyao/position/index?recruitmentType=CAMPUSRECRUITMENT",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "录入成功",
+      "success_jobs": 3,
+      "failed_reason": null
+    },
+    {
+      "rank": 200,
+      "company": "潍柴动力",
+      "official_url": "https://job.weichai.com/",
+      "url_status": "已核验（连接失败）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "ConnectError：官方招聘域名无法解析，未能取得公开岗位列表"
+    },
+    {
+      "rank": 201,
+      "company": "三一重工",
+      "official_url": "https://job.sany.com.cn/",
+      "url_status": "已核验（连接失败）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "ConnectError：官方招聘域名无法解析，未能取得公开岗位列表"
+    },
+    {
+      "rank": 202,
+      "company": "中联重科",
+      "official_url": "https://job.zoomlion.com/",
+      "url_status": "已核验（连接失败）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "RemoteProtocolError：官方招聘域名断开连接，未能取得公开岗位列表"
+    },
+    {
+      "rank": 203,
+      "company": "徐工集团",
+      "official_url": "https://job.xcmg.com/",
+      "url_status": "已核验（连接失败）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "ConnectError：官方招聘域名无法解析，未能取得公开岗位列表"
+    },
+    {
+      "rank": 204,
+      "company": "柳工",
+      "official_url": "https://www.liugong.com/",
+      "url_status": "已核验（无公开校招岗位入口）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网公开页面未发现可访问的具体校园岗位列表或详情"
+    },
+    {
+      "rank": 205,
+      "company": "山河智能",
+      "official_url": "https://www.sunward.com.cn/rczy/",
+      "url_status": "已核验（无公开校招岗位入口）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方人才资源页仅提供社会招聘/简历投递入口，未发现具体校园岗位"
+    },
+    {
+      "rank": 206,
+      "company": "中国重汽",
+      "official_url": "https://zhaopin.sinotruk.com:8009/#/schoolRecruit/index",
+      "url_status": "已核验（登录限制）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "校招页面为公开应用壳，但岗位列表接口返回 401 登录授权，未绕过登录"
+    },
+    {
+      "rank": 207,
+      "company": "潍柴雷沃",
+      "official_url": "https://lovol.zhiye.com/lw705xzlist",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "录入成功",
+      "success_jobs": 10,
+      "failed_reason": null
+    },
+    {
+      "rank": 208,
+      "company": "美兰机场",
+      "official_url": "https://www.mlairport.com/",
+      "url_status": "已核验（无公开校招入口）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网访问页未提供具体校园岗位列表"
+    },
+    {
+      "rank": 209,
+      "company": "上海机场",
+      "official_url": "https://www.shairport.com/",
+      "url_status": "已核验（安全拦截）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方域名返回 HTTP 521，未取得公开校招岗位列表"
+    },
+    {
+      "rank": 210,
+      "company": "白云机场",
+      "official_url": "https://www.baiyunairport.com/",
+      "url_status": "已核验（无公开校招入口）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网公开页面未发现具体校园岗位列表或详情"
+    },
+    {
+      "rank": 211,
+      "company": "东方航空",
+      "official_url": "https://www.ceair.com/",
+      "url_status": "已核验（无公开校招入口）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网公开页面未发现具体校园岗位列表或详情"
+    },
+    {
+      "rank": 212,
+      "company": "南方航空",
+      "official_url": "https://www.csair.com/",
+      "url_status": "已核验（无公开校招入口）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网公开页面未发现具体校园岗位列表或详情"
+    },
+    {
+      "rank": 213,
+      "company": "中国国航",
+      "official_url": "https://www.airchina.com.cn/",
+      "url_status": "已核验（无公开校招入口）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网公开页面未发现具体校园岗位列表或详情"
+    },
+    {
+      "rank": 214,
+      "company": "海航集团",
+      "official_url": "https://www.hnair.com/",
+      "url_status": "已核验（无公开校招入口）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网公开页面未发现具体校园岗位列表或详情"
+    },
+    {
+      "rank": 215,
+      "company": "春秋航空",
+      "official_url": "https://job.ch.com/",
+      "url_status": "已核验（无具体岗位）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方招聘入口仅返回招聘首页壳，未返回具体岗位列表或详情"
+    },
+    {
+      "rank": 216,
+      "company": "吉祥航空",
+      "official_url": "https://www.juneyaoair.com/",
+      "url_status": "已核验（无公开校招入口）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网公开页面未发现具体校园岗位列表或详情"
+    },
+    {
+      "rank": 217,
+      "company": "中国中免",
+      "official_url": "https://www.ctg.cn/careers-t46",
+      "url_status": "已核验（仅社会招聘公告）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方人才招聘页为社会招聘公告/内推信息，未提供可入库的校招岗位详情"
+    },
+    {
+      "rank": 218,
+      "company": "万达集团",
+      "official_url": "https://wanda.hotjob.cn/",
+      "url_status": "已核验（无具体岗位）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方招聘域名仅返回招聘首页壳，未返回具体校园岗位详情"
+    },
+    {
+      "rank": 219,
+      "company": "华侨城",
+      "official_url": "https://www.octgroup.com/",
+      "url_status": "已核验（连接超时）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方域名连接超时，未取得公开校招岗位列表"
+    },
+    {
+      "rank": 220,
+      "company": "首旅集团",
+      "official_url": "https://www.btg.com.cn/newsList/31/1.html",
+      "url_status": "已核验（公告页）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方人才页当前为招聘公告列表，未发现可独立入库的具体校招岗位详情/投递链接"
+    },
+    {
+      "rank": 221,
+      "company": "锦江酒店",
+      "official_url": "https://www.jinjianghotels.com/",
+      "url_status": "已核验（无公开校招入口）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网公开页面未发现具体校园岗位列表或详情"
+    },
+    {
+      "rank": 222,
+      "company": "洲际酒店",
+      "official_url": "https://careers.ihg.com/cn-cn/",
+      "url_status": "已核验（访问控制）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方人才入口返回 HTTP 403，未绕过访问控制"
+    },
+    {
+      "rank": 223,
+      "company": "绿城服务",
+      "official_url": "https://www.lvchengfuwu.com/",
+      "url_status": "已核验（无公开校招入口）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网公开页面未发现具体校园岗位列表或详情"
+    },
+    {
+      "rank": 224,
+      "company": "猫眼娱乐",
+      "official_url": "https://zhaopin.maoyan.com/",
+      "url_status": "已核验（域名不可达）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方招聘域名无法解析，未取得公开校招岗位"
+    },
+    {
+      "rank": 225,
+      "company": "爱奇艺",
+      "official_url": "https://jobs.iqiyi.com/",
+      "url_status": "已核验（域名不可达）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方招聘域名无法解析，未取得公开校招岗位"
+    },
+    {
+      "rank": 226,
+      "company": "腾讯视频",
+      "official_url": "https://join.qq.com/",
+      "url_status": "已核验（集团来源复用）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "腾讯视频未发现独立校招入口，集团校招来源已单独登记为腾讯"
+    },
+    {
+      "rank": 227,
+      "company": "优酷",
+      "official_url": "https://campus-talent.alibaba.com/campus/index",
+      "url_status": "已核验（集团来源复用）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "优酷未发现独立校招入口，阿里巴巴集团来源已单独登记"
+    },
+    {
+      "rank": 228,
+      "company": "芒果超媒",
+      "official_url": "https://www.mgtv.com/",
+      "url_status": "已核验（无公开校招入口）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网公开页面未发现具体校园岗位列表或详情"
+    },
+    {
+      "rank": 229,
+      "company": "东方明珠",
+      "official_url": "https://www.opg.cn/",
+      "url_status": "已核验（无公开校招入口）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网公开页面未发现具体校园岗位列表或详情"
+    },
+    {
+      "rank": 230,
+      "company": "华数传媒",
+      "official_url": "https://wecruit.hotjob.cn/SU62d26fa80dcad42fc9958ed9/pb/index.html#/",
+      "url_status": "已核验（动态招聘应用）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方 Hotjob 应用仅返回 JavaScript 壳，未取得公开岗位详情接口"
+    },
+    {
+      "rank": 231,
+      "company": "中国出版集团",
+      "official_url": "https://www.cnpub.com.cn/",
+      "url_status": "已核验（无公开校招入口）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网公开页面未发现具体校园岗位列表或详情"
+    },
+    {
+      "rank": 232,
+      "company": "新华文轩",
+      "official_url": "https://www.winshare.com.cn/",
+      "url_status": "已核验（无公开校招入口）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网公开页面未发现具体校园岗位列表或详情"
+    },
+    {
+      "rank": 233,
+      "company": "凤凰传媒",
+      "official_url": "https://www.ppm.cn/",
+      "url_status": "已核验（无公开校招入口）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网公开页面未发现具体校园岗位列表或详情"
+    },
+    {
+      "rank": 234,
+      "company": "中信出版",
+      "official_url": "https://www.citicpub.com/",
+      "url_status": "已核验（无公开校招入口）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网公开页面未发现具体校园岗位列表或详情"
+    },
+    {
+      "rank": 235,
+      "company": "掌阅科技",
+      "official_url": "https://job.zhangyue.com/",
+      "url_status": "已核验（域名不可达）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方招聘域名无法解析，未取得公开校招岗位"
+    },
+    {
+      "rank": 236,
+      "company": "字节教育",
+      "official_url": "https://jobs.bytedance.com/",
+      "url_status": "已核验（集团来源复用）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "未发现字节教育独立校招入口，集团来源已单独登记为字节跳动"
+    },
+    {
+      "rank": 237,
+      "company": "作业帮",
+      "official_url": "https://job.zuoyebang.com/campus-recruitment/zuoyebang/41328/",
+      "url_status": "已核验（校招路径404）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方 Moka 校招路径返回 HTTP 404，未取得具体岗位"
+    },
+    {
+      "rank": 238,
+      "company": "猿辅导",
+      "official_url": "https://job.yuanfudao.com/",
+      "url_status": "已核验（域名不可达）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方招聘域名无法解析，未取得公开校招岗位"
+    },
+    {
+      "rank": 239,
+      "company": "好未来",
+      "official_url": "https://job.tal.com/",
+      "url_status": "已核验（招聘首页）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方招聘站当前仅返回招聘首页，未取得具体校园岗位详情"
+    },
+    {
+      "rank": 240,
+      "company": "新东方",
+      "official_url": "https://join.neworiental.org/",
+      "url_status": "已核验（域名不可达）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方招聘域名无法解析，未取得公开校招岗位"
+    },
+    {
+      "rank": 241,
+      "company": "高途集团",
+      "official_url": "https://campus.gaotu.cn/",
+      "url_status": "已核验（域名不可达）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方校招域名无法解析"
+    },
+    {
+      "rank": 242,
+      "company": "网易有道",
+      "official_url": "https://campus.youdao.com/",
+      "url_status": "已核验（域名不可达）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方校招域名无法解析"
+    },
+    {
+      "rank": 243,
+      "company": "学而思",
+      "official_url": "https://job.tal.com/",
+      "url_status": "已核验（招聘首页）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方招聘站仅返回招聘首页，未取得具体校园岗位"
+    },
+    {
+      "rank": 244,
+      "company": "粉笔",
+      "official_url": "https://campus.fenbi.com/",
+      "url_status": "已核验（域名不可达）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方校招域名无法解析"
+    },
+    {
+      "rank": 245,
+      "company": "货拉拉",
+      "official_url": "https://hr.huolala.cn/",
+      "url_status": "已核验（无具体岗位）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方招聘页未发现具体校园岗位列表或详情"
+    },
+    {
+      "rank": 246,
+      "company": "满帮",
+      "official_url": "https://ymm56.zhiye.com/",
+      "url_status": "已核验（404）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方招聘入口重定向到 404 页面"
+    },
+    {
+      "rank": 247,
+      "company": "运满满",
+      "official_url": "https://ymm56.zhiye.com/",
+      "url_status": "已核验（404）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方招聘入口重定向到 404 页面"
+    },
+    {
+      "rank": 248,
+      "company": "同程旅行",
+      "official_url": "https://mhr.ly.com/recruit/schoolPortal/",
+      "url_status": "已核验（无具体岗位）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "校招门户仅显示提交页面，未取得具体岗位详情"
+    },
+    {
+      "rank": 249,
+      "company": "去哪儿",
+      "official_url": "https://hf7l9aiqzx.jobs.feishu.cn/704852",
+      "url_status": "已核验（无具体岗位链接）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "飞书校园门户可访问，但未发现具体岗位链接，适配器采集为空"
+    },
+    {
+      "rank": 250,
+      "company": "途牛",
+      "official_url": "https://hr.tuniu.com/",
+      "url_status": "已核验（连接超时）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方招聘入口连接超时，未取得公开岗位列表"
+    },
+    {
+      "rank": 251,
+      "company": "哈啰出行",
+      "official_url": "https://hr.hellobike.com/",
+      "url_status": "已核验（域名不可达）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方招聘域名无法解析"
+    },
+    {
+      "rank": 252,
+      "company": "曹操出行",
+      "official_url": "https://zhaopin.caocaokeji.cn/",
+      "url_status": "已核验（域名不可达）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方招聘域名无法解析"
+    },
+    {
+      "rank": 253,
+      "company": "T3出行",
+      "official_url": "https://www.t3go.cn/",
+      "url_status": "已核验（无具体校招入口）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网公开页面未发现具体校园岗位列表或详情"
+    },
+    {
+      "rank": 254,
+      "company": "高德地图",
+      "official_url": "https://talent.amap.com/",
+      "url_status": "已核验（动态首页无岗位）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方招聘页仅返回动态首页，未取得具体校招岗位"
+    },
+    {
+      "rank": 255,
+      "company": "四维图新",
+      "official_url": "https://campus.navinfo.com/",
+      "url_status": "已核验（域名不可达）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方校招域名无法解析"
+    },
+    {
+      "rank": 256,
+      "company": "科大讯飞医疗",
+      "official_url": "https://iflytek.zhiye.com/",
+      "url_status": "已核验（集团招聘首页）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "入口为科大讯飞集团招聘首页，未发现医疗业务单元独立校招岗位"
+    },
+    {
+      "rank": 257,
+      "company": "卫宁健康",
+      "official_url": "https://www.winning.com.cn/",
+      "url_status": "已核验（无具体校招入口）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网公开页面未发现具体校园岗位列表或详情"
+    },
+    {
+      "rank": 258,
+      "company": "东软集团",
+      "official_url": "https://career.neusoft.com/",
+      "url_status": "已核验（无具体校招入口）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方人才页未发现可公开访问的具体校园岗位详情"
+    },
+    {
+      "rank": 259,
+      "company": "用友网络",
+      "official_url": "https://career.yonyou.com/SU67ac41886202cc7916ae3029/pb/index.html",
+      "url_status": "已核验（动态招聘应用无岗位）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方招聘门户仅返回 JavaScript 应用壳，未取得具体校招岗位"
+    },
+    {
+      "rank": 260,
+      "company": "金蝶国际",
+      "official_url": "https://campus.kingdee.com/campus-recruitment/kingdeehr/166565?locale=zh-CN",
+      "url_status": "已核验（采集超时）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "Moka 页面可访问但首轮公开采集超时，未取得完整岗位详情"
+    },
+    {
+      "rank": 261,
+      "company": "广联达",
+      "official_url": "https://campus.glodon.com/campus-recruitment/glodon/91966/",
+      "url_status": "已核验（Moka采集超时）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方 Moka 校招页可访问，但公开岗位卡片采集超时，未写入不完整岗位"
+    },
+    {
+      "rank": 262,
+      "company": "恒生电子",
+      "official_url": "https://campus.hundsun.com/",
+      "url_status": "已核验（无具体校招岗位）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网公开页面未发现具体校园岗位列表或详情"
+    },
+    {
+      "rank": 263,
+      "company": "明源云",
+      "official_url": "https://job.mingyuanyun.com/",
+      "url_status": "已核验（域名不可达）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方招聘域名无法解析"
+    },
+    {
+      "rank": 264,
+      "company": "石墨文档",
+      "official_url": "https://shimo.im/jobs",
+      "url_status": "已核验（404）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方招聘路径返回 HTTP 404"
+    },
+    {
+      "rank": 265,
+      "company": "钉钉",
+      "official_url": "https://job.dingtalk.com/",
+      "url_status": "已核验（集团来源复用）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "钉钉未发现独立校招岗位，阿里巴巴集团招聘来源已单独登记"
+    },
+    {
+      "rank": 266,
+      "company": "飞书",
+      "official_url": "https://jobs.feishu.cn/",
+      "url_status": "已核验（入口404）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方入口返回 HTTP 404，未发现独立校园岗位"
+    },
+    {
+      "rank": 267,
+      "company": "企业微信",
+      "official_url": "https://work.weixin.qq.com/",
+      "url_status": "已核验（无具体校招岗位）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网未提供具体校园岗位列表，发现的招聘内容为宣传/公众号链接"
+    },
+    {
+      "rank": 268,
+      "company": "微盟",
+      "official_url": "https://hr.weimob.com/",
+      "url_status": "已核验（域名不可达）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方招聘域名无法解析"
+    },
+    {
+      "rank": 269,
+      "company": "有赞",
+      "official_url": "https://youzan.zhiye.com/",
+      "url_status": "已核验（招聘首页无具体校招岗位）",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方北森招聘首页未发现具体校园岗位详情"
+    },
+    {
+      "rank": 270,
+      "company": "百望股份",
+      "official_url": "https://web.baiwang.com/campus-recruitment.html",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "录入成功",
+      "success_jobs": 2,
+      "failed_reason": null
+    },
+    {
+      "rank": 271,
+      "company": "税友股份",
+      "official_url": "https://app.mokahr.com/campus-recruitment/servyou/102033/",
+      "url_status": "已核验",
+      "method": "自动（官网链接的 Moka 门户）",
+      "status": "录入成功",
+      "success_jobs": 1,
+      "failed_reason": null
+    },
+    {
+      "rank": 272,
+      "company": "深信服",
+      "official_url": "https://mp.weixin.qq.com/s/PARX5Hsj0c4QJqejGuK3XQ",
+      "url_status": "待验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "no_concrete_visible_job_cards"
+    },
+    {
+      "rank": 273,
+      "company": "奇安信",
+      "official_url": "https://campus.qianxin.com/campus/jobSearch?type=shixishen",
+      "url_status": "已核验",
+      "method": "自动（公开 JSONP 列表）",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方校招岗位接口返回 jobs=[]，当前没有可公开采集的具体岗位；未绕过登录或安全验证"
+    },
+    {
+      "rank": 274,
+      "company": "绿盟科技",
+      "official_url": "https://app.mokahr.com/campus_apply/nsfocus/29118",
+      "url_status": "已核验",
+      "method": "自动（官网链接的 Moka 门户）",
+      "status": "录入成功",
+      "success_jobs": 11,
+      "failed_reason": null
+    },
+    {
+      "rank": 275,
+      "company": "安恒信息",
+      "official_url": "https://ahxz.dbappsecurity.com.cn/campus",
+      "url_status": "已核验",
+      "method": "自动（官网北森门户）",
+      "status": "录入成功",
+      "success_jobs": 38,
+      "failed_reason": null
+    },
+    {
+      "rank": 276,
+      "company": "启明星辰",
+      "official_url": "https://venustech2.zhiye.com/campus",
+      "url_status": "已核验",
+      "method": "自动（官方北森门户）",
+      "status": "录入成功",
+      "success_jobs": 5,
+      "failed_reason": null
+    },
+    {
+      "rank": 277,
+      "company": "天融信",
+      "official_url": "https://topsec.zhiye.com/campus/jobs",
+      "url_status": "已核验",
+      "method": "自动（官方北森门户）",
+      "status": "录入成功",
+      "success_jobs": 9,
+      "failed_reason": null
+    },
+    {
+      "rank": 278,
+      "company": "山石网科",
+      "official_url": "https://hillstonenet.zhiye.com/campus?c=6401",
+      "url_status": "已核验",
+      "method": "自动（官方北森门户）",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方北森岗位接口本轮未返回可通过标准化质量门禁的具体岗位（crawl_produced_no_qualified_concrete_jobs）"
+    },
+    {
+      "rank": 279,
+      "company": "新华三",
+      "official_url": "https://h3c.zhiye.com/Campus",
+      "url_status": "已核验",
+      "method": "自动（官方北森门户）",
+      "status": "录入成功",
+      "success_jobs": 78,
+      "failed_reason": null
+    },
+    {
+      "rank": 280,
+      "company": "锐捷网络",
+      "official_url": "https://www.ruijie.com.cn/gy/xw-gs/89661/",
+      "url_status": "已核验",
+      "method": "手动（官网公告无公开岗位列表）",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方可核验页面为校园招聘宣传公告，未发现具体岗位列表、岗位详情和公开投递链接"
+    },
+    {
+      "rank": 281,
+      "company": "中科曙光",
+      "official_url": "https://sugon.zhiye.com/",
+      "url_status": "已核验",
+      "method": "自动（官方北森门户）",
+      "status": "录入成功",
+      "success_jobs": 179,
+      "failed_reason": null
+    },
+    {
+      "rank": 282,
+      "company": "寒武纪",
+      "official_url": "https://app.mokahr.com/campus-recruitment/cambricon/44201",
+      "url_status": "已核验",
+      "method": "自动（官方 Moka 门户）",
+      "status": "录入成功",
+      "success_jobs": 10,
+      "failed_reason": null
+    },
+    {
+      "rank": 283,
+      "company": "地平线",
+      "official_url": "https://wecruit.hotjob.cn/SU6409ef49bef57c635fd390a6/pb/school.html?projectCode=103302",
+      "url_status": "已核验",
+      "method": "自动（官方大易 Hotjob 门户）",
+      "status": "录入成功",
+      "success_jobs": 20,
+      "failed_reason": null
+    },
+    {
+      "rank": 284,
+      "company": "商汤科技",
+      "official_url": "https://hr-jobs.sensetime.com/edu/",
+      "url_status": "已核验",
+      "method": "自动（官方 ATS 公共门户）",
+      "status": "录入成功",
+      "success_jobs": 10,
+      "failed_reason": null
+    },
+    {
+      "rank": 285,
+      "company": "旷视科技",
+      "official_url": "https://app.mokahr.com/campus_apply/megviihr/38642",
+      "url_status": "已核验",
+      "method": "手动（公开岗位缺少工作地点）",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方 Moka 页面公开 2 个岗位，但岗位详情未提供工作地点；标准化质量门禁拒绝写入，未猜测城市"
+    },
+    {
+      "rank": 286,
+      "company": "依图科技",
+      "official_url": "https://www.yitutech.com/cn/career?mode=campus",
+      "url_status": "已核验",
+      "method": "自动（官方页面公开 Moka 接口）",
+      "status": "录入成功",
+      "success_jobs": 5,
+      "failed_reason": null
+    },
+    {
+      "rank": 287,
+      "company": "云从科技",
+      "official_url": "http://campus.cloudwalk.com/",
+      "url_status": "已核验",
+      "method": "手动（官方入口当前为空）",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网加入我们页面链接的校招入口当前返回空内容，无公开岗位列表或详情，无法标准化入库"
+    },
+    {
+      "rank": 288,
+      "company": "第四范式",
+      "official_url": "https://app.mokahr.com/campus-recruitment/4paradigm/58145",
+      "url_status": "已核验",
+      "method": "自动（官方 Moka，当前无公开岗位卡片）",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网校招 Moka 门户当前未渲染出具体公开岗位卡片，无法标准化入库"
+    },
+    {
+      "rank": 289,
+      "company": "科大国创",
+      "official_url": "http://www.kdgcsoft.com/list?index=1&type=0",
+      "url_status": "已核验",
+      "method": "手动（官方岗位全部过期）",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方招聘页可见6个岗位，但均为2024届且有效期均为2024-07-01，当前已过期，未写入活动岗位"
+    },
+    {
+      "rank": 290,
+      "company": "中科创达",
+      "official_url": "https://www.thundersoft.com/xiaozhao/",
+      "url_status": "已核验",
+      "method": "手动（官方页无具体岗位明细）",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方校园招聘页仅展示届次、岗位类别、工作地点宣传和统一投递二维码，未提供逐岗标题、职责、学历专业要求及申请链接，无法标准化入库"
+    },
+    {
+      "rank": 291,
+      "company": "思特威",
+      "official_url": "https://campus.smartsenstech.com/",
+      "url_status": "已核验",
+      "method": "自动（官方 Moka 门户）",
+      "status": "录入成功",
+      "success_jobs": 20,
+      "failed_reason": null
+    },
+    {
+      "rank": 292,
+      "company": "韦尔股份",
+      "official_url": "https://www.willsemi.com",
+      "url_status": "访问异常",
+      "method": "手动（未发现官方公开校招入口）",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "常用官网未提供可访问的校招岗位页；willsemi.com.cn 当前为域名停放页，无法确认官方岗位来源，未使用第三方招聘信息"
+    },
+    {
+      "rank": 293,
+      "company": "兆易创新",
+      "official_url": "https://www.gigadevice.com/about/career",
+      "url_status": "已核验",
+      "method": "手动（官方 Careers 无具体岗位）",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方 Careers 页面仅提供企业职业介绍和福利说明，未公开具体校招岗位列表、详情和逐岗申请链接，无法标准化入库"
+    },
+    {
+      "rank": 294,
+      "company": "澜起科技",
+      "official_url": "https://www.montage-tech.com/cn/Open_Positions",
+      "url_status": "已核验",
+      "method": "手动（官方校园岗位为空）",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方招贤纳士页校园招聘数据数组为空（jobData[5]=[]），当前无可采集的校园岗位；社会岗位未纳入校招库"
+    },
+    {
+      "rank": 295,
+      "company": "寒武纪科技",
+      "official_url": "https://app.mokahr.com/campus-recruitment/cambricon/44201",
+      "url_status": "已核验",
+      "method": "复用已录入来源（与第282家同公司）",
+      "status": "录入成功",
+      "success_jobs": 10,
+      "failed_reason": "与名录第282家寒武纪为同一企业，复用 cambricon-moka-campus，避免重复入库"
+    },
+    {
+      "rank": 296,
+      "company": "长江存储",
+      "official_url": "https://www.ymtc.com",
+      "url_status": "访问异常",
+      "method": "手动（官方入口空响应）",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方域名当前返回0字节空响应并设置访问控制Cookie，未能公开获取校招岗位列表/详情，按规则停止探测"
+    },
+    {
+      "rank": 297,
+      "company": "中芯国际",
+      "official_url": "https://smics.zhiye.com/campus",
+      "url_status": "已验证",
+      "method": "自动优先",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网明确链接到北森校园招聘入口，但该入口返回过期/404页面，岗位接口请求失败，未能公开获取具体校招岗位详情"
+    },
+    {
+      "rank": 298,
+      "company": "华虹半导体",
+      "official_url": "https://www.huahonggrace.com/",
+      "url_status": "官方入口受限",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方招聘入口未能在公开访问中提供可核验的逐岗信息；官网请求返回403，未绕过访问控制"
+    },
+    {
+      "rank": 299,
+      "company": "北方华创",
+      "official_url": "https://career.naura.com/campus",
+      "url_status": "已验证",
+      "method": "自动优先",
+      "status": "录入成功",
+      "success_jobs": 37,
+      "failed_reason": null
+    },
+    {
+      "rank": 300,
+      "company": "中微公司",
+      "official_url": "https://www.amec-inc.com/index.php/index/Lists/index/catid/100.html",
+      "url_status": "已验证",
+      "method": "自动优先",
+      "status": "录入成功",
+      "success_jobs": 25,
+      "failed_reason": null
+    },
+    {
+      "rank": 301,
+      "company": "拓荆科技",
+      "official_url": "https://www.piotech.cn/index.php/Join/join",
+      "url_status": "已验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网人才招聘页只有通用/社会岗位，页面未区分校招且岗位为2025年历史职位；为避免把社招混入校招库，未入库"
+    },
+    {
+      "rank": 302,
+      "company": "沪硅产业",
+      "official_url": "https://www.simg.com.cn/",
+      "url_status": "访问失败",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方域名在当前公开网络环境无法解析/访问，未找到可核验的官方逐岗校招入口"
+    },
+    {
+      "rank": 303,
+      "company": "闻泰科技",
+      "official_url": "http://jobs.wingtech.com/campus",
+      "url_status": "已验证",
+      "method": "自动优先",
+      "status": "录入成功",
+      "success_jobs": 1,
+      "failed_reason": null
+    },
+    {
+      "rank": 304,
+      "company": "歌尔股份",
+      "official_url": "https://www.goertek.com",
+      "url_status": "未发现公开入口",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方主页当前返回空壳页面，未提供可核验的校招岗位列表/详情，未猜测招聘链接"
+    },
+    {
+      "rank": 305,
+      "company": "立讯精密",
+      "official_url": "https://www.luxshare-ict.com/careers.html",
+      "url_status": "已验证",
+      "method": "自动优先",
+      "status": "录入成功",
+      "success_jobs": 1,
+      "failed_reason": null
+    },
+    {
+      "rank": 306,
+      "company": "蓝思科技",
+      "official_url": "https://www.hnlens.com/category/join.html",
+      "url_status": "已验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网申请加入页主要是普工和社会/通用职员岗位，未区分校招且岗位要求含工作经验；未混入校招库"
+    },
+    {
+      "rank": 307,
+      "company": "舜宇光学",
+      "official_url": "https://www.sunnyoptical.com",
+      "url_status": "未发现公开入口",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方主页当前仅提供企业介绍，未发现可核验的公开校招岗位列表/详情"
+    },
+    {
+      "rank": 308,
+      "company": "京东方",
+      "official_url": "https://campus.boe.com/",
+      "url_status": "已验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网明确链接校园招聘门户，但公开岗位接口未返回可核验逐岗数据；未绕过登录/验证码"
+    },
+    {
+      "rank": 309,
+      "company": "TCL华星",
+      "official_url": "https://www.tclcsot.com/",
+      "url_status": "已验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网链接的校园岗位详情页当前返回0字节空响应，无法核验具体岗位字段"
+    },
+    {
+      "rank": 310,
+      "company": "天合光能",
+      "official_url": "https://www.trinasolar.com/",
+      "url_status": "访问受限",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方站点返回WAF/安全验证内容，未绕过安全机制，未能获取公开校招岗位"
+    },
+    {
+      "rank": 311,
+      "company": "隆基绿能",
+      "official_url": "https://www.longi.com/en/jobs/",
+      "url_status": "未发现校招入口",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方公开页面为全球/通用招聘入口，未提供可核验的中国校园逐岗信息，未混入通用社招岗位"
+    },
+    {
+      "rank": 312,
+      "company": "通威股份",
+      "official_url": "https://www.tongwei.com/index.php/recruit.html",
+      "url_status": "未发现校招入口",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方人才战略页仅展示通用招聘/人才理念，未提供可核验校园逐岗列表和详情"
+    },
+    {
+      "rank": 313,
+      "company": "晶澳科技",
+      "official_url": "https://www.jasolar.com/",
+      "url_status": "访问受限",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方站点公开请求返回406，未能访问校招岗位详情，未绕过访问限制"
+    },
+    {
+      "rank": 314,
+      "company": "阳光电源",
+      "official_url": "https://jobs.sungrowpower.com",
+      "url_status": "已验证",
+      "method": "自动优先",
+      "status": "录入成功",
+      "success_jobs": 20,
+      "failed_reason": null
+    },
+    {
+      "rank": 315,
+      "company": "正泰电器",
+      "official_url": "https://www.chint.com",
+      "url_status": "访问受限",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方站点公开访问返回403，未绕过访问控制，未能核验校招逐岗信息"
+    },
+    {
+      "rank": 316,
+      "company": "特变电工",
+      "official_url": "https://www.tbea.com/join.html",
+      "url_status": "已验证",
+      "method": "自动优先",
+      "status": "录入成功",
+      "success_jobs": 20,
+      "failed_reason": null
+    },
+    {
+      "rank": 317,
+      "company": "东方电气",
+      "official_url": "https://www.dongfang.com/zxns/xyzp.htm",
+      "url_status": "已验证",
+      "method": "自动优先",
+      "status": "录入成功",
+      "success_jobs": 1,
+      "failed_reason": null
+    },
+    {
+      "rank": 318,
+      "company": "金风科技",
+      "official_url": "https://www.goldwind.com/cn/career/",
+      "url_status": "未发现校招岗位",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方职业发展页仅展示人才理念和发展介绍，未提供可核验的具体校园岗位列表/详情"
+    },
+    {
+      "rank": 319,
+      "company": "明阳智能",
+      "official_url": "https://www.myse.com.cn",
+      "url_status": "页面不可解析",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方主页返回不可解析的压缩/二进制响应，未能核验校招岗位列表和详情"
+    },
+    {
+      "rank": 320,
+      "company": "三峡集团",
+      "official_url": "https://www.ctg.com.cn",
+      "url_status": "未发现官方逐岗入口",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网人才招聘链接指向第三方平台，官网未提供可核验的校园逐岗详情，未将第三方岗位直接视为官方岗位"
+    },
+    {
+      "rank": 321,
+      "company": "中国核电",
+      "official_url": "https://www.cnnp.com.cn",
+      "url_status": "访问受限",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方站点公开请求返回412，未绕过访问限制，无法核验具体校招岗位"
+    },
+    {
+      "rank": 322,
+      "company": "国投电力",
+      "official_url": "https://www.sdicpower.com/gtdln/rcfz/rcln/A900801index_1.htm",
+      "url_status": "未发现官方逐岗入口",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网人才招聘链接指向第三方平台，官方页仅为人才理念介绍，未提供校园逐岗详情"
+    },
+    {
+      "rank": 323,
+      "company": "华润电力",
+      "official_url": "https://www.crpower.com.hk/rcln/index.html",
+      "url_status": "未发现校招岗位",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方人才发展页为通用人才介绍，未提供可核验的中国校园逐岗信息"
+    },
+    {
+      "rank": 324,
+      "company": "蒙牛",
+      "official_url": "https://www.mengniu.com.cn/join.html",
+      "url_status": "未发现校招岗位",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网加入我们页未提供可核验的校园逐岗列表和详情"
+    },
+    {
+      "rank": 325,
+      "company": "伊利",
+      "official_url": "https://www.yili.com/joinus",
+      "url_status": "未发现校招岗位",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网加入我们页未提供可核验的校园逐岗列表和详情"
+    },
+    {
+      "rank": 326,
+      "company": "光明乳业",
+      "official_url": "https://www.brightdairy.com",
+      "url_status": "访问失败",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方主页和候选招聘路径当前无法在公开请求中稳定访问，未能核验具体校园岗位"
+    },
+    {
+      "rank": 327,
+      "company": "双汇发展",
+      "official_url": "https://www.shuanghui.net/job-51.html",
+      "url_status": "已验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方大学生招聘页公开了栏目但当前没有可核验的具体岗位行、职责和申请链接"
+    },
+    {
+      "rank": 328,
+      "company": "海天味业",
+      "official_url": "https://www.haday.com/news/spring-campus-recruitment-2026-haday/",
+      "url_status": "已验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网仅发布校园招聘启动公告，具体岗位需跳转招聘官网/博士详情，当前页面没有逐岗标准字段"
+    },
+    {
+      "rank": 329,
+      "company": "农夫山泉",
+      "official_url": "https://www.nongfu.com/join",
+      "url_status": "未发现校招岗位",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方页面未发现可核验的校园逐岗列表和详情"
+    },
+    {
+      "rank": 330,
+      "company": "统一企业",
+      "official_url": "https://www.uni-president.com.cn",
+      "url_status": "未发现校招岗位",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方主页未提供可核验的校园逐岗招聘信息"
+    },
+    {
+      "rank": 331,
+      "company": "康师傅",
+      "official_url": "https://www.masterkong.com.cn/job",
+      "url_status": "未发现校招岗位",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方公开页面未提供可核验的校园逐岗列表和详情"
+    },
+    {
+      "rank": 332,
+      "company": "百胜中国",
+      "official_url": "https://www.yumchina.com/careers",
+      "url_status": "未发现校招岗位",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方 careers 页面未提供可核验的校园逐岗列表和详情"
+    },
+    {
+      "rank": 333,
+      "company": "麦当劳中国",
+      "official_url": "https://www.mcdonalds.com.cn/news/20250912-join-us",
+      "url_status": "仅宣传公告",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网总部校招新闻仅为宣传公告，未提供标准化逐岗字段和可核验岗位详情"
+    },
+    {
+      "rank": 334,
+      "company": "星巴克中国",
+      "official_url": "https://www.starbucks.com.cn/about/careers",
+      "url_status": "未发现校招岗位",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网链接的公开门户未产生合格具体校招岗位，且常规页面主要为社会招聘"
+    },
+    {
+      "rank": 335,
+      "company": "名创优品",
+      "official_url": "https://www.miniso.com",
+      "url_status": "未发现校招岗位",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方主页未发现可核验校园逐岗入口"
+    },
+    {
+      "rank": 336,
+      "company": "泡泡玛特",
+      "official_url": "https://www.popmart.com.cn",
+      "url_status": "未发现校招岗位",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方页面未提供可核验校园逐岗列表和详情"
+    },
+    {
+      "rank": 337,
+      "company": "安踏",
+      "official_url": "https://www.anta.com",
+      "url_status": "未发现校招岗位",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方主页为商城/品牌站，未发现可核验校园逐岗入口"
+    },
+    {
+      "rank": 338,
+      "company": "李宁",
+      "official_url": "https://www.lining.com",
+      "url_status": "仅社会招聘",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网链接的 Hotjob/Moka 页面为社会招聘，未发现校园逐岗入口"
+    },
+    {
+      "rank": 339,
+      "company": "特步",
+      "official_url": "https://www.xtep.com/xtep/join",
+      "url_status": "仅招聘栏目",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网仅展示校园招聘栏目入口文字，没有可核验的具体岗位详情"
+    },
+    {
+      "rank": 340,
+      "company": "361度",
+      "official_url": "https://361sport.com/",
+      "url_status": "未发现校招岗位",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方主页未发现可核验的校园逐岗招聘信息"
+    },
+    {
+      "rank": 341,
+      "company": "波司登",
+      "official_url": "https://www.bosideng.com",
+      "url_status": "未发现校招岗位",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方主页未发现可核验的校园逐岗招聘信息"
+    },
+    {
+      "rank": 342,
+      "company": "海澜之家",
+      "official_url": "https://www.hla.com.cn",
+      "url_status": "未发现校招岗位",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方主页未发现可核验的校园逐岗招聘信息"
+    },
+    {
+      "rank": 343,
+      "company": "森马服饰",
+      "official_url": "https://www.semir.com/new/",
+      "url_status": "未发现校招岗位",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方主页未发现可核验的校园逐岗招聘信息"
+    },
+    {
+      "rank": 344,
+      "company": "周大福",
+      "official_url": "https://hr.ctf.com.cn/campus",
+      "url_status": "已验证",
+      "method": "自动优先",
+      "status": "录入成功",
+      "success_jobs": 2,
+      "failed_reason": null
+    },
+    {
+      "rank": 345,
+      "company": "老凤祥",
+      "official_url": "https://www.laofengxiang.com",
+      "url_status": "未发现校招岗位",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方主页未发现可核验的校园逐岗招聘信息"
+    },
+    {
+      "rank": 346,
+      "company": "上海家化",
+      "official_url": "https://jahwa.zhiye.com/campus",
+      "url_status": "已验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方校园招聘系统显示无任何在招职位"
+    },
+    {
+      "rank": 347,
+      "company": "珀莱雅",
+      "official_url": "https://www.proya.com",
+      "url_status": "访问受限",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方站点返回WAF/安全验证内容，未绕过安全机制，未能核验校招岗位"
+    },
+    {
+      "rank": 348,
+      "company": "贝泰妮",
+      "official_url": "https://www.winona.cn",
+      "url_status": "未发现校招岗位",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方主页未发现可核验的校园逐岗招聘入口"
+    },
+    {
+      "rank": 349,
+      "company": "华熙生物",
+      "official_url": "https://www.bloomagebio.com",
+      "url_status": "访问超时",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方站点在公开请求中超时，未能核验具体校园岗位"
+    },
+    {
+      "rank": 350,
+      "company": "片仔癀",
+      "official_url": "https://www.zzpzh.com/rczp/list_252.aspx",
+      "url_status": "仅公告",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方人才页为招聘公告/结果公示列表，当前未提供可核验的逐岗职责、要求和申请链接"
+    },
+    {
+      "rank": 351,
+      "company": "云南白药",
+      "official_url": "https://www.yunnanbaiyao.com.cn",
+      "url_status": "未发现校招岗位",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官网人才招聘入口未提供可核验的校园逐岗列表和详情"
+    },
+    {
+      "rank": 352,
+      "company": "恒瑞医药",
+      "official_url": "https://www.hengrui.com",
+      "url_status": "访问受限",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方站点返回Request Rejected，未绕过访问控制，无法核验校招岗位"
+    },
+    {
+      "rank": 353,
+      "company": "复星医药",
+      "official_url": "https://fosun.zhiye.com/campus",
+      "url_status": "已验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方北森门户可访问但没有合格具体校园岗位，未写入不完整记录"
+    },
+    {
+      "rank": 354,
+      "company": "药明康德",
+      "official_url": "https://wuxiapptec.zhiye.com/campus",
+      "url_status": "已验证",
+      "method": "自动优先",
+      "status": "录入成功",
+      "success_jobs": 34,
+      "failed_reason": null
+    },
+    {
+      "rank": 355,
+      "company": "迈瑞医疗",
+      "official_url": "https://mindray.zhiye.com/campus",
+      "url_status": "已验证",
+      "method": "自动优先",
+      "status": "录入成功",
+      "success_jobs": 4,
+      "failed_reason": null
+    },
+    {
+      "rank": 356,
+      "company": "联影医疗",
+      "official_url": "https://united-imaging.zhiye.com/campus",
+      "url_status": "已验证",
+      "method": "自动优先",
+      "status": "录入成功",
+      "success_jobs": 139,
+      "failed_reason": null
+    },
+    {
+      "rank": 357,
+      "company": "爱尔眼科",
+      "official_url": "http://zhaopin.aierchina.com/?type=C",
+      "url_status": "已验证",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方校园页展示岗位名称但没有逐岗详情/申请链接，无法满足标准岗位入库门禁"
+    },
+    {
+      "rank": 358,
+      "company": "通策医疗",
+      "official_url": "https://www.tcmedical.com",
+      "url_status": "访问失败",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方主页响应异常/超时，未能核验公开校园逐岗信息"
+    },
+    {
+      "rank": 359,
+      "company": "华大基因",
+      "official_url": "https://www.bgi.com",
+      "url_status": "未发现校招入口",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方主页未提供可核验的校园逐岗招聘入口"
+    },
+    {
+      "rank": 360,
+      "company": "药明生物",
+      "official_url": "https://www.wuxibiologics.com",
+      "url_status": "未发现校招入口",
+      "method": "手动",
+      "status": "失败",
+      "success_jobs": 0,
+      "failed_reason": "官方主页未提供可核验的校园逐岗招聘入口"
+    },
+    {
+      "rank": 361,
+      "company": "MiniMax",
+      "official_url": "https://vrfi1sk8a0.jobs.feishu.cn/s/i6nd8qwp",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "录入成功",
+      "success_jobs": 5,
+      "failed_reason": null
+    },
+    {
+      "rank": 362,
+      "company": "北森",
+      "official_url": "https://beisen.zhiye.com",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "录入成功",
+      "success_jobs": 26,
+      "failed_reason": null
+    },
+    {
+      "rank": 363,
+      "company": "腾讯云智",
+      "official_url": "https://app-tc.mokahr.com/campus-recruitment/csig/20001",
+      "url_status": "已验证",
+      "method": "自动",
+      "status": "录入成功",
+      "success_jobs": 2,
+      "failed_reason": null
+    }
+  ]
+}

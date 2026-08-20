@@ -64,6 +64,7 @@ main { max-width:1280px; margin:0 auto; padding:0 24px 80px; }
 .stats div:last-child { border-right:0; }
 .stats strong { font-size:28px; }
 .stats span { font-size:13px; color:#344111; }
+.stats-note { margin:10px 4px 0; color:var(--muted); font-size:12px; line-height:1.6; }
 .directory-panel { margin-top:48px; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:24px; }
 .panel-purpose { display:flex; gap:10px; align-items:baseline; border-radius:12px; padding:12px 14px; font-size:12px; line-height:1.6; }
 .panel-purpose strong { white-space:nowrap; }
@@ -83,6 +84,8 @@ main { max-width:1280px; margin:0 auto; padding:0 24px 80px; }
 .source-filters label { display:flex; flex-direction:column; gap:5px; color:var(--muted); font-size:11px; font-weight:600; }
 .source-filters input, .source-filters select { min-width:130px; padding:9px 10px; border:1px solid var(--line); border-radius:8px; background:#fff; color:var(--ink); font:inherit; }
 .source-filters input { min-width:160px; }
+.source-filters textarea { min-width:320px; padding:9px 10px; border:1px solid var(--line); border-radius:8px; background:#fff; color:var(--ink); font:inherit; }
+.source-filters .wide { flex-basis:100%; }
 .source-filters button { padding:9px 14px; border-radius:8px; font:inherit; cursor:pointer; }
 .source-filters .primary-button { border:1px solid #315600; background:#315600; color:#fff; }
 .source-filters .secondary-button { border:1px solid var(--line); background:#fff; color:var(--ink); }
@@ -157,6 +160,8 @@ select {
 .job-details summary { cursor:pointer; color:var(--accent-dark); font-size:13px; font-weight:700; }
 .job-section { margin-top:14px; }
 .job-section h4 { margin:0 0 6px; font-size:12px; }
+.major-requirements { display:flex; flex-wrap:wrap; gap:6px; }
+.major-tag { background:#f4f0ff; border:1px solid #ddd2ff; color:#55428a; border-radius:999px; padding:5px 8px; font-size:11px; }
 .job-section p { margin:0; color:#666660; font-size:13px; line-height:1.65; white-space:pre-line; }
 .job-foot { display:flex; justify-content:space-between; align-items:center; gap:10px; margin-top:auto; padding-top:18px; border-top:1px solid #ecebe5; }
 .updated { font-size:11px; color:#8a8a84; }

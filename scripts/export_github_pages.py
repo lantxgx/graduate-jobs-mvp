@@ -29,6 +29,28 @@ def main() -> None:
                 f"SELECT {columns} FROM jobs WHERE status='active' ORDER BY last_seen_at DESC, id DESC"
             ).fetchall()
         ]
+        ids = [row["id"] for row in rows]
+        locations = {job_id: [] for job_id in ids}
+        hierarchy = {job_id: [] for job_id in ids}
+        majors = {job_id: [] for job_id in ids}
+        if ids:
+            placeholders = ",".join("?" for _ in ids)
+            for item in conn.execute(
+                f"SELECT job_id, location, country, province, city FROM job_locations "
+                f"WHERE job_id IN ({placeholders}) ORDER BY job_id, position", ids
+            ).fetchall():
+                locations[item[0]].append(item[1])
+                hierarchy[item[0]].append({"country": item[2], "province": item[3], "city": item[4]})
+            for item in conn.execute(
+                f"SELECT job_id, major FROM job_majors WHERE job_id IN ({placeholders}) "
+                f"ORDER BY job_id, position", ids
+            ).fetchall():
+                majors[item[0]].append(item[1])
+        for row in rows:
+            row["work_locations"] = locations[row["id"]]
+            row["location_hierarchy"] = hierarchy[row["id"]]
+            row["major_requirements"] = majors[row["id"]]
+            row["job_function"] = row.get("category") or "其他"
     DOCS.mkdir(parents=True, exist_ok=True)
     (DOCS / "jobs.json").write_text(
         json.dumps({"exported_at": rows[0]["last_seen_at"] if rows else None, "items": rows}, ensure_ascii=False),

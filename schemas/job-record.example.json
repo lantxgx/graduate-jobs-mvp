@@ -1,0 +1,29 @@
+{
+  "record_version": "1.0",
+  "source_id": "example-company-campus",
+  "source_job_id": "job-001",
+  "company": "示例科技",
+  "title": "软件研发工程师",
+  "work_locations": ["北京"],
+  "location_hierarchy": [{"country": "中国", "province": "北京", "city": "北京"}],
+  "location_status": "stated",
+  "job_function": "软件研发",
+  "job_nature": "全职",
+  "degree": "本科及以上",
+  "major_requirements": ["计算机科学与技术", "软件工程"],
+  "responsibilities": ["参与产品研发和技术方案落地"],
+  "qualifications": ["熟悉至少一种编程语言", "具备良好的问题解决能力"],
+  "graduate_year": "2027",
+  "published_at": null,
+  "deadline": null,
+  "apply_url": "https://jobs.example.com/campus/job-001",
+  "source_url": "https://jobs.example.com/campus",
+  "status": "accepted",
+  "evidence": {
+    "listing_url": "https://jobs.example.com/campus",
+    "detail_url": "https://jobs.example.com/campus/job-001",
+    "captured_at": "2026-08-19T00:00:00Z",
+    "raw_hash": null
+  },
+  "raw": null
+}

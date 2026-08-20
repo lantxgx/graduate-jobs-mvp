@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>找岗位 · 应届生招聘雷达</title>
+  <title>牛投马面 · 应届生招聘</title>
   <link rel="stylesheet" href="/static/styles.css" />
 </head>
 <body>
   <header class="hero">
     <nav class="nav" aria-label="主导航">
-      <a class="brand" href="/">Graduate Radar</a>
+      <a class="brand" href="/">牛投马面</a>
       <div class="nav-links">
         <a class="nav-link active" href="/">找岗位</a>
         <a class="nav-link" href="/profile">我的画像</a>
         <a class="nav-link" href="/admin/sources">数据管理</a>
+        <a class="nav-link" href="/admin/manual">手动录入</a>
       </div>
       <div class="badge">官网直达 · 应届优先</div>
     </nav>
@@ -30,10 +31,11 @@
 
   <main>
     <section class="stats">
-      <div><strong id="total">0</strong><span>活动岗位</span></div>
-      <div><strong id="companyCount">0</strong><span>已同步公司</span></div>
-      <div><strong id="cityCount">0</strong><span>工作地点</span></div>
+      <div><strong id="companyCount">0</strong><span>企业数量</span></div>
+      <div><strong id="total">0</strong><span>岗位数量</span></div>
+      <div><strong id="sourceCountHome">0</strong><span>招聘入口数量</span></div>
     </section>
+    <p class="stats-note">招聘入口指已接入的官方校招网页；一个企业可能对应多个招聘入口。</p>
 
     <section class="workspace">
       <aside class="filters">
@@ -42,14 +44,16 @@
           <button id="resetBtn" class="text-btn">重置</button>
         </div>
         <label>公司<select id="company"><option value="">全部公司</option></select></label>
+        <label>国家/地区<select id="country"><option value="">全部国家/地区</option></select></label>
+        <label>省份<select id="province"><option value="">全部省份</option></select></label>
         <label>城市<select id="city"><option value="">全部城市</option></select></label>
-        <label>职能<select id="category"><option value="">全部职能</option></select></label>
-        <label>岗位族<select id="jobFamily"><option value="">全部岗位族</option></select></label>
+        <label>岗位职能（平台归类）<select id="category"><option value="">全部岗位职能</option></select></label>
+        <label>专业要求<select id="major"><option value="">全部专业</option></select></label>
         <label>招聘类型<select id="jobNature"><option value="">全部类型</option></select></label>
         <label>学历<select id="degree"><option value="">全部学历</option></select></label>
         <div class="source-note">
           <strong>数据原则</strong>
-          <p>只展示通过具体岗位质量门槛的公开招聘信息；详情和最终投递以公司官方页面为准。</p>
+          <p>只展示通过质量门槛的官方岗位。岗位职能是平台归类；专业要求只取官网明确写出的专业或学科，不从岗位名称猜测。</p>
         </div>
         <div class="company-directory">
           <div class="directory-heading"><strong>企业目录</strong><span id="directoryCount">0 家</span></div>
@@ -86,10 +90,10 @@
     <article class="job-card">
       <div class="job-top"><div><div class="company"></div><h3 class="title"></h3></div><div class="category"></div></div>
       <div class="chips"></div><div class="match-summary"></div>
-      <details class="job-details"><summary>查看职位描述与要求</summary><div class="job-section description-section"><h4>职位描述</h4><p class="description"></p></div><div class="job-section requirements-section"><h4>职位要求</h4><p class="requirements"></p></div></details>
+      <details class="job-details"><summary>查看标准化岗位信息</summary><div class="job-section major-section"><h4>专业要求</h4><div class="major-requirements"></div></div><div class="job-section description-section"><h4>岗位职责</h4><p class="description"></p></div><div class="job-section requirements-section"><h4>任职要求</h4><p class="requirements"></p></div></details>
       <div class="job-foot"><span class="updated"></span><button class="favorite" type="button">收藏</button><button class="job-action" data-action="ignore" type="button">不感兴趣</button><button class="job-action" data-action="applied" type="button">已投递</button><a class="apply" target="_blank" rel="noopener noreferrer">官网投递 ↗</a></div>
     </article>
   </template>
-  <script src="/static/app.js?v=20260815-5"></script>
+  <script src="/static/app.js?v=20260820-coverage"></script>
 </body>
 </html>

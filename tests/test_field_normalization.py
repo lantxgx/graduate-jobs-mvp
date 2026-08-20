@@ -1,10 +1,12 @@
 import unittest
 
 from crawler.normalize import (
+    extract_major_requirements,
     normalize_category,
     normalize_city,
     normalize_degree,
     normalize_job_nature,
+    split_location_records,
 )
 
 
@@ -26,6 +28,28 @@ class FieldNormalizationTests(unittest.TestCase):
         self.assertEqual(normalize_category(None, "算法工程师"), "算法/AI")
         self.assertEqual(normalize_category("算法/AI", "AI Talent Partner（招聘与运营）"), "职能")
         self.assertEqual(normalize_city("工作地点：北京 / 北京, 上海"), "北京 / 上海")
+
+    def test_location_hierarchy_preserves_evidence_without_combining_cities(self):
+        self.assertEqual(
+            split_location_records("北京市-北京市 / 广东省-深圳市 / 英国-伦敦"),
+            [
+                {"country": "中国", "province": "北京", "city": "北京"},
+                {"country": "中国", "province": "广东", "city": "深圳"},
+                {"country": "英国", "province": "", "city": "伦敦"},
+            ],
+        )
+        self.assertEqual(
+            split_location_records("Shanghai / China"),
+            [{"country": "中国", "province": "", "city": "Shanghai"}],
+        )
+
+    def test_academic_major_is_separate_from_job_function(self):
+        requirements = "计算机、信息工程、人工智能、自动化、软件工程、数学等相关专业；有产品意识优先"
+        self.assertEqual(
+            extract_major_requirements(requirements),
+            ["计算机类", "软件工程", "人工智能", "信息工程", "自动化类", "数学类"],
+        )
+        self.assertNotIn("产品", extract_major_requirements(requirements))
 
 
 if __name__ == "__main__":

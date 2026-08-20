@@ -56,6 +56,35 @@ def init_db() -> None:
             CREATE INDEX IF NOT EXISTS idx_jobs_category ON jobs(category);
             CREATE INDEX IF NOT EXISTS idx_jobs_status ON jobs(status);
 
+            CREATE TABLE IF NOT EXISTS job_locations (
+                job_id INTEGER NOT NULL,
+                location TEXT NOT NULL,
+                country TEXT NOT NULL DEFAULT '',
+                province TEXT NOT NULL DEFAULT '',
+                city TEXT NOT NULL DEFAULT '',
+                position INTEGER NOT NULL DEFAULT 0,
+                PRIMARY KEY(job_id, location),
+                FOREIGN KEY(job_id) REFERENCES jobs(id)
+            );
+
+            CREATE INDEX IF NOT EXISTS idx_job_locations_location
+                ON job_locations(location);
+
+            CREATE TABLE IF NOT EXISTS job_majors (
+                job_id INTEGER NOT NULL,
+                major TEXT NOT NULL,
+                position INTEGER NOT NULL DEFAULT 0,
+                PRIMARY KEY(job_id, major),
+                FOREIGN KEY(job_id) REFERENCES jobs(id)
+            );
+
+            CREATE INDEX IF NOT EXISTS idx_job_majors_major ON job_majors(major);
+
+            CREATE TABLE IF NOT EXISTS data_migrations (
+                name TEXT PRIMARY KEY,
+                applied_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+            );
+
             CREATE TABLE IF NOT EXISTS crawl_runs (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 source_id TEXT NOT NULL,
@@ -215,6 +244,16 @@ def init_db() -> None:
         ):
             if column not in job_columns:
                 conn.execute(f"ALTER TABLE jobs ADD COLUMN {column} {definition}")
+        location_columns = {row[1] for row in conn.execute("PRAGMA table_info(job_locations)").fetchall()}
+        for column in ("country", "province", "city"):
+            if column not in location_columns:
+                conn.execute(
+                    f"ALTER TABLE job_locations ADD COLUMN {column} TEXT NOT NULL DEFAULT ''"
+                )
+        conn.execute(
+            "CREATE INDEX IF NOT EXISTS idx_job_locations_hierarchy "
+            "ON job_locations(country, province, city)"
+        )
 
         # Seed canonical and brand aliases, then reconcile known source naming variants.
         companies = conn.execute(
@@ -307,6 +346,39 @@ def init_db() -> None:
                 (family, confidence, json.dumps(evidence, ensure_ascii=False), row[0]),
             )
 
+        # The legacy city column retains the source text for auditability.
+        # The relation below provides the standard JSON array semantics used
+        # by filters and API consumers.
+        from crawler.normalize import extract_major_requirements, split_location_records
+        location_migration = conn.execute(
+            "SELECT 1 FROM data_migrations WHERE name='location-hierarchy-v2'"
+        ).fetchone()
+        if not location_migration:
+            conn.execute("DELETE FROM job_locations")
+            location_rows = conn.execute(
+                "SELECT id, city FROM jobs WHERE city IS NOT NULL AND TRIM(city)<>''"
+            ).fetchall()
+            for row in location_rows:
+                for position, location in enumerate(split_location_records(row[1])):
+                    conn.execute(
+                        "INSERT OR IGNORE INTO job_locations"
+                        "(job_id, location, country, province, city, position) VALUES (?, ?, ?, ?, ?, ?)",
+                        (row[0], location["city"], location["country"], location["province"], location["city"], position),
+                    )
+            conn.execute("INSERT INTO data_migrations(name) VALUES ('location-hierarchy-v2')")
+        major_migration = conn.execute(
+            "SELECT 1 FROM data_migrations WHERE name='academic-majors-v1'"
+        ).fetchone()
+        if not major_migration:
+            conn.execute("DELETE FROM job_majors")
+            for row in conn.execute("SELECT id, requirements FROM jobs").fetchall():
+                for position, major in enumerate(extract_major_requirements(row[1])):
+                    conn.execute(
+                        "INSERT OR IGNORE INTO job_majors(job_id, major, position) VALUES (?, ?, ?)",
+                        (row[0], major, position),
+                    )
+            conn.execute("INSERT INTO data_migrations(name) VALUES ('academic-majors-v1')")
+
 
 @contextmanager
 def connect():
@@ -320,7 +392,10 @@ def connect():
 
 
 def upsert_job(job: dict[str, Any]) -> str:
-    from crawler.normalize import normalize_category, normalize_degree, normalize_job_nature
+    from crawler.normalize import (
+        extract_major_requirements, normalize_category, normalize_degree,
+        normalize_job_nature, split_location_records,
+    )
 
     job = dict(job)
     job["job_nature"] = normalize_job_nature(
@@ -420,9 +495,22 @@ def upsert_job(job: dict[str, Any]) -> str:
                     existing["id"],
                 ),
             )
+            conn.execute("DELETE FROM job_locations WHERE job_id=?", (existing["id"],))
+            for position, location in enumerate(split_location_records(job.get("city"))):
+                conn.execute(
+                    "INSERT INTO job_locations"
+                    "(job_id, location, country, province, city, position) VALUES (?, ?, ?, ?, ?, ?)",
+                    (existing["id"], location["city"], location["country"], location["province"], location["city"], position),
+                )
+            conn.execute("DELETE FROM job_majors WHERE job_id=?", (existing["id"],))
+            for position, major in enumerate(extract_major_requirements(job.get("requirements"))):
+                conn.execute(
+                    "INSERT INTO job_majors(job_id, major, position) VALUES (?, ?, ?)",
+                    (existing["id"], major, position),
+                )
             return "updated"
 
-        conn.execute(
+        cursor = conn.execute(
             """
             INSERT INTO jobs (
                 source_id, source_job_id, company, company_id, title, city, job_nature,
@@ -458,6 +546,17 @@ def upsert_job(job: dict[str, Any]) -> str:
                 None,
             ),
         )
+        for position, location in enumerate(split_location_records(job.get("city"))):
+            conn.execute(
+                "INSERT INTO job_locations"
+                "(job_id, location, country, province, city, position) VALUES (?, ?, ?, ?, ?, ?)",
+                (cursor.lastrowid, location["city"], location["country"], location["province"], location["city"], position),
+            )
+        for position, major in enumerate(extract_major_requirements(job.get("requirements"))):
+            conn.execute(
+                "INSERT INTO job_majors(job_id, major, position) VALUES (?, ?, ?)",
+                (cursor.lastrowid, major, position),
+            )
         return "created"
 
 
@@ -754,6 +853,9 @@ def query_jobs(
     limit: int = 100,
     job_family: str = "",
     offset: int = 0,
+    country: str = "",
+    province: str = "",
+    major: str = "",
 ) -> list[dict]:
     clauses = ["status='active'"]
     params: list[Any] = []
@@ -765,9 +867,15 @@ def query_jobs(
     if company:
         clauses.append("company=?")
         params.append(company)
-    if city:
-        clauses.append("city LIKE ?")
-        params.append(f"%{city}%")
+    if country or province or city:
+        location_clauses = ["jl.job_id=jobs.id"]
+        for column, value in (("country", country), ("province", province), ("city", city)):
+            if value:
+                location_clauses.append(f"jl.{column}=?")
+                params.append(value)
+        clauses.append(
+            f"EXISTS (SELECT 1 FROM job_locations jl WHERE {' AND '.join(location_clauses)})"
+        )
     if category:
         clauses.append("category LIKE ?")
         params.append(f"%{category}%")
@@ -780,6 +888,11 @@ def query_jobs(
     if job_family:
         clauses.append("job_family=?")
         params.append(job_family)
+    if major:
+        clauses.append(
+            "EXISTS (SELECT 1 FROM job_majors jm WHERE jm.job_id=jobs.id AND jm.major=?)"
+        )
+        params.append(major)
 
     sql = f"""
         SELECT id, source_id, source_job_id, company, title, city, job_nature,
@@ -793,7 +906,33 @@ def query_jobs(
     """
     params.extend([min(max(limit, 1), 500), max(offset, 0)])
     with connect() as conn:
-        return [dict(r) for r in conn.execute(sql, params).fetchall()]
+        rows = [dict(r) for r in conn.execute(sql, params).fetchall()]
+        if not rows:
+            return rows
+        locations: dict[int, list[str]] = {row["id"]: [] for row in rows}
+        location_hierarchy: dict[int, list[dict[str, str]]] = {row["id"]: [] for row in rows}
+        majors: dict[int, list[str]] = {row["id"]: [] for row in rows}
+        placeholders = ",".join("?" for _ in rows)
+        for location_row in conn.execute(
+            f"SELECT job_id, location, country, province, city FROM job_locations WHERE job_id IN ({placeholders}) "
+            "ORDER BY job_id, position",
+            list(locations),
+        ).fetchall():
+            locations[location_row[0]].append(location_row[1])
+            location_hierarchy[location_row[0]].append({
+                "country": location_row[2], "province": location_row[3], "city": location_row[4]
+            })
+        for major_row in conn.execute(
+            f"SELECT job_id, major FROM job_majors WHERE job_id IN ({placeholders}) "
+            "ORDER BY job_id, position",
+            list(majors),
+        ).fetchall():
+            majors[major_row[0]].append(major_row[1])
+        for row in rows:
+            row["work_locations"] = locations[row["id"]]
+            row["location_hierarchy"] = location_hierarchy[row["id"]]
+            row["major_requirements"] = majors[row["id"]]
+        return rows
 
 
 def count_jobs(
@@ -804,6 +943,9 @@ def count_jobs(
     job_nature: str = "",
     degree: str = "",
     job_family: str = "",
+    country: str = "",
+    province: str = "",
+    major: str = "",
 ) -> int:
     clauses = ["status='active'"]
     params: list[Any] = []
@@ -814,9 +956,15 @@ def count_jobs(
     if company:
         clauses.append("company=?")
         params.append(company)
-    if city:
-        clauses.append("city LIKE ?")
-        params.append(f"%{city}%")
+    if country or province or city:
+        location_clauses = ["jl.job_id=jobs.id"]
+        for column, value in (("country", country), ("province", province), ("city", city)):
+            if value:
+                location_clauses.append(f"jl.{column}=?")
+                params.append(value)
+        clauses.append(
+            f"EXISTS (SELECT 1 FROM job_locations jl WHERE {' AND '.join(location_clauses)})"
+        )
     if category:
         clauses.append("category LIKE ?")
         params.append(f"%{category}%")
@@ -829,6 +977,11 @@ def count_jobs(
     if job_family:
         clauses.append("job_family=?")
         params.append(job_family)
+    if major:
+        clauses.append(
+            "EXISTS (SELECT 1 FROM job_majors jm WHERE jm.job_id=jobs.id AND jm.major=?)"
+        )
+        params.append(major)
     with connect() as conn:
         return int(conn.execute(f"SELECT COUNT(*) FROM jobs WHERE {' AND '.join(clauses)}", params).fetchone()[0])
 
@@ -1178,15 +1331,68 @@ def facets() -> dict:
             ]
 
         total = conn.execute("SELECT COUNT(*) FROM jobs WHERE status='active'").fetchone()[0]
+        location_hierarchy = [
+            {"country": row[0], "province": row[1], "city": row[2]}
+            for row in conn.execute(
+                "SELECT DISTINCT jl.country, jl.province, jl.city FROM job_locations jl "
+                "JOIN jobs j ON j.id=jl.job_id "
+                "WHERE j.status='active' AND TRIM(jl.city)<>'' "
+                "ORDER BY jl.country, jl.province, jl.city"
+            ).fetchall()
+        ]
+        cities = sorted({location["city"] for location in location_hierarchy})
+        majors = [
+            row[0] for row in conn.execute(
+                "SELECT DISTINCT jm.major FROM job_majors jm JOIN jobs j ON j.id=jm.job_id "
+                "WHERE j.status='active' ORDER BY jm.major"
+            ).fetchall()
+        ]
         return {
             "total": total,
             "companies": values("company"),
-            "cities": values("city"),
+            "cities": cities,
+            "locations": location_hierarchy,
             "categories": values("category"),
             "job_natures": values("job_nature"),
             "degrees": values("degree"),
             "job_families": values("job_family"),
+            "majors": majors,
         }
+
+
+def coverage_summary() -> dict:
+    """Return separate, auditable coverage counters for the home page."""
+    roster_path = Path("data/company-onboarding-roster.json")
+    roster = {}
+    if roster_path.exists():
+        try:
+            payload = json.loads(roster_path.read_text(encoding="utf-8"))
+            companies = payload.get("companies", []) if isinstance(payload, dict) else []
+            counts: dict[str, int] = {}
+            for item in companies:
+                status = str(item.get("status") or "未标记")
+                counts[status] = counts.get(status, 0) + 1
+            roster = {"total": len(companies), "by_status": counts}
+        except (OSError, json.JSONDecodeError):
+            roster = {"total": 0, "by_status": {}}
+    with connect() as conn:
+        active_jobs = conn.execute("SELECT COUNT(*) FROM jobs WHERE status='active'").fetchone()[0]
+        active_job_companies = conn.execute(
+            "SELECT COUNT(DISTINCT company) FROM jobs WHERE status='active'"
+        ).fetchone()[0]
+        registered_companies = conn.execute(
+            "SELECT COUNT(*) FROM companies WHERE status='active'"
+        ).fetchone()[0]
+        integrated_sources = conn.execute(
+            "SELECT COUNT(*) FROM career_sources WHERE integration_status='integrated'"
+        ).fetchone()[0]
+    return {
+        "roster": roster,
+        "registered_companies": registered_companies,
+        "active_job_companies": active_job_companies,
+        "active_jobs": active_jobs,
+        "integrated_sources": integrated_sources,
+    }
 
 
 def job_quality_summary() -> dict:

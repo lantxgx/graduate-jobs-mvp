@@ -1,0 +1,52 @@
+{
+  "success": true,
+  "errorCode": 1000000,
+  "errorMsg": null,
+  "result": {
+    "total": 3,
+    "list": [
+      {
+        "id": "f1a1e001-0000-4000-8000-000000000001",
+        "name": "区域业务管培生（上海）",
+        "code": "XZ0000601",
+        "workLocation": "上海",
+        "workLocationName": "上海",
+        "job": "operation",
+        "jobName": "运营",
+        "releaseTime": 1783316661000,
+        "jobDuty": "1、参与或主导负责品类商家的引入、管理、考核、服务工作；\n2、分析洞察行业趋势并进行分析。",
+        "labelList": ["紧缺"],
+        "recruitTypeName": "管培生",
+        "graduationYear": "2027"
+      },
+      {
+        "id": "f1a1e001-0000-4000-8000-000000000002",
+        "name": "大模型算法工程师（上海）",
+        "code": "XZ0000602",
+        "workLocation": "上海",
+        "workLocationName": "上海",
+        "job": "tech",
+        "jobName": "技术",
+        "releaseTime": 1783316661000,
+        "jobDuty": "负责大模型算法研究与落地。",
+        "labelList": [],
+        "recruitTypeName": "技术专场",
+        "graduationYear": "2027"
+      },
+      {
+        "id": "f1a1e001-0000-4000-8000-000000000003",
+        "name": "法务助理（上海）",
+        "code": "XZ0000603",
+        "workLocation": "上海",
+        "workLocationName": "上海",
+        "job": "general",
+        "jobName": "职能",
+        "releaseTime": 1783255809000,
+        "jobDuty": "1、协助处理与业务相关的全球合规工作；\n2、协助起草、审阅和修订合同。",
+        "labelList": ["紧缺"],
+        "recruitTypeName": "管培生",
+        "graduationYear": "2027"
+      }
+    ]
+  }
+}

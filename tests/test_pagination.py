@@ -51,6 +51,34 @@ class JobPaginationTests(unittest.TestCase):
         self.assertEqual(result["total"], 5)
         self.assertEqual(len(result["items"]), 2)
 
+    def test_multi_city_jobs_use_array_and_atomic_facets(self):
+        db.upsert_job({
+            "source_id": "pagination",
+            "source_job_id": "multi-city",
+            "job_nature": "全职",
+            "company": "Example",
+            "title": "Multi City Position",
+            "city": "北京市-北京市 / 广东省-深圳市 / 上海市-上海市",
+            "requirements": "计算机、软件工程、人工智能等相关专业",
+            "source_url": "https://example.com/jobs/multi-city",
+            "apply_url": "https://example.com/jobs/multi-city",
+            "content_hash": "pagination-multi-city",
+            "raw": {},
+        })
+        facets = self.client.get("/api/facets").json()
+        self.assertIn("北京", facets["cities"])
+        self.assertIn("深圳", facets["cities"])
+        self.assertIn("上海", facets["cities"])
+        self.assertNotIn("北京市-北京市 / 广东省-深圳市 / 上海市-上海市", facets["cities"])
+        self.assertIn("计算机类", facets["majors"])
+        self.assertIn({"country": "中国", "province": "广东", "city": "深圳"}, facets["locations"])
+        result = self.client.get("/api/jobs?city=深圳&limit=10&offset=0").json()
+        self.assertEqual(result["total"], 1)
+        self.assertEqual(result["items"][0]["work_locations"], ["北京", "深圳", "上海"])
+        self.assertEqual(result["items"][0]["major_requirements"], ["计算机类", "软件工程", "人工智能"])
+        hierarchical = self.client.get("/api/jobs?country=中国&province=广东&city=深圳&major=人工智能&limit=10&offset=0").json()
+        self.assertEqual(hierarchical["total"], 1)
+
 
 if __name__ == "__main__":
     unittest.main()

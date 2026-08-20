@@ -1,0 +1,58 @@
+{
+  "Code": 200,
+  "Message": "operation success",
+  "Count": 4,
+  "Data": [
+    {
+      "Id": "11111111-1111-4111-8111-111111111111",
+      "JobAdId": 10001,
+      "JobAdName": "安全测试实习生（成都）",
+      "Category": "实习生招聘",
+      "CategoryId": "3",
+      "LocNames": ["四川省·成都市"],
+      "Duty": "协助完成安全测试并整理测试报告。",
+      "Require": "本科及以上学历，计算机相关专业。",
+      "ClassificationOne": "安全类",
+      "Kind": "实习",
+      "ChangeDate": "2026-08-11T21:29:08"
+    },
+    {
+      "Id": "22222222-2222-4222-8222-222222222222",
+      "JobAdId": 10002,
+      "JobAdName": "26春-嵌入式开发工程师（北京）",
+      "Category": "校园招聘",
+      "CategoryId": "2",
+      "LocNames": ["北京市"],
+      "Duty": "负责嵌入式 Linux 软件设计、开发与维护。",
+      "Require": "2026年应届毕业生，本科及以上学历。",
+      "ClassificationOne": "开发类",
+      "Kind": "全职",
+      "ChangeDate": "2026-07-29T20:28:01"
+    },
+    {
+      "Id": "33333333-3333-4333-8333-333333333333",
+      "JobAdId": 10003,
+      "JobAdName": "客服日常实习生（成都）",
+      "Category": "日常实习招聘",
+      "CategoryId": "5",
+      "LocNames": ["四川省·成都市"],
+      "Duty": "处理客户咨询并整理反馈。",
+      "Require": "大专及以上学历，可稳定实习。",
+      "ClassificationOne": "营销类",
+      "Kind": "实习",
+      "ChangeDate": "2026-06-17T14:28:49"
+    },
+    {
+      "Id": "44444444-4444-4444-8444-444444444444",
+      "JobAdId": 10004,
+      "JobAdName": "未知招聘通道岗位",
+      "Category": "其他",
+      "CategoryId": "99",
+      "LocNames": ["北京市"],
+      "Duty": "仅用于验证未知路由不生成投递链接。",
+      "Require": "本科及以上学历。",
+      "ClassificationOne": "职能类",
+      "Kind": "全职"
+    }
+  ]
+}

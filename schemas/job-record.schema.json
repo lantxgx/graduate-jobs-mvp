@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://graduate-radar.local/schemas/job-record.schema.json",
+  "title": "Graduate Radar normalized job record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "record_version", "source_id", "source_job_id", "company", "title",
+    "work_locations", "location_hierarchy", "location_status", "job_function", "job_nature", "degree", "major_requirements",
+    "responsibilities", "qualifications", "apply_url", "source_url",
+    "status", "evidence"
+  ],
+  "properties": {
+    "record_version": {"const": "1.0"},
+    "source_id": {"type": "string", "minLength": 1},
+    "source_job_id": {"type": "string", "minLength": 1},
+    "company": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1, "maxLength": 160},
+    "work_locations": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "location_hierarchy": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["country", "province", "city"],
+        "properties": {
+          "country": {"type": "string", "minLength": 1},
+          "province": {"type": "string"},
+          "city": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "location_status": {"enum": ["stated", "not_stated"]},
+    "job_function": {"type": "string", "minLength": 1},
+    "job_nature": {"enum": ["全职", "实习"]},
+    "degree": {"type": "string", "minLength": 1},
+    "major_requirements": {"type": "array", "items": {"type": "string"}},
+    "responsibilities": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "qualifications": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "graduate_year": {"type": ["string", "null"]},
+    "published_at": {"type": ["string", "null"]},
+    "deadline": {"type": ["string", "null"]},
+    "apply_url": {"type": "string", "format": "uri", "pattern": "^https?://"},
+    "source_url": {"type": "string", "format": "uri", "pattern": "^https?://"},
+    "status": {"enum": ["accepted", "quarantined", "expired"]},
+    "evidence": {
+      "type": "object", "additionalProperties": false,
+      "required": ["listing_url", "detail_url", "captured_at"],
+      "properties": {
+        "listing_url": {"type": "string", "format": "uri"},
+        "detail_url": {"type": "string", "format": "uri"},
+        "captured_at": {"type": "string", "minLength": 1},
+        "raw_hash": {"type": ["string", "null"]}
+      }
+    },
+    "raw": {"type": ["object", "array", "string", "null"]}
+  }
+}

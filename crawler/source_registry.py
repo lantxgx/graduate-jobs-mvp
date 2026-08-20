@@ -25,12 +25,38 @@ DEFAULT_SOURCE_FILE = Path("config/sources.json")
 # Keep this allowlist explicit: source discovery must never promote a source
 # merely because a company or URL exists in the registry.
 VERIFIED_SOURCE_KEYS = {
+    "360-campus": "beisen",
     "xiaomi-campus": "xiaomi_jobs_browser",
     "xiaopeng-campus": "feishu_jobs_browser",
     "papegames-campus": "papegames",
     "oppo-campus": "oppo",
     "mihoyo-campus": "mihoyo",
     "minimax-campus": "feishu_jobs_browser",
+    "source-6d787af3a9ff8ba3": "jd",
+    "lenovo-campus": "lenovo",
+    "meituan-campus": "meituan",
+    "beisen-campus": "beisen",
+    "pdd-campus": "pdd",
+    "tencent-cloud-moka-campus": "moka",
+    "kingsoft-campus": "moka",
+    "geely-campus": "moka",
+    "polycareer-beisen-campus": "beisen",
+    "naura-beisen-campus": "beisen",
+    "amec-moka-campus": "moka",
+    "amec-moka-internship": "moka",
+    "wingtech-beisen-campus": "beisen",
+    "luxshare-hotjob-campus": "hotjob",
+    "boe-beisen-campus": "beisen",
+    "sungrow-moka-campus": "moka",
+    "tbea-hotjob-campus": "hotjob",
+    "dongfang-campus": "dongfang",
+    "starbucks-beisen-campus": "beisen",
+    "ctf-beisen-campus": "beisen",
+    "wuxiapptec-beisen-campus": "beisen",
+    "mindray-beisen-campus": "beisen",
+    "unitedimaging-beisen-campus": "beisen",
+    "fosun-beisen-campus": "beisen",
+    "aier-custom-campus": "custom_html",
 }
 
 COMPANY_CANONICAL_ALIASES = {
@@ -96,7 +122,7 @@ def sync_config_sources(path: Path = DEFAULT_SOURCE_FILE) -> dict:
             adapter = str(source.get("adapter") or source.get("mode") or "legacy")
             config = {
                 k: source[k]
-                for k in ("mode", "max_pages", "max_jobs", "page_delay_ms", "job_delay_ms", "snapshot_complete")
+                for k in ("mode", "max_pages", "max_jobs", "page_size", "page_delay_ms", "job_delay_ms", "snapshot_complete", "detail_routes")
                 if k in source
             }
             if existing:

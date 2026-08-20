@@ -3,6 +3,7 @@ from __future__ import annotations
 import asyncio
 import json
 import os
+import hashlib
 from pathlib import Path
 
 from fastapi import BackgroundTasks, FastAPI, Query, HTTPException, Body
@@ -16,6 +17,7 @@ from app.db import (
     query_jobs_with_profile,
     recommend_jobs,
     facets,
+    coverage_summary,
     connect,
     query_companies,
     query_company_job_directory,
@@ -34,12 +36,14 @@ from app.db import (
     acquire_crawl_lock,
     release_crawl_lock,
     crawl_cooldown_remaining,
+    upsert_job,
 )
-from crawler.runner import load_sources, crawl_source
+from crawler.runner import load_sources, crawl_source, is_qualified_job
+from crawler.normalize import normalize_category, normalize_degree, normalize_job_nature, normalize_city
 from app.resume_parser import parse_resume_base64
 from app.ai_profile import analyze_resume_text
 
-app = FastAPI(title="应届生招聘雷达", version="0.2.0")
+app = FastAPI(title="牛投马面", version="0.2.0")
 STATIC_DIR = Path("static")
 
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
@@ -65,6 +69,11 @@ def admin_sources_page():
     return FileResponse(STATIC_DIR / "admin-sources.html")
 
 
+@app.get("/admin/manual")
+def admin_manual_page():
+    return FileResponse(STATIC_DIR / "admin-manual.html")
+
+
 @app.get("/health")
 def health():
     return {"ok": True}
@@ -74,20 +83,29 @@ def health():
 def jobs(
     keyword: str = "",
     company: str = "",
+    country: str = "",
+    province: str = "",
     city: str = "",
     category: str = "",
+    major: str = "",
     job_nature: str = "",
     degree: str = "",
     job_family: str = "",
     limit: int = Query(100, ge=1, le=500),
     offset: int | None = Query(None, ge=0),
 ):
-    rows = query_jobs(keyword, company, city, category, job_nature, degree, limit, job_family, offset or 0)
+    rows = query_jobs(
+        keyword, company, city, category, job_nature, degree, limit,
+        job_family, offset or 0, country, province, major,
+    )
     if offset is None:
         return rows
     return {
         "items": rows,
-        "total": count_jobs(keyword, company, city, category, job_nature, degree, job_family),
+        "total": count_jobs(
+            keyword, company, city, category, job_nature, degree,
+            job_family, country, province, major,
+        ),
         "offset": offset,
         "limit": min(max(limit, 1), 500),
     }
@@ -96,6 +114,11 @@ def jobs(
 @app.get("/api/facets")
 def get_facets():
     return facets()
+
+
+@app.get("/api/coverage-summary")
+def get_coverage_summary():
+    return coverage_summary()
 
 
 @app.get("/api/job-quality")
@@ -126,6 +149,45 @@ def jobs_with_profile(
 @app.get("/api/sources")
 def sources():
     return load_sources()
+
+
+@app.post("/api/manual/jobs")
+def manual_jobs(payload: dict = Body(...)):
+    """Insert reviewed jobs with the same canonical fields and quality gate as crawlers."""
+    records = payload.get("jobs") if isinstance(payload, dict) else None
+    if not isinstance(records, list) or not records:
+        raise HTTPException(400, "jobs must be a non-empty list")
+    required = ("company", "title", "city", "job_nature", "category", "degree", "requirements", "description", "apply_url", "source_url")
+    errors, accepted = [], 0
+    for index, raw in enumerate(records):
+        if not isinstance(raw, dict):
+            errors.append({"index": index, "error": "job_must_be_object"}); continue
+        missing = [key for key in required if not str(raw.get(key) or "").strip()]
+        if missing:
+            errors.append({"index": index, "error": "missing_required_fields", "fields": missing}); continue
+        source_url, apply_url = str(raw["source_url"]).strip(), str(raw["apply_url"]).strip()
+        if not source_url.startswith(("https://", "http://")) or not apply_url.startswith(("https://", "http://")):
+            errors.append({"index": index, "error": "official_http_url_required"}); continue
+        company, title = str(raw["company"]).strip(), str(raw["title"]).strip()
+        source_id = str(raw.get("source_id") or "manual-" + hashlib.sha1(source_url.encode()).hexdigest()[:16])
+        with connect() as conn:
+            row = conn.execute("SELECT id FROM companies WHERE canonical_name=?", (company,)).fetchone()
+            company_id = row[0] if row else conn.execute("INSERT INTO companies(canonical_name,brand_name) VALUES (?,?)", (company, company)).lastrowid
+            conn.execute("INSERT OR IGNORE INTO company_aliases(company_id,alias) VALUES (?,?)", (company_id, company))
+            conn.execute("""INSERT OR IGNORE INTO career_sources(source_key,company_id,source_name,url,final_url,domain,recruitment_scope,ats_type,official_status,access_status,integration_status,discovery_source,adapter,adapter_config_json,enabled,quality_level,integration_priority)
+                VALUES (?,?,?,?,?,'manual','campus','manual','candidate','reachable','integrated','manual-entry','manual','{}',1,'medium',3)""", (source_id, company_id, company + '手动录入', source_url, source_url))
+        job = dict(raw)
+        job.update({"source_id": source_id, "company": company, "title": title, "city": normalize_city(raw["city"]), "job_nature": normalize_job_nature(raw["job_nature"], title, raw["description"] + raw["requirements"]), "category": normalize_category(raw["category"], title, raw["description"]), "degree": normalize_degree(raw["degree"], raw["requirements"]), "source_job_id": str(raw.get("source_job_id") or hashlib.sha1((source_id + '|' + title + '|' + apply_url).encode()).hexdigest()[:24]), "raw": raw})
+        job["content_hash"] = hashlib.sha256((source_id + '|' + job["source_job_id"] + '|' + title).encode()).hexdigest()
+        if not is_qualified_job(job):
+            errors.append({"index": index, "error": "quality_gate_rejected"}); continue
+        try:
+            upsert_job(job); accepted += 1
+        except (ValueError, KeyError) as exc:
+            errors.append({"index": index, "error": str(exc)})
+    if errors and not accepted:
+        raise HTTPException(422, {"accepted": 0, "errors": errors})
+    return {"accepted": accepted, "rejected": len(errors), "errors": errors}
 
 
 @app.get("/api/recommendations")

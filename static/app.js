@@ -3,9 +3,11 @@ const $ = (id) => document.getElementById(id);
 const fields = {
   keyword: $("keyword"),
   company: $("company"),
+  country: $("country"),
+  province: $("province"),
   city: $("city"),
   category: $("category"),
-  job_family: $("jobFamily"),
+  major: $("major"),
   job_nature: $("jobNature"),
   degree: $("degree"),
 };
@@ -25,11 +27,17 @@ function text(v) {
   return (v || "").toString().replace(/\s+/g, " ").trim();
 }
 
+function listValue(value) {
+  if (Array.isArray(value)) return value.map(text).filter(Boolean);
+  return text(value).split(/\n|\/|；|;/).map(item => item.trim()).filter(Boolean);
+}
+
 let currentJobs = [];
 let actionState = { favorite: new Set(), ignore: new Set(), applied: new Set() };
 let pendingResumeProfile = null;
 let currentOffset = 0;
 let currentTotal = 0;
+let locationHierarchy = [];
 const pageSize = 100;
 const poolLabels = {
   main: "主攻方向",
@@ -46,21 +54,26 @@ const statusLabels = {
   unknown: "暂无证据",
 };
 const riskLabels = { high: "较高", medium: "中等", low: "较低" };
-const jobFamilyLabels = {
-  algorithm_ai: "算法 / AI",
-  data: "数据",
-  design: "设计",
-  functional: "职能",
-  hardware: "硬件研发",
-  manufacturing: "制造 / 工艺",
-  marketing: "市场 / 销售",
-  operations: "运营",
-  product: "产品",
-  sales: "销售",
-  software_rnd: "软件研发",
-  supply_chain: "供应链 / 采购",
-  testing_quality: "测试 / 质量",
-};
+const categoryLabels = { "算法/AI": "算法与人工智能" };
+
+function unique(values) {
+  return [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b, "zh-CN"));
+}
+
+function refreshLocationOptions(level) {
+  if (level === "country") {
+    fields.province.value = "";
+    fields.city.value = "";
+  } else if (level === "province") {
+    fields.city.value = "";
+  }
+  const byCountry = locationHierarchy.filter(item => !fields.country.value || item.country === fields.country.value);
+  if (level !== "province") {
+    optionize(fields.province, unique(byCountry.map(item => item.province)));
+  }
+  const byProvince = byCountry.filter(item => !fields.province.value || item.province === fields.province.value);
+  optionize(fields.city, unique(byProvince.map(item => item.city)));
+}
 
 function renderJobs(jobs) {
   const container = $("jobs");
@@ -76,12 +89,12 @@ function renderJobs(jobs) {
     node.querySelector(".title").textContent = job.title || "未命名岗位";
 
     const cat = node.querySelector(".category");
-    if (job.category) cat.textContent = job.category;
+    if (job.category) cat.textContent = categoryLabels[job.category] || job.category;
     else cat.remove();
 
     const chips = node.querySelector(".chips");
     for (const item of [
-      job.city,
+      listValue(job.work_locations || job.city).join(" / "),
       job.job_nature,
       job.degree,
       job.graduate_year,
@@ -118,15 +131,29 @@ function renderJobs(jobs) {
     if (dimensionText) matchSummary.textContent = dimensionText;
     else matchSummary.remove();
 
-    const description = text(job.description);
-    const requirements = text(job.requirements);
+    const description = text(job.responsibilities || job.description);
+    const requirements = text(job.qualifications || job.requirements);
+    const majors = listValue(job.major_requirements);
+    const normalizedMajors = majors;
+    const majorSection = node.querySelector(".major-section");
+    const majorContainer = node.querySelector(".major-requirements");
+    if (normalizedMajors.length) {
+      for (const major of normalizedMajors) {
+        const item = document.createElement("span");
+        item.className = "major-tag";
+        item.textContent = major;
+        majorContainer.appendChild(item);
+      }
+    } else {
+      majorSection.remove();
+    }
     const descriptionSection = node.querySelector(".description-section");
     const requirementsSection = node.querySelector(".requirements-section");
     if (description) node.querySelector(".description").textContent = description;
     else descriptionSection.remove();
     if (requirements) node.querySelector(".requirements").textContent = requirements;
     else requirementsSection.remove();
-    if (!description && !requirements) {
+    if (!description && !requirements && !normalizedMajors.length) {
       node.querySelector(".job-details").remove();
     }
     node.querySelector(".updated").textContent = `最近发现：${(job.last_seen_at || "").slice(0, 10) || "—"}`;
@@ -168,14 +195,19 @@ function renderJobs(jobs) {
 }
 
 async function loadFacets() {
-  const data = await fetch("/api/facets").then(r => r.json());
+  const [data, coverage] = await Promise.all([
+    fetch("/api/facets").then(r => r.json()),
+    fetch("/api/coverage-summary").then(r => r.json()),
+  ]);
   $("total").textContent = data.total || 0;
-  $("companyCount").textContent = (data.companies || []).length;
-  $("cityCount").textContent = (data.cities || []).length;
+  $("companyCount").textContent = coverage.registered_companies ?? (data.companies || []).length;
+  $("sourceCountHome").textContent = coverage.integrated_sources || 0;
   optionize(fields.company, data.companies);
-  optionize(fields.city, data.cities);
-  optionize(fields.category, data.categories);
-  optionize(fields.job_family, (data.job_families || []).map(value => ({ value, label: jobFamilyLabels[value] || value })));
+  locationHierarchy = data.locations || [];
+  optionize(fields.country, unique(locationHierarchy.map(item => item.country)));
+  refreshLocationOptions();
+  optionize(fields.category, (data.categories || []).map(value => ({ value, label: categoryLabels[value] || value })));
+  optionize(fields.major, data.majors || []);
   optionize(fields.job_nature, data.job_natures);
   optionize(fields.degree, data.degrees);
 }
@@ -185,7 +217,7 @@ async function loadCompanyDirectory() {
   const list = $("companyDirectoryList");
   if (!list) return;
   const syncedCompanies = companies.filter(company => Number(company.active_job_count || 0) > 0);
-  $("directoryCount").textContent = `${syncedCompanies.length} 家已同步`;
+  $("directoryCount").textContent = `${syncedCompanies.length} 家有岗位`;
   list.replaceChildren();
   for (const company of syncedCompanies) {
     const item = document.createElement("button");
@@ -449,8 +481,10 @@ for (const tab of document.querySelectorAll(".view-tab")) {
 }
 $("keyword").addEventListener("keydown", e => { if (e.key === "Enter") loadJobs(); });
 for (const [key, field] of Object.entries(fields)) {
-  if (key !== "keyword") field.addEventListener("change", loadJobs);
+  if (key !== "keyword" && !["country", "province"].includes(key)) field.addEventListener("change", loadJobs);
 }
+fields.country.addEventListener("change", () => { refreshLocationOptions("country"); loadJobs(); });
+fields.province.addEventListener("change", () => { refreshLocationOptions("province"); loadJobs(); });
 $("resetBtn").addEventListener("click", () => {
   for (const field of Object.values(fields)) field.value = "";
   loadJobs();
