@@ -4,6 +4,7 @@
 - 官方归属证据：https://www.cambricon.com/
 - 官方校招入口：https://app.mokahr.com/campus-recruitment/cambricon/44201
 - ATS：Moka 公开校园门户。
-- 首轮采集：复用 Moka 适配器，受控上限 10 条；发现 10 条，写入 10 条。
-- 结果：岗位库新增 10 条，`snapshot_complete=false`。
-- 验证：worker 成功，标准化门禁通过；未绕过登录、验证码或访问控制。
+- 最近采集（2026-09-03）：复用 Moka 适配器，受控上限 10 条；发现 10 条，新增 1 条、更新 9 条。
+- 结果：活动岗位 11 条，全部通过岗位字段门禁；`snapshot_complete=false`（受控上限，不宣称完整覆盖）。
+- 验证：寒武纪官网首页明确链接该 Moka 校招入口；worker 成功，公开页面可访问，未绕过登录、验证码或访问控制。
+- 来源状态：`confirmed / reachable / integrated`，质量等级 `high`。

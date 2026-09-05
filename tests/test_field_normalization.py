@@ -6,6 +6,7 @@ from crawler.normalize import (
     normalize_city,
     normalize_degree,
     normalize_job_nature,
+    location_quality_issues,
     split_location_records,
 )
 
@@ -50,6 +51,15 @@ class FieldNormalizationTests(unittest.TestCase):
             ["计算机类", "软件工程", "人工智能", "信息工程", "自动化类", "数学类"],
         )
         self.assertNotIn("产品", extract_major_requirements(requirements))
+
+    def test_testing_and_quality_are_separate_when_evidence_exists(self):
+        self.assertEqual(normalize_category("测试/质量", "软件测试开发工程师", "负责自动化测试"), "软件测试")
+        self.assertEqual(normalize_category("测试/质量", "芯片测试工程师", "负责硬件电路验证"), "硬件测试")
+        self.assertEqual(normalize_category("测试/质量", "质量体系工程师", "负责供应商质量管理"), "质量管理")
+
+    def test_numeric_location_codes_are_not_cities(self):
+        self.assertEqual(split_location_records("北京 / 13"), [{"country": "中国", "province": "北京", "city": "北京"}])
+        self.assertEqual(location_quality_issues("北京 / 13"), ["unknown_location_code"])
 
 
 if __name__ == "__main__":

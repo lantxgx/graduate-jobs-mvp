@@ -39,7 +39,7 @@ from app.db import (
     upsert_job,
 )
 from crawler.runner import load_sources, crawl_source, is_qualified_job
-from crawler.normalize import normalize_category, normalize_degree, normalize_job_nature, normalize_city
+from crawler.normalize import normalize_category, normalize_degree, normalize_job_nature, normalize_city, normalize_job
 from app.resume_parser import parse_resume_base64
 from app.ai_profile import analyze_resume_text
 
@@ -153,40 +153,38 @@ def sources():
 
 @app.post("/api/manual/jobs")
 def manual_jobs(payload: dict = Body(...)):
-    """Insert reviewed jobs with the same canonical fields and quality gate as crawlers."""
+    """Insert reviewed jobs through the same normalization and quality gate as crawlers."""
     records = payload.get("jobs") if isinstance(payload, dict) else None
     if not isinstance(records, list) or not records:
         raise HTTPException(400, "jobs must be a non-empty list")
-    required = ("company", "title", "city", "job_nature", "category", "degree", "requirements", "description", "apply_url", "source_url")
-    errors, accepted = [], 0
+    errors, accepted = [], []
     for index, raw in enumerate(records):
         if not isinstance(raw, dict):
             errors.append({"index": index, "error": "job_must_be_object"}); continue
-        missing = [key for key in required if not str(raw.get(key) or "").strip()]
-        if missing:
-            errors.append({"index": index, "error": "missing_required_fields", "fields": missing}); continue
-        source_url, apply_url = str(raw["source_url"]).strip(), str(raw["apply_url"]).strip()
-        if not source_url.startswith(("https://", "http://")) or not apply_url.startswith(("https://", "http://")):
-            errors.append({"index": index, "error": "official_http_url_required"}); continue
-        company, title = str(raw["company"]).strip(), str(raw["title"]).strip()
+        source_url = str(raw.get("source_url") or "").strip()
+        company = str(raw.get("company") or "").strip()
         source_id = str(raw.get("source_id") or "manual-" + hashlib.sha1(source_url.encode()).hexdigest()[:16])
+        source = {"id": source_id, "company": company, "url": source_url, "campus_only": True}
+        job = normalize_job(raw, source)
+        if not job or not is_qualified_job(job):
+            errors.append({"index": index, "error": "quality_gate_rejected", "reason": "missing concrete normalized fields"}); continue
+        apply_url = job["apply_url"]
         with connect() as conn:
             row = conn.execute("SELECT id FROM companies WHERE canonical_name=?", (company,)).fetchone()
             company_id = row[0] if row else conn.execute("INSERT INTO companies(canonical_name,brand_name) VALUES (?,?)", (company, company)).lastrowid
             conn.execute("INSERT OR IGNORE INTO company_aliases(company_id,alias) VALUES (?,?)", (company_id, company))
             conn.execute("""INSERT OR IGNORE INTO career_sources(source_key,company_id,source_name,url,final_url,domain,recruitment_scope,ats_type,official_status,access_status,integration_status,discovery_source,adapter,adapter_config_json,enabled,quality_level,integration_priority)
                 VALUES (?,?,?,?,?,'manual','campus','manual','candidate','reachable','integrated','manual-entry','manual','{}',1,'medium',3)""", (source_id, company_id, company + '手动录入', source_url, source_url))
-        job = dict(raw)
-        job.update({"source_id": source_id, "company": company, "title": title, "city": normalize_city(raw["city"]), "job_nature": normalize_job_nature(raw["job_nature"], title, raw["description"] + raw["requirements"]), "category": normalize_category(raw["category"], title, raw["description"]), "degree": normalize_degree(raw["degree"], raw["requirements"]), "source_job_id": str(raw.get("source_job_id") or hashlib.sha1((source_id + '|' + title + '|' + apply_url).encode()).hexdigest()[:24]), "raw": raw})
-        job["content_hash"] = hashlib.sha256((source_id + '|' + job["source_job_id"] + '|' + title).encode()).hexdigest()
-        if not is_qualified_job(job):
-            errors.append({"index": index, "error": "quality_gate_rejected"}); continue
+        job["raw"] = raw
         try:
-            upsert_job(job); accepted += 1
+            upsert_job(job)
+            with connect() as conn:
+                row = conn.execute("SELECT id FROM jobs WHERE source_id=? AND source_job_id=? AND status='active'", (source_id, job["source_job_id"])).fetchone()
+            accepted.append({"index": index, "job_id": row[0] if row else None, "source_id": source_id, "source_job_id": job["source_job_id"]})
         except (ValueError, KeyError) as exc:
             errors.append({"index": index, "error": str(exc)})
     if errors and not accepted:
-        raise HTTPException(422, {"accepted": 0, "errors": errors})
+        raise HTTPException(422, {"accepted": [], "rejected": len(errors), "errors": errors})
     return {"accepted": accepted, "rejected": len(errors), "errors": errors}
 
 

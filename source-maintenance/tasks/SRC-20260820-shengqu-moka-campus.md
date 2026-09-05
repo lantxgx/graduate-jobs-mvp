@@ -2,7 +2,7 @@
 
 - company: 盛趣游戏
 - owner: Codex
-- state: integrated_sampled
+- state: confirmed_reachable_integrated
 - official_url: https://app.mokahr.com/campus-recruitment/shengqu/96336
 - adapter: moka
 - scope: 校园招聘
@@ -25,3 +25,9 @@
 ## Validation
 
 13 条岗位已写入 SQLite，均通过岗位质量门禁并具有官方详情/投递链接。后续刷新继续使用同一 Moka 配置，不删除旧岗位。
+
+## Verification update (2026-09-03)
+
+- Official ownership evidence recorded in the source registry: `https://www.shengqugames.com/`.
+- Revalidated 14 active jobs; all active-job contract gates passed.
+- Promoted to `confirmed / reachable / integrated`; bounded snapshot remains `snapshot_complete=false`.

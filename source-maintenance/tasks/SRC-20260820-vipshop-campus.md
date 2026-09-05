@@ -3,7 +3,13 @@
 - company: 唯品会
 - source_id: vipshop-moka-roster
 - source_url: https://app-tc.mokahr.com/campus-recruitment/vipshophr/10039
-- state: integrated (sampled)
+- state: candidate (public jobs refreshed; official ownership evidence pending)
+
+## 2026-09-03 refresh
+
+- Expanded bounded Moka collection to 20 jobs: 17 created and 3 updated.
+- All 20 active records passed the job-field contract.
+- Snapshot remains partial; official company-to-Moka ownership evidence is still pending, so no promotion was performed.
 
 Bing 结果只用于发现候选地址；直接访问后确认这是唯品会（中国）有限公司的
 Moka 校园招聘门户，并取得公开岗位列表和岗位详情。复用 Moka 适配器完成 3 条

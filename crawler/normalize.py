@@ -41,7 +41,7 @@ URL_KEYS = [
     "JobAdUrl", "url", "link", "href"
 ]
 ID_KEYS = [
-    "id", "jobid", "job_id", "positionid", "position_id",
+    "id", "jobid", "job_id", "source_job_id", "positionid", "position_id",
     "recruitmentid", "JobAdId",
 ]
 DATE_KEYS = [
@@ -54,7 +54,7 @@ JOB_NATURE_INTERNSHIP = "实习"
 JOB_NATURE_VALUES = {JOB_NATURE_FULL_TIME, JOB_NATURE_INTERNSHIP}
 
 CATEGORY_VALUES = {
-    "算法/AI", "软件研发", "硬件研发", "测试/质量", "数据", "产品", "运营",
+    "算法/AI", "软件研发", "硬件研发", "软件测试", "硬件测试", "质量管理", "测试/质量", "数据", "产品", "运营",
     "设计", "市场/销售", "制造/工艺", "供应链/采购", "职能", "其他",
 }
 
@@ -174,9 +174,20 @@ def normalize_category(raw_category: str | None, title: str = "", description: s
     title_text = str(title or "").lower()
     if any(token in title_text for token in ("招聘", "人才", "talent partner", "human resources", "hrbp")):
         return "职能"
-    if raw in CATEGORY_VALUES:
+    if raw in CATEGORY_VALUES and raw not in {"测试/质量"}:
         return raw
     text = " ".join(str(value or "") for value in (raw, title, description)).lower()
+    if any(token in text for token in ("质量管理", "质量体系", "供应商质量", "生产质量", "品质管理", "质量工程", "quality management", "supplier quality")):
+        return "质量管理"
+    if any(token in text for token in ("测试", "test", "qa")):
+        if any(token in text for token in ("软件", "系统", "自动化测试", "接口测试", "功能测试", "software", "web", "app")):
+            return "软件测试"
+        if any(token in text for token in ("硬件", "芯片", "嵌入式", "电子", "电路", "hardware", "embedded")):
+            return "硬件测试"
+        # A generic test title is intentionally kept separate from quality
+        # management but remains reviewable instead of being guessed.
+        if any(token in text for token in ("测试工程师", "test engineer", "测试开发")):
+            return "测试/质量"
     rules = (
         ("算法/AI", ("算法", "机器学习", "深度学习", "人工智能", "ai", "nlp", "cv")),
         ("软件研发", ("软件", "开发", "后端", "前端", "java", "python", "c++", "golang")),
@@ -213,6 +224,14 @@ def normalize_location_name(value: str | None) -> str | None:
     """Normalize one evidenced location to a stable city-level filter value."""
     text = str(value or "").strip().replace("·", "-")
     if not text:
+        return None
+    # Numeric location codes are source-specific.  Without a verified source
+    # dictionary they must remain unresolved, never become a city name.
+    if re.fullmatch(r"\d+", text):
+        return None
+    if text in {"人", "若干", "不限", "全国"} or len(text) > 24:
+        return None
+    if any(token in text for token in ("届", "招聘", "任职要求", "学历", "岗位职责", "工作地点")):
         return None
     municipality = {
         "北京市": "北京", "上海市": "上海", "天津市": "天津", "重庆市": "重庆",
@@ -251,6 +270,8 @@ def split_location_records(value: str | None) -> list[dict[str, str]]:
     records: list[dict[str, str]] = []
     municipalities = {"北京", "上海", "天津", "重庆"}
     for raw in raw_items:
+        if re.fullmatch(r"\d+", raw) or raw in {"人", "若干", "不限", "全国"}:
+            continue
         cleaned = raw.replace("·", "-").strip()
         parts = [part.strip() for part in cleaned.split("-") if part.strip()]
         country = forced_country or ""
@@ -266,6 +287,11 @@ def split_location_records(value: str | None) -> list[dict[str, str]]:
             country = country or "中国"
             province = parts[0][:-1]
             city = parts[1]
+        elif parts and parts[0].lower() in COUNTRY_ALIASES:
+            country = COUNTRY_ALIASES[parts[0].lower()]
+        elif parts and parts[0].endswith(("省", "自治区")):
+            country = country or "中国"
+            province = re.sub(r"(省|壮族自治区|回族自治区|维吾尔自治区|自治区)$", "", parts[0])
         elif parts:
             city = parts[-1]
         city = normalize_location_name(city)
@@ -274,11 +300,21 @@ def split_location_records(value: str | None) -> list[dict[str, str]]:
             country = INTERNATIONAL_CITY_COUNTRIES.get(city_key, "中国")
         if not province and city in municipalities:
             province = city
-        if city:
+        if city or province or country:
             record = {"country": country, "province": province, "city": city}
             if record not in records:
                 records.append(record)
     return records
+
+
+def location_quality_issues(value: str | None) -> list[str]:
+    """Return auditable location issues without guessing source-specific codes."""
+    issues = []
+    if any(re.fullmatch(r"\d+", item.strip()) for item in re.split(r"[/|,，、;；\n]+", str(value or "")) if item.strip()):
+        issues.append("unknown_location_code")
+    if value and not split_location_records(value):
+        issues.append("location_unresolved")
+    return issues
 
 
 def extract_major_requirements(requirements: str | None) -> list[str]:
@@ -518,7 +554,9 @@ def normalize_job(raw: dict[str, Any], source: dict[str, Any]) -> dict[str, Any]
         "description": description,
         "apply_url": apply_url or source["url"],
         "source_url": source["url"],
-        "source_job_id": source_job_id,
+        "source_job_id": source_job_id or hashlib.sha1(
+            f"{source['id']}|{apply_url or source['url']}|{title}".encode("utf-8", "ignore")
+        ).hexdigest()[:24],
         "published_at": published_at,
     }
     digest_src = "|".join(

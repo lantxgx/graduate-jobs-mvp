@@ -144,17 +144,23 @@ async def _fetch_detail_text(page: Any, source: dict[str, Any], job_id: str, tim
         if line and any(k in line for k in CITY_MARKERS) and "|" in line:
             city_hint = line
             break
-    if "职位描述" in text:
-        tail = text.split("职位描述", 1)[1]
-        block = tail.split("职位信息", 1)[0] if "职位信息" in tail else tail
-        # Moka portals use "任职要求" (Kingsoft) or "职位要求" (Geely).
-        for req_title in ("任职要求", "职位要求"):
-            if req_title in block:
-                desc_part, req_part = block.split(req_title, 1)
-                description = _norm(desc_part) or None
-                requirements = _norm(req_part) or None
-                break
+    # Moka tenants use several equivalent labels for the duties section.
+    # Keep the parser evidence-backed while accepting the common variants.
+    desc_title = next((marker for marker in ("职位描述", "岗位职责", "工作职责", "职位职责") if marker in text), None)
+    if desc_title:
+        tail = text.split(desc_title, 1)[1]
+        # Some tenants place a repeated “职位信息” heading before the
+        # requirements section.  Find the requirements marker in the full
+        # tail first; truncating at that heading would otherwise discard it.
+        req_title = next((marker for marker in ("任职要求", "职位要求", "岗位要求", "任职资格", "岗位资格") if marker in tail), None)
+        if req_title:
+            desc_part, req_part = tail.split(req_title, 1)
+            if "职位信息" in desc_part:
+                desc_part = desc_part.rsplit("职位信息", 1)[-1]
+            description = _norm(desc_part) or None
+            requirements = _norm(req_part) or None
         else:
+            block = tail.split("职位信息", 1)[0] if "职位信息" in tail else tail
             description = _norm(block) or None
     return {"description": description, "requirements": requirements, "city_hint": city_hint}
 
@@ -244,6 +250,18 @@ def normalize_moka_job(raw: dict[str, Any], source: dict[str, Any]) -> dict[str,
     title = str(raw.get("title") or "").strip()
     description = str(raw.get("description") or "").strip()
     requirements = str(raw.get("requirements") or "").strip()
+    # Some Moka tenants return both labelled sections in one fallback text
+    # field when the detail request is incomplete.  Split only on an explicit
+    # requirements heading; never infer or fabricate missing text.
+    if not requirements and description:
+        req_marker = next(
+            (marker for marker in ("任职要求", "职位要求", "岗位要求", "任职资格", "岗位资格") if marker in description),
+            None,
+        )
+        if req_marker:
+            desc_part, req_part = description.split(req_marker, 1)
+            description = desc_part.strip()
+            requirements = req_part.strip()
     if not job_id or not title:
         return None
     nature = normalize_job_nature(str(raw.get("nature") or "全职"), title, description + " " + requirements)

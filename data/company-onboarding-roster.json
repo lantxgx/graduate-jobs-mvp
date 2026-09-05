@@ -9,8 +9,9 @@
       "url_status": "已验证",
       "method": "自动优先",
       "status": "录入成功",
-      "success_jobs": 10,
-      "failed_reason": null
+      "success_jobs": 17,
+      "failed_reason": null,
+      "last_checked_at": "2026-09-03T18:27:44+08:00"
     },
     {
       "rank": 2,
@@ -18,9 +19,10 @@
       "official_url": "https://join.qq.com/post.html?query=p_1",
       "url_status": "已验证",
       "method": "自动优先",
-      "status": "录入成功",
-      "success_jobs": 10,
-      "failed_reason": null
+      "status": "部分失败",
+      "success_jobs": 20,
+      "failed_reason": "配置入口当前返回404，但公开岗位接口仍返回记录；需核实新的官方入口后再提升来源状态",
+      "last_checked_at": "2026-09-03T19:08:27+08:00"
     },
     {
       "rank": 3,
@@ -239,8 +241,9 @@
       "url_status": "已验证",
       "method": "自动",
       "status": "录入成功",
-      "success_jobs": 3,
-      "failed_reason": null
+      "success_jobs": 23,
+      "failed_reason": null,
+      "last_checked_at": "2026-09-03T18:58:42+08:00"
     },
     {
       "rank": 25,
@@ -309,8 +312,9 @@
       "url_status": "已验证",
       "method": "自动",
       "status": "录入成功",
-      "success_jobs": 3,
-      "failed_reason": null
+      "success_jobs": 4,
+      "failed_reason": null,
+      "last_checked_at": "2026-09-03T18:18:08+08:00"
     },
     {
       "rank": 32,
@@ -319,8 +323,9 @@
       "url_status": "已验证",
       "method": "自动",
       "status": "录入成功",
-      "success_jobs": 8,
-      "failed_reason": null
+      "success_jobs": 15,
+      "failed_reason": null,
+      "last_checked_at": "2026-09-03T19:12:07+08:00"
     },
     {
       "rank": 33,
@@ -348,9 +353,10 @@
       "official_url": "https://nd.zhiye.com/campus",
       "url_status": "已验证",
       "method": "自动",
-      "status": "录入成功",
+      "status": "部分失败",
       "success_jobs": 5,
-      "failed_reason": null
+      "failed_reason": "官方页面可访问，但本轮适配器未发现具体岗位卡片；保留历史岗位并等待页面结构核验",
+      "last_checked_at": "2026-09-03T18:13:42+08:00"
     },
     {
       "rank": 36,
@@ -358,9 +364,10 @@
       "official_url": "https://campus.zulong.com/",
       "url_status": "已验证",
       "method": "自动",
-      "status": "录入成功",
+      "status": "部分失败",
       "success_jobs": 3,
-      "failed_reason": null
+      "failed_reason": "部分岗位缺少官网任职要求，质量门禁未通过",
+      "last_checked_at": "2026-09-03T18:01:24+08:00"
     },
     {
       "rank": 37,
@@ -378,9 +385,10 @@
       "official_url": "https://app.mokahr.com/campus-recruitment/shengqu/96336",
       "url_status": "已验证",
       "method": "自动",
-      "status": "录入成功",
-      "success_jobs": 13,
-      "failed_reason": null
+      "status": "部分失败",
+      "success_jobs": 14,
+      "failed_reason": "部分岗位缺少官网任职要求，质量门禁未通过",
+      "last_checked_at": "2026-09-03T17:18:28+08:00"
     },
     {
       "rank": 39,
@@ -389,8 +397,9 @@
       "url_status": "已验证",
       "method": "自动",
       "status": "录入成功",
-      "success_jobs": 2,
-      "failed_reason": null
+      "success_jobs": 23,
+      "failed_reason": null,
+      "last_checked_at": "2026-09-03T17:11:06+08:00"
     },
     {
       "rank": 40,
@@ -558,9 +567,10 @@
       "official_url": "https://dahua.zhiye.com/campus",
       "url_status": "已验证",
       "method": "自动（北森）",
-      "status": "录入成功",
+      "status": "部分失败",
       "success_jobs": 68,
-      "failed_reason": null
+      "failed_reason": "官方页面可访问，但本轮北森适配器未发现岗位列表；保留历史岗位并等待接口修复",
+      "last_checked_at": "2026-09-03T17:44:00+08:00"
     },
     {
       "rank": 57,
@@ -599,8 +609,9 @@
       "url_status": "已验证",
       "method": "自动（Moka）",
       "status": "录入成功",
-      "success_jobs": 5,
-      "failed_reason": null
+      "success_jobs": 10,
+      "failed_reason": null,
+      "last_checked_at": "2026-09-03T17:14:44+08:00"
     },
     {
       "rank": 61,
@@ -610,7 +621,8 @@
       "method": "自动失败，转专用接口",
       "status": "部分失败",
       "success_jobs": null,
-      "failed_reason": "官网确认官方Moka校园门户，但本轮通用Moka适配器未取得合格具体岗位；保留失败记录并转专用接口/人工核验。"
+      "failed_reason": "官网确认官方Moka校园门户，但本轮通用Moka适配器未取得合格具体岗位；保留失败记录并转专用接口/人工核验。",
+      "last_checked_at": "2026-09-03T17:25:19+08:00"
     },
     {
       "rank": 62,
@@ -1350,7 +1362,8 @@
       "method": "官网公开接口自动录入",
       "status": "录入成功",
       "success_jobs": 1,
-      "failed_reason": null
+      "failed_reason": null,
+      "last_checked_at": "2026-09-03T18:02:18+08:00"
     },
     {
       "rank": 136,
@@ -2070,7 +2083,8 @@
       "method": "自动",
       "status": "录入成功",
       "success_jobs": 10,
-      "failed_reason": null
+      "failed_reason": null,
+      "last_checked_at": "2026-09-03T17:56:42+08:00"
     },
     {
       "rank": 208,
@@ -2608,9 +2622,10 @@
       "official_url": "https://campus.glodon.com/campus-recruitment/glodon/91966/",
       "url_status": "已核验（Moka采集超时）",
       "method": "手动",
-      "status": "失败",
-      "success_jobs": 0,
-      "failed_reason": "官方 Moka 校招页可访问，但公开岗位卡片采集超时，未写入不完整岗位"
+      "status": "部分失败",
+      "success_jobs": 10,
+      "failed_reason": "本轮已采集10个岗位，但部分岗位缺少官网任职要求，质量门禁未通过",
+      "last_checked_at": "2026-09-03T18:16:26+08:00"
     },
     {
       "rank": 262,
@@ -2700,7 +2715,8 @@
       "method": "自动",
       "status": "录入成功",
       "success_jobs": 2,
-      "failed_reason": null
+      "failed_reason": null,
+      "last_checked_at": "2026-09-03T18:09:34+08:00"
     },
     {
       "rank": 271,
@@ -2750,7 +2766,8 @@
       "method": "自动（官网北森门户）",
       "status": "录入成功",
       "success_jobs": 38,
-      "failed_reason": null
+      "failed_reason": null,
+      "last_checked_at": "2026-09-03T17:46:49+08:00"
     },
     {
       "rank": 276,
@@ -2760,7 +2777,8 @@
       "method": "自动（官方北森门户）",
       "status": "录入成功",
       "success_jobs": 5,
-      "failed_reason": null
+      "failed_reason": null,
+      "last_checked_at": "2026-09-03T19:22:46+08:00"
     },
     {
       "rank": 277,
@@ -2769,8 +2787,9 @@
       "url_status": "已核验",
       "method": "自动（官方北森门户）",
       "status": "录入成功",
-      "success_jobs": 9,
-      "failed_reason": null
+      "success_jobs": 13,
+      "failed_reason": null,
+      "last_checked_at": "2026-09-03T17:49:16+08:00"
     },
     {
       "rank": 278,
@@ -2789,8 +2808,9 @@
       "url_status": "已核验",
       "method": "自动（官方北森门户）",
       "status": "录入成功",
-      "success_jobs": 78,
-      "failed_reason": null
+      "success_jobs": 82,
+      "failed_reason": null,
+      "last_checked_at": "2026-09-03T17:41:31+08:00"
     },
     {
       "rank": 280,
@@ -2809,8 +2829,9 @@
       "url_status": "已核验",
       "method": "自动（官方北森门户）",
       "status": "录入成功",
-      "success_jobs": 179,
-      "failed_reason": null
+      "success_jobs": 182,
+      "failed_reason": null,
+      "last_checked_at": "2026-09-03T17:37:50+08:00"
     },
     {
       "rank": 282,
@@ -2829,8 +2850,9 @@
       "url_status": "已核验",
       "method": "自动（官方大易 Hotjob 门户）",
       "status": "录入成功",
-      "success_jobs": 20,
-      "failed_reason": null
+      "success_jobs": 21,
+      "failed_reason": null,
+      "last_checked_at": "2026-09-03T17:52:11+08:00"
     },
     {
       "rank": 284,
@@ -2838,9 +2860,10 @@
       "official_url": "https://hr-jobs.sensetime.com/edu/",
       "url_status": "已核验",
       "method": "自动（官方 ATS 公共门户）",
-      "status": "录入成功",
-      "success_jobs": 10,
-      "failed_reason": null
+      "status": "部分失败",
+      "success_jobs": 17,
+      "failed_reason": "入口页当前返回404，但公开ATS接口仍返回岗位；需核实新的官方入口后再提升来源状态",
+      "last_checked_at": "2026-09-03T18:35:12+08:00"
     },
     {
       "rank": 285,
@@ -2860,7 +2883,8 @@
       "method": "自动（官方页面公开 Moka 接口）",
       "status": "录入成功",
       "success_jobs": 5,
-      "failed_reason": null
+      "failed_reason": null,
+      "last_checked_at": "2026-09-03T18:45:37+08:00"
     },
     {
       "rank": 287,
@@ -2908,9 +2932,10 @@
       "official_url": "https://campus.smartsenstech.com/",
       "url_status": "已核验",
       "method": "自动（官方 Moka 门户）",
-      "status": "录入成功",
-      "success_jobs": 20,
-      "failed_reason": null
+      "status": "部分失败",
+      "success_jobs": 32,
+      "failed_reason": "部分岗位缺少官网任职要求，质量门禁未通过",
+      "last_checked_at": "2026-09-03T17:30:20+08:00"
     },
     {
       "rank": 292,
@@ -3570,7 +3595,8 @@
       "method": "手动",
       "status": "失败",
       "success_jobs": 0,
-      "failed_reason": "官方校园页展示岗位名称但没有逐岗详情/申请链接，无法满足标准岗位入库门禁"
+      "failed_reason": "官方校园页展示岗位名称但没有逐岗详情/申请链接，无法满足标准岗位入库门禁",
+      "last_checked_at": "2026-09-03T19:36:05+08:00"
     },
     {
       "rank": 358,

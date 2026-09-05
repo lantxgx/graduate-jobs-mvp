@@ -48,6 +48,8 @@
 企业官网登记、岗位字段契约、单企业任务模板和本轮执行记录统一放在
 [`source-maintenance/`](source-maintenance/)。其他 AI 每次只领取一个企业任务，先核验具体岗位详情，再运行单来源 worker；未通过字段质量门禁的来源不得进入活动岗位。
 
+交给 Claude 执行后续采集时，请先阅读 [`docs/CLAUDE_OPERATIONS_MANUAL.md`](docs/CLAUDE_OPERATIONS_MANUAL.md)，其中包含从企业领取、官方 URL 核验、标准化、入库验收、前端快照同步到失败处理的完整步骤。
+
 ## 本地运行
 
 建议 Python 3.11 / 3.12。

@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Iterable, Any
 
 from app.taxonomy import classify_job
+from crawler.normalize import location_quality_issues, split_location_records
 
 DB_PATH = Path(os.getenv("DATABASE_PATH", "data/jobs.db"))
 
@@ -241,6 +242,7 @@ def init_db() -> None:
             ("detail_fetched_at", "TEXT"),
             ("missing_snapshot_count", "INTEGER NOT NULL DEFAULT 0"),
             ("last_changed_at", "TEXT"),
+            ("quality_issues", "TEXT NOT NULL DEFAULT '[]'"),
         ):
             if column not in job_columns:
                 conn.execute(f"ALTER TABLE jobs ADD COLUMN {column} {definition}")
@@ -379,6 +381,52 @@ def init_db() -> None:
                     )
             conn.execute("INSERT INTO data_migrations(name) VALUES ('academic-majors-v1')")
 
+        location_v3 = conn.execute(
+            "SELECT 1 FROM data_migrations WHERE name='location-hierarchy-v3'"
+        ).fetchone()
+        if not location_v3:
+            conn.execute("DELETE FROM job_locations")
+            for row in conn.execute("SELECT id, city FROM jobs WHERE city IS NOT NULL AND TRIM(city)<>''").fetchall():
+                issues = location_quality_issues(row[1])
+                conn.execute("UPDATE jobs SET quality_issues=? WHERE id=?", (json.dumps(issues, ensure_ascii=False), row[0]))
+                for position, location in enumerate(split_location_records(row[1])):
+                    label = location["city"] or location["province"] or location["country"]
+                    conn.execute(
+                        "INSERT OR IGNORE INTO job_locations(job_id, location, country, province, city, position) VALUES (?, ?, ?, ?, ?, ?)",
+                        (row[0], label, location["country"], location["province"], location["city"], position),
+                    )
+            conn.execute("INSERT INTO data_migrations(name) VALUES ('location-hierarchy-v3')")
+
+        location_v4 = conn.execute(
+            "SELECT 1 FROM data_migrations WHERE name='location-hierarchy-v4'"
+        ).fetchone()
+        if not location_v4:
+            conn.execute("DELETE FROM job_locations")
+            for row in conn.execute("SELECT id, city FROM jobs WHERE city IS NOT NULL AND TRIM(city)<>''").fetchall():
+                issues = location_quality_issues(row[1])
+                conn.execute("UPDATE jobs SET quality_issues=? WHERE id=?", (json.dumps(issues, ensure_ascii=False), row[0]))
+                for position, location in enumerate(split_location_records(row[1])):
+                    label = location["city"] or location["province"] or location["country"]
+                    conn.execute(
+                        "INSERT OR IGNORE INTO job_locations(job_id, location, country, province, city, position) VALUES (?, ?, ?, ?, ?, ?)",
+                        (row[0], label, location["country"], location["province"], location["city"], position),
+                    )
+            conn.execute("INSERT INTO data_migrations(name) VALUES ('location-hierarchy-v4')")
+
+        category_v2 = conn.execute(
+            "SELECT 1 FROM data_migrations WHERE name='job-category-taxonomy-v2'"
+        ).fetchone()
+        if not category_v2:
+            from crawler.normalize import normalize_category
+            for row in conn.execute("SELECT id, category, title, description FROM jobs").fetchall():
+                category = normalize_category(row[1], row[2], row[3])
+                family, confidence, evidence = classify_job(row[2], category, row[3])
+                conn.execute(
+                    "UPDATE jobs SET category=?, job_family=?, job_family_confidence=?, job_family_evidence=? WHERE id=?",
+                    (category, family, confidence, json.dumps(evidence, ensure_ascii=False), row[0]),
+                )
+            conn.execute("INSERT INTO data_migrations(name) VALUES ('job-category-taxonomy-v2')")
+
 
 @contextmanager
 def connect():
@@ -394,7 +442,7 @@ def connect():
 def upsert_job(job: dict[str, Any]) -> str:
     from crawler.normalize import (
         extract_major_requirements, normalize_category, normalize_degree,
-        normalize_job_nature, split_location_records,
+        normalize_job_nature, split_location_records, location_quality_issues,
     )
 
     job = dict(job)
@@ -409,6 +457,7 @@ def upsert_job(job: dict[str, Any]) -> str:
         " ".join(filter(None, (job.get("description"), job.get("requirements"))))
     )
     job["degree"] = normalize_degree(job.get("degree"), job.get("requirements") or "")
+    job["quality_issues"] = location_quality_issues(job.get("city"))
     family, confidence, evidence = classify_job(
         job.get("title"), job.get("category"), job.get("description")
     )
@@ -469,7 +518,8 @@ def upsert_job(job: dict[str, Any]) -> str:
                     raw_json=?,
                     job_family=?,
                     job_family_confidence=?,
-                    job_family_evidence=?
+                    job_family_evidence=?,
+                    quality_issues=?
                 WHERE id=?
                 """,
                 (
@@ -492,15 +542,17 @@ def upsert_job(job: dict[str, Any]) -> str:
                     family,
                     confidence,
                     json.dumps(evidence, ensure_ascii=False),
+                    json.dumps(job.get("quality_issues", []), ensure_ascii=False),
                     existing["id"],
                 ),
             )
             conn.execute("DELETE FROM job_locations WHERE job_id=?", (existing["id"],))
             for position, location in enumerate(split_location_records(job.get("city"))):
+                label = location["city"] or location["province"] or location["country"]
                 conn.execute(
                     "INSERT INTO job_locations"
                     "(job_id, location, country, province, city, position) VALUES (?, ?, ?, ?, ?, ?)",
-                    (existing["id"], location["city"], location["country"], location["province"], location["city"], position),
+                    (existing["id"], label, location["country"], location["province"], location["city"], position),
                 )
             conn.execute("DELETE FROM job_majors WHERE job_id=?", (existing["id"],))
             for position, major in enumerate(extract_major_requirements(job.get("requirements"))):
@@ -517,8 +569,9 @@ def upsert_job(job: dict[str, Any]) -> str:
                 category, degree, graduate_year, requirements, description,
                 apply_url, source_url, published_at, content_hash, raw_json,
                 job_family, job_family_confidence, job_family_evidence,
+                quality_issues,
                 detail_hash, detail_fetched_at, last_changed_at
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """,
             (
                 job["source_id"],
@@ -541,16 +594,18 @@ def upsert_job(job: dict[str, Any]) -> str:
                 family,
                 confidence,
                 json.dumps(evidence, ensure_ascii=False),
+                json.dumps(job.get("quality_issues", []), ensure_ascii=False),
                 detail_hash,
                 None,
                 None,
             ),
         )
         for position, location in enumerate(split_location_records(job.get("city"))):
+            label = location["city"] or location["province"] or location["country"]
             conn.execute(
                 "INSERT INTO job_locations"
                 "(job_id, location, country, province, city, position) VALUES (?, ?, ?, ?, ?, ?)",
-                (cursor.lastrowid, location["city"], location["country"], location["province"], location["city"], position),
+                (cursor.lastrowid, label, location["country"], location["province"], location["city"], position),
             )
         for position, major in enumerate(extract_major_requirements(job.get("requirements"))):
             conn.execute(

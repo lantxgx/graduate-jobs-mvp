@@ -57,6 +57,12 @@ VERIFIED_SOURCE_KEYS = {
     "unitedimaging-beisen-campus": "beisen",
     "fosun-beisen-campus": "beisen",
     "aier-custom-campus": "custom_html",
+    "dahua-beisen-campus": "beisen",
+    "nsfocus-moka-campus": "moka",
+    "shengqu-moka-campus": "moka",
+    "ztgame-moka-campus": "moka",
+    "glodon-moka-campus": "moka",
+    "smartsenstech-moka-campus": "moka",
 }
 
 COMPANY_CANONICAL_ALIASES = {
@@ -122,7 +128,7 @@ def sync_config_sources(path: Path = DEFAULT_SOURCE_FILE) -> dict:
             adapter = str(source.get("adapter") or source.get("mode") or "legacy")
             config = {
                 k: source[k]
-                for k in ("mode", "max_pages", "max_jobs", "page_size", "page_delay_ms", "job_delay_ms", "snapshot_complete", "detail_routes")
+                for k in ("mode", "max_pages", "max_jobs", "page_size", "page_delay_ms", "job_delay_ms", "snapshot_complete", "detail_routes", "categories")
                 if k in source
             }
             if existing:
