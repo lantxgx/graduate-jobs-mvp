@@ -21,6 +21,7 @@ class BilibiliAdapterTests(unittest.TestCase):
         self.assertEqual(job["city"], "上海")
         self.assertEqual(job["job_nature"], "全职")
         self.assertEqual(job["degree"], "本科及以上")
+        self.assertEqual(job["graduate_year"], "2027")
         self.assertEqual(job["source_job_id"], "30368")
         self.assertIn("/campus/positions/30368?type=3", job["apply_url"])
         self.assertIn("版本规划", job["description"])

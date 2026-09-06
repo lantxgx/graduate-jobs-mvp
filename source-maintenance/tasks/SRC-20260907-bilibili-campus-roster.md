@@ -44,7 +44,7 @@
 | city | 上海 | list/detail `workLocation` |
 | job_nature | 全职 | list/detail `positionTypeName` |
 | degree | 本科及以上 | detail `positionDescription` work requirements |
-| graduate_year | 2027 | title/detail requirement text |
+| graduate_year | 2027 | title/detail requirement text; adapter extracts explicit `20xx届`/`20xx graduate` |
 | category/job_family | 运营 | `postCodeName=游戏类` plus title evidence |
 | description | official work duties | detail `positionDescription` |
 | requirements | official work requirements | detail `positionDescription` |

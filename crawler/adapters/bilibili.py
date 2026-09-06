@@ -36,6 +36,17 @@ def _split_description(value: Any) -> tuple[str, str]:
     return text[: match.start()].strip(), text[match.end() :].strip()
 
 
+def _graduate_year(text: str) -> str | None:
+    match = re.search(r"(20\d{2})\s*届", text)
+    if match:
+        return match.group(1)
+    match = re.search(r"(20\d{2})\s+graduate\b", text, re.IGNORECASE)
+    if match:
+        return match.group(1)
+    match = re.search(r"class\s+of\s+(20\d{2}(?:\s*/\s*20\d{2})?)", text, re.IGNORECASE)
+    return re.sub(r"\s+", "", match.group(1)) if match else None
+
+
 def normalize_bilibili_position(raw: dict[str, Any], source: dict[str, Any]) -> dict[str, Any] | None:
     job_id = str(raw.get("id") or raw.get("source_job_id") or "").strip()
     title = _plain(raw.get("positionName") or raw.get("title"))
@@ -64,6 +75,7 @@ def normalize_bilibili_position(raw: dict[str, Any], source: dict[str, Any]) -> 
     # normalize_job deliberately owns category, degree and cohort inference;
     # only evidence-backed fields specific to this API are added here.
     job["raw"] = {**raw, "detail_url": detail_url}
+    job["graduate_year"] = _graduate_year(f"{title} {description} {requirements}")
     return job
 
 
