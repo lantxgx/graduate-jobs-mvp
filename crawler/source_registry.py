@@ -68,6 +68,7 @@ VERIFIED_SOURCE_KEYS = {
     "changan-beisen-campus": "beisen",
     "dreame-beisen-campus": "beisen",
     "unilumin-beisen-campus": "beisen",
+    "yusys-beisen-campus": "beisen",
     "nsfocus-moka-campus": "moka",
     "shengqu-moka-campus": "moka",
     "ztgame-moka-campus": "moka",
