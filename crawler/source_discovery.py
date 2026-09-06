@@ -8,7 +8,7 @@ from urllib.parse import urlparse
 
 ATS_BY_MARKER = (
     ("feishu", ("jobs.feishu.cn", "jobs.f.mioffice.cn")),
-    ("beisen", ("zhiye.com",)),
+    ("beisen", ("zhiye.com", "campus.qiniu.com")),
     ("moka", ("mokahr.com",)),
     ("greenhouse", ("greenhouse.io",)),
     ("lever", ("lever.co",)),

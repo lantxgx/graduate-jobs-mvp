@@ -58,6 +58,7 @@ VERIFIED_SOURCE_KEYS = {
     "fosun-beisen-campus": "beisen",
     "aier-custom-campus": "custom_html",
     "dahua-beisen-campus": "beisen",
+    "qiniu-beisen-campus": "beisen",
     "nsfocus-moka-campus": "moka",
     "shengqu-moka-campus": "moka",
     "ztgame-moka-campus": "moka",
