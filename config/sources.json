@@ -2022,5 +2022,19 @@
     "detail_wait_ms": 800,
     "require_requirements": true,
     "enabled": true
+  },
+  {
+    "id": "insta360-feishu-campus",
+    "company": "影石创新",
+    "name": "影石Insta360校园招聘（官网链接的飞书门户）",
+    "url": "https://arashivision.jobs.feishu.cn/campus",
+    "mode": "feishu_jobs_browser",
+    "adapter": "feishu_jobs_browser",
+    "max_jobs": 10,
+    "job_delay_ms": 1200,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "require_requirements": true,
+    "enabled": false
   }
 ]
