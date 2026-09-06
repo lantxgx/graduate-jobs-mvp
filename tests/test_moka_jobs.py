@@ -60,6 +60,19 @@ class MokaNormalizeTests(unittest.TestCase):
         self.assertIsNotNone(job)
         self.assertEqual(job["city"], "杭州")
 
+    def test_detail_city_hint_overrides_title_like_card_city(self):
+        raw = {
+            "source_job_id": "8d0c42a2-99cb-4454-a8f7-662ff704b1a2",
+            "title": "机器学习算法工程师（深圳）",
+            "nature": "全职",
+            "city": "机器学习算法工程师（深圳）",
+            "city_hint": "算法|广东·深圳市|技术类",
+            "description": "负责机器学习算法研发。",
+            "requirements": "硕士及以上学历。",
+        }
+        job = normalize_moka_job(raw, SOURCE)
+        self.assertEqual(job["city"], "深圳")
+
     def test_rejects_without_id_or_title(self):
         self.assertIsNone(normalize_moka_job({}, SOURCE))
         self.assertIsNone(normalize_moka_job({"source_job_id": "x"}, SOURCE))

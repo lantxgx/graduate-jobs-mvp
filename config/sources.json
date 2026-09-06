@@ -1507,5 +1507,20 @@
     "snapshot_complete": true,
     "campus_only": true,
     "enabled": true
+  },
+  {
+    "id": "dji-moka-campus",
+    "company": "DJI 大疆",
+    "name": "DJI 大疆校园招聘（官网 Moka 门户）",
+    "url": "https://apply.careers.dji.com/campus-recruitment/dji/143359",
+    "mode": "moka",
+    "adapter": "moka",
+    "org_id": "dji",
+    "site_id": 143359,
+    "max_jobs": 5,
+    "max_detail": 5,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "enabled": true
   }
 ]

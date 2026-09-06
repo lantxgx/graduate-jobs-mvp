@@ -267,10 +267,12 @@ def normalize_moka_job(raw: dict[str, Any], source: dict[str, Any]) -> dict[str,
     nature = normalize_job_nature(str(raw.get("nature") or "全职"), title, description + " " + requirements)
     if nature is None:
         nature = "全职"
-    city = raw.get("city") or None
-    if not city:
-        hint = raw.get("city_hint") or ""
-        city = next((ln for ln in hint.split("|") if any(k in ln for k in CITY_MARKERS)), None)
+    hint = raw.get("city_hint") or ""
+    hinted_city = next((ln for ln in hint.split("|") if any(k in ln for k in CITY_MARKERS)), None)
+    # Detail headers are authoritative when the list card accidentally
+    # matches a city marker inside the job title (common for titles ending in
+    # “（深圳）”).
+    city = hinted_city or raw.get("city") or None
     canonical = {
         "company": source["company"],
         "title": title[:160],
