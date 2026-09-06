@@ -1631,5 +1631,25 @@
     "snapshot_complete": false,
     "campus_only": true,
     "enabled": true
+  },
+  {
+    "id": "luyuan-beisen-campus",
+    "company": "浙江绿源电动车有限公司",
+    "name": "绿源电动车校园招聘（官网北森公开门户）",
+    "url": "https://luyuan.zhiye.com/campus/jobs",
+    "mode": "beisen",
+    "adapter": "beisen",
+    "page_size": 20,
+    "max_pages": 20,
+    "page_delay_ms": 500,
+    "detail_routes": {
+      "2": "/campus/detail",
+      "3": "/intern/detail"
+    },
+    "categories": ["2", "3"],
+    "max_jobs": 20,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "enabled": true
   }
 ]
