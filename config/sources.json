@@ -1668,5 +1668,24 @@
     "snapshot_complete": false,
     "campus_only": true,
     "enabled": true
+  },
+  {
+    "id": "ximalaya-beisen-internship",
+    "company": "喜马拉雅",
+    "name": "喜马拉雅实习生招聘（官网北森公开门户）",
+    "url": "http://jobs.ximalaya.com/campus",
+    "mode": "beisen",
+    "adapter": "beisen",
+    "page_size": 20,
+    "max_pages": 2,
+    "page_delay_ms": 500,
+    "detail_routes": {
+      "3": "/intern/detail"
+    },
+    "categories": ["3"],
+    "max_jobs": 2,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "enabled": true
   }
 ]

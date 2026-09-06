@@ -79,6 +79,7 @@ VERIFIED_SOURCE_KEYS = {
     "sensetime-campus-ats": "sensetime",
     "servyou-moka-campus": "moka",
     "byd-campus": "byd",
+    "ximalaya-beisen-internship": "beisen",
 }
 
 COMPANY_CANONICAL_ALIASES = {
