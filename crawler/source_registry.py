@@ -61,6 +61,7 @@ VERIFIED_SOURCE_KEYS = {
     "qiniu-beisen-campus": "beisen",
     "sangfor-custom-campus": "sangfor",
     "intel-tupu-campus": "fuyao",
+    "fanruan-campus": "fanruan",
     "nsfocus-moka-campus": "moka",
     "shengqu-moka-campus": "moka",
     "ztgame-moka-campus": "moka",

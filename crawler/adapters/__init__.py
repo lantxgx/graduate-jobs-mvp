@@ -29,6 +29,7 @@ from crawler.adapters.sensetime import SensetimeCampusAdapter, BytedanceAtsCampu
 from crawler.adapters.yitu import YituCampusAdapter
 from crawler.adapters.dongfang import DongfangCampusAdapter
 from crawler.adapters.sangfor import SangforCampusAdapter
+from crawler.adapters.fanruan import FanruanAdapter
 
 
 def default_registry() -> AdapterRegistry:
@@ -73,6 +74,7 @@ def default_registry() -> AdapterRegistry:
     registry.register("yitu", YituCampusAdapter())
     registry.register("dongfang", DongfangCampusAdapter())
     registry.register("sangfor", SangforCampusAdapter())
+    registry.register("fanruan", FanruanAdapter())
     return registry
 
 
@@ -111,6 +113,7 @@ __all__ = [
     "YituCampusAdapter",
     "DongfangCampusAdapter",
     "SangforCampusAdapter",
+    "FanruanAdapter",
     "default_registry",
 ]
 

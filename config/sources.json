@@ -1494,5 +1494,18 @@
     "snapshot_complete": false,
     "campus_only": true,
     "enabled": true
+  },
+  {
+    "id": "fanruan-campus",
+    "company": "帆软",
+    "name": "帆软校园招聘（官网公开岗位页）",
+    "url": "https://join.fanruan.com/campus",
+    "mode": "fanruan",
+    "adapter": "fanruan",
+    "job_categories": ["5", "1"],
+    "max_pages": 10,
+    "snapshot_complete": true,
+    "campus_only": true,
+    "enabled": true
   }
 ]
