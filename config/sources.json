@@ -1536,5 +1536,20 @@
     "snapshot_complete": false,
     "campus_only": true,
     "enabled": true
+  },
+  {
+    "id": "gwm-hotjob-campus",
+    "company": "长城汽车",
+    "name": "长城汽车校园招聘（官网 Hotjob 门户）",
+    "url": "https://zhaopin.gwm.cn/SU692d3058ea11b01b6c54d0ea/pb/index.html",
+    "mode": "hotjob",
+    "adapter": "hotjob",
+    "suite_key": "SU692d3058ea11b01b6c54d0ea",
+    "max_jobs": 5,
+    "page_size": 12,
+    "require_requirements": true,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "enabled": true
   }
 ]

@@ -96,6 +96,8 @@ class HotjobCampusAdapter:
         requirements = detail.get("serviceCondition") or ""
         if not title or not (description or requirements):
             return None
+        if source.get("require_requirements") and not str(requirements).strip():
+            return None
         cities = []
         for loc in detail.get("workPlaceList") or []:
             name = normalize_location_name(str((loc or {}).get("name") or ""))
