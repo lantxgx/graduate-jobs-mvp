@@ -584,7 +584,7 @@
     "max_detail": 8,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true,
+    "enabled": false,
     "detail_wait_ms": 1000
   },
   {
@@ -658,7 +658,7 @@
     "max_detail": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true,
+    "enabled": false,
     "detail_wait_ms": 1000
   },
   {
@@ -1467,7 +1467,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true,
+    "enabled": false,
     "render_wait_ms": 1200
   },
   {
