@@ -103,6 +103,7 @@ VERIFIED_SOURCE_KEYS = {
     "xcmg-moka-campus": "moka",
     "eve-hotjob-campus": "hotjob",
     "jinkosolar-moka-campus": "moka",
+    "bilibili-campus-roster": "bilibili",
 }
 
 COMPANY_CANONICAL_ALIASES = {

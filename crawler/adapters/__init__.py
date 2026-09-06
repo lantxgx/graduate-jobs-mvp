@@ -40,6 +40,7 @@ from crawler.adapters.apple import AppleCampusAdapter
 from crawler.adapters.cmb import CmbCampusAdapter
 from crawler.adapters.anker import AnkerCampusAdapter
 from crawler.adapters.gac_toyota import GacToyotaCampusAdapter
+from crawler.adapters.bilibili import BilibiliCampusAdapter
 
 
 def default_registry() -> AdapterRegistry:
@@ -95,6 +96,7 @@ def default_registry() -> AdapterRegistry:
     registry.register("cmb", CmbCampusAdapter())
     registry.register("anker", AnkerCampusAdapter())
     registry.register("gac_toyota", GacToyotaCampusAdapter())
+    registry.register("bilibili", BilibiliCampusAdapter())
     return registry
 
 
@@ -144,6 +146,7 @@ __all__ = [
     "CmbCampusAdapter",
     "AnkerCampusAdapter",
     "GacToyotaCampusAdapter",
+    "BilibiliCampusAdapter",
     "default_registry",
 ]
 
