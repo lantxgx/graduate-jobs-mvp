@@ -1571,5 +1571,25 @@
     "snapshot_complete": false,
     "campus_only": true,
     "enabled": true
+  },
+  {
+    "id": "dreame-beisen-campus",
+    "company": "追觅科技",
+    "name": "追觅科技校园招聘（公开北森门户）",
+    "url": "https://dreame.zhiye.com/campus/jobs",
+    "mode": "beisen",
+    "adapter": "beisen",
+    "page_size": 20,
+    "max_pages": 20,
+    "page_delay_ms": 500,
+    "detail_routes": {
+      "2": "/campus/detail",
+      "3": "/intern/detail"
+    },
+    "categories": ["2", "3"],
+    "max_jobs": 20,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "enabled": true
   }
 ]
