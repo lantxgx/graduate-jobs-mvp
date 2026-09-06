@@ -39,6 +39,12 @@ class FieldNormalizationTests(unittest.TestCase):
                 {"country": "英国", "province": "", "city": "伦敦"},
             ],
         )
+
+    def test_location_hierarchy_keeps_country_only_scope_with_empty_city(self):
+        self.assertEqual(
+            split_location_records("中国"),
+            [{"country": "中国", "province": "", "city": ""}],
+        )
         self.assertEqual(
             split_location_records("Shanghai / China"),
             [{"country": "中国", "province": "", "city": "Shanghai"}],

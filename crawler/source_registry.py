@@ -65,6 +65,7 @@ VERIFIED_SOURCE_KEYS = {
     "dji-moka-campus": "moka",
     "tcl-hotjob-campus": "hotjob",
     "gwm-hotjob-campus": "hotjob",
+    "changan-beisen-campus": "beisen",
     "nsfocus-moka-campus": "moka",
     "shengqu-moka-campus": "moka",
     "ztgame-moka-campus": "moka",

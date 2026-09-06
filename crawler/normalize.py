@@ -295,6 +295,11 @@ def split_location_records(value: str | None) -> list[dict[str, str]]:
         elif parts:
             city = parts[-1]
         city = normalize_location_name(city)
+        # Keep country/province-only evidence as an explicit empty city. The
+        # location table uses an empty string for a non-city scope; passing
+        # None violates its NOT NULL contract and can abort an otherwise
+        # valid source snapshot.
+        city = city or ""
         city_key = str(city or "").lower()
         if not country:
             country = INTERNATIONAL_CITY_COUNTRIES.get(city_key, "中国")
