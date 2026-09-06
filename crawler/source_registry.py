@@ -105,6 +105,7 @@ VERIFIED_SOURCE_KEYS = {
     "jinkosolar-moka-campus": "moka",
     "bilibili-campus-roster": "bilibili",
     "ctrip-campus-api": "ctrip",
+    "insta360-feishu-campus": "feishu_jobs_browser",
 }
 
 COMPANY_CANONICAL_ALIASES = {

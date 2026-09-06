@@ -59,6 +59,25 @@ Bachelor degree or above; Java or Go experience.
         self.assertEqual(job["city"], "Shanghai")
         self.assertEqual(job["recruitment_type"], "\u6b63\u5f0f")
 
+    def test_parse_pinned_detail_with_combined_campus_metadata(self):
+        text = """Marketing Trainee（意大利语） -2027校招
+置顶
+深圳校招正式
+职位描述
+Manage public channels and campaign reporting.
+职位要求
+Fluent Italian and strong communication skills.
+投递
+"""
+        job = parse_feishu_detail_text(
+            text,
+            "https://arashivision.jobs.feishu.cn/campus/position/7667853804130650378/detail",
+        )
+        self.assertIsNotNone(job)
+        self.assertEqual(job["city"], "深圳")
+        self.assertEqual(job["recruitment_type"], "正式")
+        self.assertEqual(job["category"], "其他")
+
 
 if __name__ == "__main__":
     unittest.main()

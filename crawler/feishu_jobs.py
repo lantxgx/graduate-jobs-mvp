@@ -47,6 +47,17 @@ def parse_feishu_detail_text(text: str, apply_url: str) -> dict[str, Any] | None
         city = header_lines[1]
         job_nature = header_lines[2]
         category = " ".join(header_lines[3:])
+    elif len(header_lines) == 3 and header_lines[1] in {"置顶", "热门", "急招"}:
+        title = header_lines[0]
+        metadata = header_lines[2]
+        nature_match = re.match(
+            rf"^(.*?)({'|'.join(JOB_NATURE_MARKERS)})(.*)$", metadata
+        )
+        if not nature_match:
+            return None
+        city = re.sub(r"(校招|校园招聘)$", "", nature_match.group(1)).strip()
+        job_nature = nature_match.group(2).strip()
+        category = nature_match.group(3).strip() or "其他"
     elif len(header_lines) == 2:
         title = header_lines[0]
         metadata = header_lines[1]

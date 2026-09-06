@@ -4,7 +4,11 @@
     "company": "远景科技集团",
     "name": "远景校园招聘",
     "url": "https://envision-career.com/campus-recruitment/envisiongroup/43123/#/jobs",
-    "mode": "browser_json",
+    "mode": "moka",
+    "adapter": "moka",
+    "max_jobs": 10,
+    "max_detail": 10,
+    "snapshot_complete": false,
     "campus_only": true,
     "enabled": true
   },
@@ -175,7 +179,7 @@
     "page_delay_ms": 500,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "alibaba-cainiao-campus",
@@ -2035,6 +2039,6 @@
     "snapshot_complete": false,
     "campus_only": true,
     "require_requirements": true,
-    "enabled": false
+    "enabled": true
   }
 ]
