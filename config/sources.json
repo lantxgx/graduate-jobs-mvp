@@ -1988,5 +1988,22 @@
     "campus_only": true,
     "require_requirements": true,
     "enabled": true
+  },
+  {
+    "id": "jinkosolar-moka-campus",
+    "company": "晶科能源",
+    "name": "晶科能源校园招聘（官网链接的 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/jinkosolar/41896#/jobs",
+    "mode": "moka",
+    "adapter": "moka",
+    "org_id": "jinkosolar",
+    "site_id": 41896,
+    "max_jobs": 10,
+    "max_detail": 10,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "detail_wait_ms": 800,
+    "require_requirements": true,
+    "enabled": true
   }
 ]

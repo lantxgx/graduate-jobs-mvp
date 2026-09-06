@@ -102,6 +102,7 @@ VERIFIED_SOURCE_KEYS = {
     "gac-toyota-campus": "gac_toyota",
     "xcmg-moka-campus": "moka",
     "eve-hotjob-campus": "hotjob",
+    "jinkosolar-moka-campus": "moka",
 }
 
 COMPANY_CANONICAL_ALIASES = {
