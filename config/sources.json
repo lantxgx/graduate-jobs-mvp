@@ -377,7 +377,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "roster-002",
@@ -671,7 +671,7 @@
     "max_jobs": 5,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true,
+    "enabled": false,
     "render_wait_ms": 1800
   },
   {
@@ -720,7 +720,7 @@
     "max_detail": 15,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true,
+    "enabled": false,
     "detail_wait_ms": 1000
   },
   {
@@ -1455,7 +1455,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "aier-custom-campus",
@@ -1808,7 +1808,7 @@
     "campus_only": true,
     "detail_wait_ms": 1000,
     "require_requirements": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "sohu-moka-campus",
@@ -1825,7 +1825,7 @@
     "campus_only": true,
     "detail_wait_ms": 1000,
     "require_requirements": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "lixiang-campus-api",

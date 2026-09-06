@@ -69,3 +69,9 @@
 - Complete active snapshot: no
 - Blocker/risks: browser-rendered route did not expose the public list to the existing adapter; no bypass or repeated retry
 - Exact next action: do not retry without new adapter evidence; continue with another unfailed source
+
+## Final bounded probe (2026-09-07)
+
+- A later worker probe did not return a public job list in the short allowed window and was stopped before another request.
+- Run record was marked failed with `bounded_probe_timeout`; no jobs were written and no existing jobs were deactivated.
+- Stop decision: disable this source for the fast batch and do not retry without changed evidence.

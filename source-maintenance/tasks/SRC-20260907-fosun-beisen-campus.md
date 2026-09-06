@@ -18,3 +18,8 @@
 
 - No jobs were added or deactivated.
 - Record as failed for the current public page/data shape and do not retry without new adapter evidence.
+
+## Final status (2026-09-07)
+
+- The source remains disabled for the fast batch after the same no-qualified-jobs result.
+- No jobs were written or deactivated; do not retry without changed adapter evidence.

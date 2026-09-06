@@ -69,3 +69,9 @@
 - Complete active snapshot: no
 - Blocker/risks: all 13 public records lacked an independently accepted requirements field in this bounded run; raw observations remain quarantined
 - Exact next action: do not retry without a new detail contract; continue with another unfailed source
+
+## Final bounded probe (2026-09-07)
+
+- A later worker probe did not return a public job list in the short allowed window and was stopped before another request.
+- Run record was marked failed with `bounded_probe_timeout`; no jobs were written and no existing jobs were deactivated.
+- Stop decision: disable this source for the fast batch and do not retry without changed evidence.
