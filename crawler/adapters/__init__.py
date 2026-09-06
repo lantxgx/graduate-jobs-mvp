@@ -42,6 +42,7 @@ from crawler.adapters.anker import AnkerCampusAdapter
 from crawler.adapters.gac_toyota import GacToyotaCampusAdapter
 from crawler.adapters.bilibili import BilibiliCampusAdapter
 from crawler.adapters.ctrip import CtripCampusAdapter
+from crawler.adapters.shlab import ShlabCampusAdapter
 
 
 def default_registry() -> AdapterRegistry:
@@ -99,6 +100,7 @@ def default_registry() -> AdapterRegistry:
     registry.register("gac_toyota", GacToyotaCampusAdapter())
     registry.register("bilibili", BilibiliCampusAdapter())
     registry.register("ctrip", CtripCampusAdapter())
+    registry.register("shlab", ShlabCampusAdapter())
     return registry
 
 

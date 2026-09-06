@@ -2028,6 +2028,21 @@
     "enabled": true
   },
   {
+    "id": "shlab-campus",
+    "company": "上海人工智能实验室",
+    "name": "上海人工智能实验室校园招聘（官网公开岗位 API）",
+    "url": "https://www.shlab.org.cn/joinus/campus?mode=campus",
+    "mode": "shlab",
+    "adapter": "shlab",
+    "api_base": "https://www.shlab.org.cn",
+    "max_jobs": 10,
+    "page_size": 7,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "require_requirements": true,
+    "enabled": true
+  },
+  {
     "id": "insta360-feishu-campus",
     "company": "影石创新",
     "name": "影石Insta360校园招聘（官网链接的飞书门户）",

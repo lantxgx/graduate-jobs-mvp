@@ -106,6 +106,7 @@ VERIFIED_SOURCE_KEYS = {
     "bilibili-campus-roster": "bilibili",
     "ctrip-campus-api": "ctrip",
     "insta360-feishu-campus": "feishu_jobs_browser",
+    "shlab-campus": "shlab",
 }
 
 COMPANY_CANONICAL_ALIASES = {
