@@ -94,6 +94,9 @@ VERIFIED_SOURCE_KEYS = {
     "agibot-feishu-campus": "feishu_jobs_browser",
     "aibee-feishu-campus": "feishu_jobs_browser",
     "deeplang-feishu-campus": "feishu_jobs_browser",
+    "zte-moka-campus": "moka",
+    "jouav-beisen-campus": "beisen",
+    "roster-002": "tencent",
 }
 
 COMPANY_CANONICAL_ALIASES = {

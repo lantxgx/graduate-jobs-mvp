@@ -2,7 +2,7 @@
 
 - company: 纵横股份（成都纵横自动化技术股份有限公司）
 - source_id: jouav-beisen-campus
-- state: validating
+- state: integrated_sampled
 - official_url: https://www.jouav.com/zh/career
 - campus_url: https://jouav.zhiye.com/campus/jobs
 - ats: Beisen / zhiye.com
@@ -17,4 +17,5 @@
 
 - Initial probe: 20-listing cap, sequential page requests, campus and campus-system internship categories.
 - `snapshot_complete=false` for the first integration; this is a bounded sample, not a full-coverage claim.
-- Next: run the single-source worker, inspect accepted/quarantined counts, then validate and export only if gates pass.
+- The existing bounded run found 22 active jobs and passed the minimum source validation gates; the source is promoted as an incomplete sample.
+- Next: refresh only when due; do not claim complete coverage from this sample.
