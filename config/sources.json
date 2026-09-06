@@ -175,7 +175,7 @@
     "page_delay_ms": 500,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "alibaba-cainiao-campus",
@@ -189,7 +189,7 @@
     "max_pages": 49,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "dewu-campus-roster",
@@ -629,7 +629,7 @@
     "categories": ["2", "3"],
     "snapshot_complete": true,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "zulong-moka-campus",
@@ -825,7 +825,7 @@
     "max_jobs": 10,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "citics-campus",
@@ -1200,7 +1200,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "smics-beisen-campus",
@@ -1220,7 +1220,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "amec-moka-campus",
@@ -1305,7 +1305,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "sungrow-moka-campus",
@@ -1367,7 +1367,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "ctf-beisen-campus",
@@ -1485,7 +1485,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "sangfor-custom-campus",
@@ -1499,7 +1499,7 @@
     "max_pages": 5,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "intel-tupu-campus",
@@ -1757,7 +1757,7 @@
     "max_detail": 10,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "zkxx-moka-internship",
