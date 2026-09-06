@@ -44,7 +44,11 @@ from app.resume_parser import parse_resume_base64
 from app.ai_profile import analyze_resume_text
 
 app = FastAPI(title="牛投马面", version="0.2.0")
-STATIC_DIR = Path("static")
+# Resolve the frontend directory from this module instead of the process
+# working directory.  The latter can differ when the server is launched from
+# a shortcut, IDE, or a second Python runtime, which makes FileResponse return
+# HTTP 500 even though the API and /static mount still work.
+STATIC_DIR = Path(__file__).resolve().parent.parent / "static"
 
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 
