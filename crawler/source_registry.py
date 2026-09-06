@@ -75,6 +75,9 @@ VERIFIED_SOURCE_KEYS = {
     "ztgame-moka-campus": "moka",
     "glodon-moka-campus": "moka",
     "smartsenstech-moka-campus": "moka",
+    "dewu-campus-roster": "dewu",
+    "sensetime-campus-ats": "sensetime",
+    "servyou-moka-campus": "moka",
 }
 
 COMPANY_CANONICAL_ALIASES = {
