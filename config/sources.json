@@ -1956,5 +1956,37 @@
     "campus_only": true,
     "require_requirements": true,
     "enabled": false
+  },
+  {
+    "id": "xcmg-moka-campus",
+    "company": "徐工集团",
+    "name": "徐工集团校园招聘（官网链接的 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/xcmg/148091?locale=zh-CN",
+    "mode": "moka",
+    "adapter": "moka",
+    "org_id": "xcmg",
+    "site_id": 148091,
+    "max_jobs": 10,
+    "max_detail": 10,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "detail_wait_ms": 800,
+    "require_requirements": true,
+    "enabled": true
+  },
+  {
+    "id": "eve-hotjob-campus",
+    "company": "亿纬锂能",
+    "name": "亿纬锂能校园招聘（官网链接的 Hotjob 门户）",
+    "url": "https://wecruit.hotjob.cn/SU630487ca0dcad45aa7768a79/pb/school.html",
+    "mode": "hotjob",
+    "adapter": "hotjob",
+    "suite_key": "SU630487ca0dcad45aa7768a79",
+    "max_jobs": 10,
+    "page_size": 10,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "require_requirements": true,
+    "enabled": true
   }
 ]

@@ -100,6 +100,8 @@ VERIFIED_SOURCE_KEYS = {
     "netdragon-campus": "beisen",
     "anker-campus-api": "anker",
     "gac-toyota-campus": "gac_toyota",
+    "xcmg-moka-campus": "moka",
+    "eve-hotjob-campus": "hotjob",
 }
 
 COMPANY_CANONICAL_ALIASES = {
