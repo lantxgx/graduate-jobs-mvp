@@ -62,10 +62,10 @@ class FuyaoCampusAdapter:
         paragraphs = [p for p in paragraphs if p]
         text = "\n".join(paragraphs)
         duty, req = text, ""
-        if "任职要求" in text:
-            duty, req = text.split("任职要求", 1)
-        elif "岗位要求" in text:
-            duty, req = text.split("岗位要求", 1)
+        for marker in ("任职要求", "岗位要求", "任职资格", "基本要求", "Qualifications"):
+            if marker in text:
+                duty, req = text.split(marker, 1)
+                break
         return {"id": item.source_job_id, "listing": item.raw, "title": item.title, "city": item.raw.get("city", ""),
                 "description": duty.replace("岗位职责", "", 1).strip(), "requirements": req.strip(),
                 "detail_url": item.detail_url}
