@@ -1,0 +1,18 @@
+{
+  "outer": {
+    "id": "2089623328531697666",
+    "jobName": "安全工程师",
+    "jobType": "安健环",
+    "updateTime": "2026-09-05"
+  },
+  "inner": {
+    "id": "2089623336307937282",
+    "division": "集团品质",
+    "researchDirection": "安全合规管理",
+    "jobDuty": "负责制定地区安全目标、指标以及分解。",
+    "jobRequirements": "学历要求：本科；专业要求：安全相关专业。",
+    "workPlace": "芜湖市,汕头市,深圳市"
+  },
+  "job_nature": "全职",
+  "outer_id": "2089623328531697666"
+}

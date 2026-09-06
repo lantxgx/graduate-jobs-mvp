@@ -1651,5 +1651,22 @@
     "snapshot_complete": false,
     "campus_only": true,
     "enabled": true
+  },
+  {
+    "id": "byd-campus",
+    "company": "比亚迪",
+    "name": "比亚迪校园招聘（官网公开招聘门户）",
+    "url": "https://job.byd.com/portal/pc/#/school/schoolPositionList",
+    "mode": "byd",
+    "adapter": "byd",
+    "batch": "2027",
+    "channels": [
+      {"campus_nature": "008501", "job_nature": "全职"},
+      {"campus_nature": "008502", "job_nature": "实习"}
+    ],
+    "max_jobs": 20,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "enabled": true
   }
 ]

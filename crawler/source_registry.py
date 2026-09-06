@@ -78,6 +78,7 @@ VERIFIED_SOURCE_KEYS = {
     "dewu-campus-roster": "dewu",
     "sensetime-campus-ats": "sensetime",
     "servyou-moka-campus": "moka",
+    "byd-campus": "byd",
 }
 
 COMPANY_CANONICAL_ALIASES = {
