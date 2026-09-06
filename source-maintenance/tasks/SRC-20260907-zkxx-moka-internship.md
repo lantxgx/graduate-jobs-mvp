@@ -65,8 +65,5 @@
 
 ## Outcome
 
-- Final source states: candidate / reachable / analyzing; adapter repair applied, source rerun pending cooldown
-- Active jobs after run: 0
-- Complete active snapshot: no
-- Blocker/risks: the worker's retry is protected by the normal source cooldown; no cooldown bypass was used
-- Exact next action: rerun this source after cooldown, then validate accepted/quarantined rows and export only if gates pass
+- The worker completed with `crawl_produced_no_qualified_concrete_jobs` after the bounded attempt; it was not retried.
+- No jobs were added or deactivated. Treat this source as blocked for this pass and do not retry without new evidence.

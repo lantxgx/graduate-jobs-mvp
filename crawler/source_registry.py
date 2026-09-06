@@ -97,6 +97,8 @@ VERIFIED_SOURCE_KEYS = {
     "zte-moka-campus": "moka",
     "jouav-beisen-campus": "beisen",
     "roster-002": "tencent",
+    "netdragon-campus": "beisen",
+    "anker-campus-api": "anker",
 }
 
 COMPANY_CANONICAL_ALIASES = {

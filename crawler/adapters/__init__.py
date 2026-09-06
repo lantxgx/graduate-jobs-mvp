@@ -38,6 +38,7 @@ from crawler.adapters.leihuo import LeihuoCampusAdapter
 from crawler.adapters.lixiang import LixiangCampusAdapter
 from crawler.adapters.apple import AppleCampusAdapter
 from crawler.adapters.cmb import CmbCampusAdapter
+from crawler.adapters.anker import AnkerCampusAdapter
 
 
 def default_registry() -> AdapterRegistry:
@@ -91,6 +92,7 @@ def default_registry() -> AdapterRegistry:
     registry.register("lixiang", LixiangCampusAdapter())
     registry.register("apple", AppleCampusAdapter())
     registry.register("cmb", CmbCampusAdapter())
+    registry.register("anker", AnkerCampusAdapter())
     return registry
 
 
@@ -138,6 +140,7 @@ __all__ = [
     "LixiangCampusAdapter",
     "AppleCampusAdapter",
     "CmbCampusAdapter",
+    "AnkerCampusAdapter",
     "default_registry",
 ]
 

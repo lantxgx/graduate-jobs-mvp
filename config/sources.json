@@ -620,8 +620,8 @@
     "company": "网龙",
     "name": "网龙校园招聘（北森公开岗位列表）",
     "url": "https://nd.zhiye.com/campus",
-    "mode": "lovol",
-    "adapter": "lovol",
+    "mode": "beisen",
+    "adapter": "beisen",
     "page_size": 20,
     "max_pages": 20,
     "page_delay_ms": 500,
@@ -1774,7 +1774,7 @@
     "campus_only": true,
     "detail_wait_ms": 1000,
     "require_requirements": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "nestle-moka-campus",
@@ -1840,7 +1840,7 @@
     "snapshot_complete": false,
     "campus_only": true,
     "require_requirements": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "apple-china-intern-api",
@@ -1853,7 +1853,7 @@
     "snapshot_complete": false,
     "campus_only": true,
     "require_requirements": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "zhihu-moka-campus",
@@ -1909,6 +1909,21 @@
     "adapter": "feishu_jobs_browser",
     "max_jobs": 5,
     "job_delay_ms": 1200,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "require_requirements": true,
+    "enabled": true
+  },
+  {
+    "id": "anker-campus-api",
+    "company": "安克创新",
+    "name": "安克创新校园招聘（官网公开 API）",
+    "url": "https://career.anker-in.com/universities/recruitment/",
+    "mode": "anker",
+    "adapter": "anker",
+    "website_id": "7268177039772633400",
+    "apply_url": "https://anker-in.jobs.feishu.cn/189381/position/application",
+    "max_jobs": 10,
     "snapshot_complete": false,
     "campus_only": true,
     "require_requirements": true,
