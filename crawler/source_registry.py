@@ -112,6 +112,9 @@ VERIFIED_SOURCE_KEYS = {
     "mengniu-beisen-campus": "beisen",
     "weichai-beisen-campus": "beisen",
     "jmc-beisen-campus": "beisen",
+    "chery-beisen-campus": "beisen",
+    "siasun-beisen-campus": "beisen",
+    "tongwei-beisen-campus": "beisen",
 }
 
 COMPANY_CANONICAL_ALIASES = {

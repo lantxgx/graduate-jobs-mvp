@@ -2155,5 +2155,65 @@
     "campus_only": true,
     "require_requirements": true,
     "enabled": true
+  },
+  {
+    "id": "chery-beisen-campus",
+    "company": "奇瑞汽车",
+    "name": "奇瑞汽车校园招聘（官网北森公开岗位）",
+    "url": "https://chery.zhiye.com/campus",
+    "mode": "beisen",
+    "adapter": "beisen",
+    "categories": [2],
+    "detail_routes": {
+      "2": "/campus/detail",
+      "3": "/intern/detail"
+    },
+    "page_size": 50,
+    "max_pages": 50,
+    "page_delay_ms": 0,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "require_requirements": true,
+    "enabled": true
+  },
+  {
+    "id": "siasun-beisen-campus",
+    "company": "新松机器人",
+    "name": "新松机器人校园招聘（官网北森公开岗位）",
+    "url": "https://siasun.zhiye.com/campus",
+    "mode": "beisen",
+    "adapter": "beisen",
+    "categories": [2],
+    "detail_routes": {
+      "2": "/campus/detail",
+      "3": "/intern/detail"
+    },
+    "page_size": 20,
+    "max_pages": 2,
+    "page_delay_ms": 500,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "require_requirements": true,
+    "enabled": true
+  },
+  {
+    "id": "tongwei-beisen-campus",
+    "company": "通威",
+    "name": "通威校园招聘（官网北森公开岗位）",
+    "url": "https://tongwei.zhiye.com/campus",
+    "mode": "beisen",
+    "adapter": "beisen",
+    "categories": [2],
+    "detail_routes": {
+      "2": "/campus/detail",
+      "3": "/intern/detail"
+    },
+    "page_size": 20,
+    "max_pages": 1,
+    "page_delay_ms": 500,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "require_requirements": true,
+    "enabled": true
   }
 ]
