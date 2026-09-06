@@ -175,7 +175,7 @@
     "page_delay_ms": 500,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": false
+    "enabled": true
   },
   {
     "id": "alibaba-cainiao-campus",
@@ -557,7 +557,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": false
+    "enabled": true
   },
   {
     "id": "huya-campus-api",
@@ -584,7 +584,7 @@
     "max_detail": 8,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": false,
+    "enabled": true,
     "detail_wait_ms": 1000
   },
   {
@@ -612,7 +612,7 @@
     "max_detail": 8,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true,
+    "enabled": false,
     "detail_wait_ms": 1000
   },
   {
@@ -629,7 +629,7 @@
     "categories": ["2", "3"],
     "snapshot_complete": true,
     "campus_only": true,
-    "enabled": false
+    "enabled": true
   },
   {
     "id": "zulong-moka-campus",
@@ -658,7 +658,7 @@
     "max_detail": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": false,
+    "enabled": true,
     "detail_wait_ms": 1000
   },
   {
@@ -689,7 +689,7 @@
     "max_jobs": 200,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": false
+    "enabled": true
   },
   {
     "id": "zte-moka-campus",
@@ -923,7 +923,7 @@
     "max_jobs": 10,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": false
+    "enabled": true
   },
   {
     "id": "servyou-moka-campus",
@@ -1134,7 +1134,7 @@
     "max_detail": 3,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true,
+    "enabled": false,
     "detail_wait_ms": 1000
   },
   {
@@ -1163,7 +1163,7 @@
     "max_detail": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true,
+    "enabled": false,
     "detail_wait_ms": 1000
   },
   {
@@ -1200,7 +1200,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": false
+    "enabled": true
   },
   {
     "id": "smics-beisen-campus",
@@ -1485,7 +1485,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": false
+    "enabled": true
   },
   {
     "id": "sangfor-custom-campus",
