@@ -67,6 +67,7 @@ VERIFIED_SOURCE_KEYS = {
     "gwm-hotjob-campus": "hotjob",
     "changan-beisen-campus": "beisen",
     "dreame-beisen-campus": "beisen",
+    "unilumin-beisen-campus": "beisen",
     "nsfocus-moka-campus": "moka",
     "shengqu-moka-campus": "moka",
     "ztgame-moka-campus": "moka",

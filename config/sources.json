@@ -1591,5 +1591,25 @@
     "snapshot_complete": false,
     "campus_only": true,
     "enabled": true
+  },
+  {
+    "id": "unilumin-beisen-campus",
+    "company": "洲明科技",
+    "name": "洲明科技校园招聘（官网北森公开门户）",
+    "url": "https://unilumin.zhiye.com/campus/jobs",
+    "mode": "beisen",
+    "adapter": "beisen",
+    "page_size": 20,
+    "max_pages": 20,
+    "page_delay_ms": 500,
+    "detail_routes": {
+      "2": "/campus/detail",
+      "3": "/intern/detail"
+    },
+    "categories": ["2", "3"],
+    "max_jobs": 20,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "enabled": true
   }
 ]
