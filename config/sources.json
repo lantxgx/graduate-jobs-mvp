@@ -360,7 +360,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "kuaishou-campus-roster",
@@ -434,7 +434,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "roster-010",
@@ -518,7 +518,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "didi-campus-roster",
@@ -530,7 +530,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "sf-campus-roster",
@@ -542,7 +542,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "netease-campus-roster",
@@ -554,7 +554,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "roster-022",
