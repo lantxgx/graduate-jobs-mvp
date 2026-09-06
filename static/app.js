@@ -38,7 +38,8 @@ let pendingResumeProfile = null;
 let currentOffset = 0;
 let currentTotal = 0;
 let locationHierarchy = [];
-const pageSize = 100;
+// 首屏只渲染一小批，避免几千条岗位的详情 DOM 阻塞页面；“加载更多”仍可查看完整岗位池。
+const pageSize = 30;
 const poolLabels = {
   main: "主攻方向",
   target_company: "目标企业",
@@ -55,6 +56,23 @@ const statusLabels = {
 };
 const riskLabels = { high: "较高", medium: "中等", low: "较低" };
 const categoryLabels = { "算法/AI": "算法与人工智能" };
+
+async function apiJSON(url, options) {
+  const response = await fetch(url, options);
+  if (!response.ok) throw new Error(`接口 ${url} 返回 HTTP ${response.status}`);
+  return response.json();
+}
+
+function showDataLoadError(error) {
+  const message = error instanceof Error ? error.message : String(error);
+  $("total").textContent = "—";
+  $("companyCount").textContent = "—";
+  $("cityCount").textContent = "—";
+  $("jobs").replaceChildren();
+  $("resultCount").textContent = "岗位数据加载失败";
+  $("loadMoreStatus").textContent = `${message}；请刷新页面重试`;
+  $("empty").hidden = true;
+}
 
 function unique(values) {
   return [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b, "zh-CN"));
@@ -196,8 +214,8 @@ function renderJobs(jobs) {
 
 async function loadFacets() {
   const [data, coverage] = await Promise.all([
-    fetch("/api/facets").then(r => r.json()),
-    fetch("/api/coverage-summary").then(r => r.json()),
+    apiJSON("/api/facets"),
+    apiJSON("/api/coverage-summary"),
   ]);
   $("total").textContent = data.total || 0;
   $("companyCount").textContent = coverage.active_job_companies ?? (data.companies || []).length;
@@ -213,7 +231,7 @@ async function loadFacets() {
 }
 
 async function loadCompanyDirectory() {
-  const companies = await fetch("/api/company-job-directory?limit=100").then(r => r.json());
+  const companies = await apiJSON("/api/company-job-directory?limit=100");
   const list = $("companyDirectoryList");
   if (!list) return;
   const syncedCompanies = companies.filter(company => Number(company.active_job_count || 0) > 0);
@@ -248,7 +266,7 @@ async function loadJobs() {
   }
   params.set("offset", "0");
   params.set("limit", String(pageSize));
-  const data = await fetch(`/api/jobs?${params}`).then(r => r.json());
+  const data = await apiJSON(`/api/jobs?${params}`);
   currentJobs = data.items || data;
   currentTotal = data.total ?? currentJobs.length;
   renderJobs(currentJobs);
@@ -490,4 +508,14 @@ $("resetBtn").addEventListener("click", () => {
   loadJobs();
 });
 
-Promise.all([loadFacets(), loadCompanyDirectory(), loadActionState()]).then(() => loadJobs());
+// 岗位主列表、筛选项和企业目录并行加载；辅助接口较慢或异常时仍要保证岗位可查。
+loadJobs().catch(showDataLoadError);
+Promise.all([loadFacets(), loadActionState()]).catch(error => {
+  console.warn("筛选项或用户操作状态加载失败，岗位列表仍可使用：", error);
+});
+loadCompanyDirectory().catch(error => {
+  const message = error instanceof Error ? error.message : String(error);
+  $("directoryCount").textContent = "目录加载失败";
+  const list = $("companyDirectoryList");
+  if (list) list.textContent = message;
+});
