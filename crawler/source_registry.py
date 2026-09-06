@@ -91,6 +91,9 @@ VERIFIED_SOURCE_KEYS = {
     "apple-china-intern-api": "apple",
     "cmb-campus-roster": "cmb",
     "zhihu-moka-campus": "moka",
+    "agibot-feishu-campus": "feishu_jobs_browser",
+    "aibee-feishu-campus": "feishu_jobs_browser",
+    "deeplang-feishu-campus": "feishu_jobs_browser",
 }
 
 COMPANY_CANONICAL_ALIASES = {

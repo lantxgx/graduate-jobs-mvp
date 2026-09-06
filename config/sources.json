@@ -1871,5 +1871,47 @@
     "detail_wait_ms": 1000,
     "require_requirements": true,
     "enabled": true
+  },
+  {
+    "id": "agibot-feishu-campus",
+    "company": "智元机器人",
+    "name": "智元机器人校园招聘（官网链接的飞书门户）",
+    "url": "https://agirobot.jobs.feishu.cn/campusrecruitment",
+    "mode": "feishu_jobs_browser",
+    "adapter": "feishu_jobs_browser",
+    "max_jobs": 5,
+    "job_delay_ms": 1200,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "require_requirements": true,
+    "enabled": true
+  },
+  {
+    "id": "aibee-feishu-campus",
+    "company": "爱笔智能",
+    "name": "爱笔智能校园招聘（官网链接的飞书门户）",
+    "url": "https://aibee.jobs.feishu.cn/834668",
+    "mode": "feishu_jobs_browser",
+    "adapter": "feishu_jobs_browser",
+    "max_jobs": 5,
+    "job_delay_ms": 1200,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "require_requirements": true,
+    "enabled": true
+  },
+  {
+    "id": "deeplang-feishu-campus",
+    "company": "深言科技",
+    "name": "深言科技校园招聘（官网链接的飞书门户）",
+    "url": "https://deeplang.jobs.feishu.cn/913608/position/list",
+    "mode": "feishu_jobs_browser",
+    "adapter": "feishu_jobs_browser",
+    "max_jobs": 5,
+    "job_delay_ms": 1200,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "require_requirements": true,
+    "enabled": true
   }
 ]
