@@ -99,6 +99,7 @@ VERIFIED_SOURCE_KEYS = {
     "roster-002": "tencent",
     "netdragon-campus": "beisen",
     "anker-campus-api": "anker",
+    "gac-toyota-campus": "gac_toyota",
 }
 
 COMPANY_CANONICAL_ALIASES = {

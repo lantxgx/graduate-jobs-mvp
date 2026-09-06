@@ -1928,5 +1928,33 @@
     "campus_only": true,
     "require_requirements": true,
     "enabled": true
+  },
+  {
+    "id": "gac-toyota-campus",
+    "company": "广汽丰田",
+    "name": "广汽丰田校园招聘（官网链接的北森公开页面）",
+    "url": "https://gac-toyota.zhiye.com/campus/jobs",
+    "mode": "gac_toyota",
+    "adapter": "gac_toyota",
+    "max_jobs": 20,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "require_requirements": true,
+    "enabled": true
+  },
+  {
+    "id": "wasu-hotjob-campus",
+    "company": "华数传媒",
+    "name": "华数传媒校园招聘（公开 Hotjob 接口）",
+    "url": "https://wecruit.hotjob.cn/SU62d26fa80dcad42fc9958ed9/pb/index.html#/",
+    "mode": "hotjob",
+    "adapter": "hotjob",
+    "suite_key": "SU62d26fa80dc42fc9958ed9",
+    "max_jobs": 20,
+    "page_size": 12,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "require_requirements": true,
+    "enabled": false
   }
 ]
