@@ -231,7 +231,8 @@ async function loadFacets() {
 }
 
 async function loadCompanyDirectory() {
-  const companies = await apiJSON("/api/company-job-directory?limit=100");
+  const data = await apiJSON("/api/company-job-directory?limit=100");
+  const companies = data.items || data;
   const list = $("companyDirectoryList");
   if (!list) return;
   const syncedCompanies = companies.filter(company => Number(company.active_job_count || 0) > 0);
