@@ -15,6 +15,8 @@ from __future__ import annotations
 
 import asyncio
 import hashlib
+import html
+import json
 import os
 import re
 from typing import Any
@@ -59,6 +61,34 @@ def _blocked(text: str) -> str | None:
     return None
 
 
+def parse_embedded_job_cards(value: str | None) -> list[dict[str, Any]]:
+    """Read the public SSR ``init-data`` job list used by some Moka tenants."""
+    if not value:
+        return []
+    try:
+        payload = json.loads(value)
+    except json.JSONDecodeError:
+        try:
+            payload = json.loads(html.unescape(value))
+        except json.JSONDecodeError:
+            return []
+    jobs = payload.get("jobs") if isinstance(payload, dict) else None
+    if not isinstance(jobs, list):
+        return []
+    cards: list[dict[str, Any]] = []
+    for job in jobs:
+        if not isinstance(job, dict) or not job.get("id") or not job.get("title"):
+            continue
+        cards.append({
+            "source_job_id": str(job["id"]),
+            "raw_text": " ".join(str(x) for x in (
+                job.get("title"), job.get("commitment"), job.get("education"),
+            ) if x),
+            "embedded": job,
+        })
+    return cards
+
+
 async def _collect_cards(page: Any, timeout_ms: int) -> tuple[list[dict[str, Any]], str | None]:
     """Wait for job-card links on the rendered page and parse them."""
     cards: dict[str, dict[str, Any]] = {}
@@ -71,6 +101,13 @@ async def _collect_cards(page: Any, timeout_ms: int) -> tuple[list[dict[str, Any
         blocked = _blocked(body_text)
         if blocked:
             return [], blocked
+        try:
+            embedded = await page.locator("#init-data").get_attribute("value")
+        except Exception:
+            embedded = None
+        embedded_cards = parse_embedded_job_cards(embedded)
+        if embedded_cards:
+            return embedded_cards, None
         try:
             anchors = await page.locator("a[href*='#/job/']").evaluate_all(
                 "els => els.map(e => ({href: e.getAttribute('href') || '', txt: (e.innerText || '').trim()}))"
@@ -104,6 +141,14 @@ async def _collect_cards(page: Any, timeout_ms: int) -> tuple[list[dict[str, Any
 
 
 def _parse_card(card: dict[str, Any]) -> dict[str, Any]:
+    embedded = card.get("embedded")
+    if isinstance(embedded, dict):
+        return {
+            "source_job_id": str(embedded.get("id") or card["source_job_id"]),
+            "title": str(embedded.get("title") or card["source_job_id"]),
+            "nature": str(embedded.get("commitment") or "全职"),
+            "city": None,
+        }
     lines = [ln.strip() for ln in card["raw_text"].splitlines() if ln.strip()]
     meaningful = [ln for ln in lines if ln not in ("急", "分享", "|")]
     title = meaningful[0] if meaningful else card["source_job_id"]

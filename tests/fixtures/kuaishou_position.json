@@ -1,0 +1,12 @@
+{
+  "id": 13101,
+  "code": "e0c40d90b8f24483933668c415a82a5a",
+  "name": "推荐大模型算法工程师",
+  "positionNatureCode": "fulltime",
+  "recruitSubProjectCode": "20271779425607",
+  "description": "探索大模型推荐系统与多模态信号建模，推进算法能力落地。",
+  "positionDemand": "1、硕士及以上学历，计算机、人工智能、统计学、数学等专业；\n2、熟悉 C/C++、Python 或 Java。",
+  "workLocationDicts": [{"name": "北京", "code": "beijing"}, {"name": "杭州", "code": "Hangzhou"}],
+  "releaseTime": "2026-08-09 17:59:47",
+  "updateTime": 1788260415000
+}

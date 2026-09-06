@@ -31,6 +31,13 @@ from crawler.adapters.dongfang import DongfangCampusAdapter
 from crawler.adapters.sangfor import SangforCampusAdapter
 from crawler.adapters.fanruan import FanruanAdapter
 from crawler.adapters.byd import BydCampusAdapter
+from crawler.adapters.gbits import GbitsCampusAdapter
+from crawler.adapters.kuaishou import KuaishouCampusAdapter
+from crawler.adapters.wind import WindCampusAdapter
+from crawler.adapters.leihuo import LeihuoCampusAdapter
+from crawler.adapters.lixiang import LixiangCampusAdapter
+from crawler.adapters.apple import AppleCampusAdapter
+from crawler.adapters.cmb import CmbCampusAdapter
 
 
 def default_registry() -> AdapterRegistry:
@@ -77,6 +84,13 @@ def default_registry() -> AdapterRegistry:
     registry.register("sangfor", SangforCampusAdapter())
     registry.register("fanruan", FanruanAdapter())
     registry.register("byd", BydCampusAdapter())
+    registry.register("gbits", GbitsCampusAdapter())
+    registry.register("kuaishou", KuaishouCampusAdapter())
+    registry.register("wind", WindCampusAdapter())
+    registry.register("leihuo", LeihuoCampusAdapter())
+    registry.register("lixiang", LixiangCampusAdapter())
+    registry.register("apple", AppleCampusAdapter())
+    registry.register("cmb", CmbCampusAdapter())
     return registry
 
 
@@ -117,6 +131,13 @@ __all__ = [
     "SangforCampusAdapter",
     "FanruanAdapter",
     "BydCampusAdapter",
+    "GbitsCampusAdapter",
+    "KuaishouCampusAdapter",
+    "WindCampusAdapter",
+    "LeihuoCampusAdapter",
+    "LixiangCampusAdapter",
+    "AppleCampusAdapter",
+    "CmbCampusAdapter",
     "default_registry",
 ]
 

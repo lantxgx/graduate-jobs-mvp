@@ -25,7 +25,7 @@ from crawler.normalize import JOB_NATURE_VALUES
 SOURCE_FILE = Path("config/sources.json")
 
 
-def is_qualified_job(job: dict) -> bool:
+def is_qualified_job(job: dict, source: dict | None = None) -> bool:
     """Enforce the concrete-position gate before a crawl can mutate job state."""
     has_detail = bool(str(job.get("description") or "").strip() or str(job.get("requirements") or "").strip())
     return (
@@ -34,6 +34,10 @@ def is_qualified_job(job: dict) -> bool:
             for field in ("title", "city", "category", "degree", "job_nature", "apply_url", "source_url", "content_hash")
         )
         and has_detail
+        and (
+            not (source or {}).get("require_requirements")
+            or bool(str(job.get("requirements") or "").strip())
+        )
         and job.get("job_nature") in JOB_NATURE_VALUES
     )
 
@@ -88,7 +92,7 @@ async def crawl_source(source: dict) -> dict:
             raw = await adapter.fetch_detail(source, item)
             job = adapter.normalize(source, raw)
             if job:
-                if is_qualified_job(job):
+                if is_qualified_job(job, source):
                     normalized.append(job)
                 else:
                     record_job_quarantine(

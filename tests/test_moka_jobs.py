@@ -1,6 +1,6 @@
 import unittest
 
-from crawler.adapters.moka import normalize_moka_job
+from crawler.adapters.moka import normalize_moka_job, parse_embedded_job_cards
 
 SOURCE = {
     "id": "kingsoft-campus",
@@ -11,6 +11,16 @@ SOURCE = {
 
 
 class MokaNormalizeTests(unittest.TestCase):
+    def test_parses_public_ssr_init_data_job_list(self):
+        cards = parse_embedded_job_cards(
+            '{"jobs":[{"id":"job-1","title":"实习-机器人结构工程师",'
+            '"commitment":"实习","education":"本科"}]}'
+        )
+        self.assertEqual(len(cards), 1)
+        self.assertEqual(cards[0]["source_job_id"], "job-1")
+        self.assertIn("实习", cards[0]["raw_text"])
+        self.assertEqual(cards[0]["embedded"]["education"], "本科")
+
     def test_normalizes_concrete_moka_job(self):
         raw = {
             "source_job_id": "24d44c91-5110-4c0b-989e-9c0d4d80ba25",

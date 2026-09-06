@@ -1,0 +1,15 @@
+{
+  "ChannelPositionID": 1404,
+  "ChannelPositionName": "全栈研发工程师（实习）",
+  "PositionType": 9002,
+  "PositionTypeText": "校招",
+  "PositionName": "全栈研发工程师（实习）",
+  "PositionClassName": "软件研发类",
+  "WorkPlace": [{"Name": "上海", "Value": "1"}],
+  "ExpireFlag": false,
+  "Degree": null,
+  "ChannelPositionDesc": "参与公司核心产品的前端和后端开发工作，协助实现新功能和技术优化。",
+  "ChannelPositionRequirement": "计算机、软件工程、信息技术等相关专业本科及以上学历在读；熟悉至少一种开发语言。",
+  "PublishDate": "2025-12-09 00:00:00.0000",
+  "InUse": true
+}

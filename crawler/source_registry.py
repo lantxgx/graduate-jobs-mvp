@@ -80,6 +80,16 @@ VERIFIED_SOURCE_KEYS = {
     "servyou-moka-campus": "moka",
     "byd-campus": "byd",
     "ximalaya-beisen-internship": "beisen",
+    "gbits-campus": "gbits",
+    "kuaishou-campus-roster": "kuaishou",
+    "source-de915a7057089add": "wind",
+    "leihuo-campus": "leihuo",
+    "kingdee-moka-campus": "moka",
+    "baiwang-campus": "baiwang",
+    "citics-campus": "citics",
+    "lixiang-campus-api": "lixiang",
+    "apple-china-intern-api": "apple",
+    "cmb-campus-roster": "cmb",
 }
 
 COMPANY_CANONICAL_ALIASES = {
@@ -145,7 +155,7 @@ def sync_config_sources(path: Path = DEFAULT_SOURCE_FILE) -> dict:
             adapter = str(source.get("adapter") or source.get("mode") or "legacy")
             config = {
                 k: source[k]
-                for k in ("mode", "base_url", "channel_id", "max_pages", "max_jobs", "page_size", "page_delay_ms", "job_delay_ms", "snapshot_complete", "detail_routes", "categories")
+                for k in ("mode", "base_url", "channel_id", "project_id", "recruitment_type_id", "max_pages", "max_jobs", "page_size", "page_delay_ms", "job_delay_ms", "snapshot_complete", "detail_routes", "categories", "recruit_sub_project_codes")
                 if k in source
             }
             if existing:
