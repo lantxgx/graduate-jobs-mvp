@@ -63,6 +63,7 @@ VERIFIED_SOURCE_KEYS = {
     "intel-tupu-campus": "fuyao",
     "fanruan-campus": "fanruan",
     "dji-moka-campus": "moka",
+    "tcl-hotjob-campus": "hotjob",
     "nsfocus-moka-campus": "moka",
     "shengqu-moka-campus": "moka",
     "ztgame-moka-campus": "moka",

@@ -1522,5 +1522,19 @@
     "snapshot_complete": false,
     "campus_only": true,
     "enabled": true
+  },
+  {
+    "id": "tcl-hotjob-campus",
+    "company": "TCL",
+    "name": "TCL校园招聘（官网 Hotjob 门户）",
+    "url": "https://wecruit.hotjob.cn/SU64893571bef57c16d356b99e/pb/school.html",
+    "mode": "hotjob",
+    "adapter": "hotjob",
+    "suite_key": "SU64893571bef57c16d356b99e",
+    "max_jobs": 5,
+    "page_size": 12,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "enabled": true
   }
 ]
