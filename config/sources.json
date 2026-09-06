@@ -1854,5 +1854,22 @@
     "campus_only": true,
     "require_requirements": true,
     "enabled": true
+  },
+  {
+    "id": "zhihu-moka-campus",
+    "company": "知乎",
+    "name": "知乎校园招聘（官网链接的 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/zhihu/68321",
+    "mode": "moka",
+    "adapter": "moka",
+    "org_id": "zhihu",
+    "site_id": 68321,
+    "max_jobs": 10,
+    "max_detail": 10,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "detail_wait_ms": 1000,
+    "require_requirements": true,
+    "enabled": true
   }
 ]

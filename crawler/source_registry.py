@@ -90,6 +90,7 @@ VERIFIED_SOURCE_KEYS = {
     "lixiang-campus-api": "lixiang",
     "apple-china-intern-api": "apple",
     "cmb-campus-roster": "cmb",
+    "zhihu-moka-campus": "moka",
 }
 
 COMPANY_CANONICAL_ALIASES = {
