@@ -104,6 +104,7 @@ VERIFIED_SOURCE_KEYS = {
     "eve-hotjob-campus": "hotjob",
     "jinkosolar-moka-campus": "moka",
     "bilibili-campus-roster": "bilibili",
+    "ctrip-campus-api": "ctrip",
 }
 
 COMPANY_CANONICAL_ALIASES = {

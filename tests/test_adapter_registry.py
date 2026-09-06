@@ -8,7 +8,7 @@ class AdapterRegistryTests(unittest.TestCase):
         registry = default_registry()
         self.assertEqual(
             registry.names(),
-            ["alibaba", "anker", "apple", "baiwang", "beisen", "beisen_jobs_browser", "bilibili", "browser_json", "byd", "bytedance_ats", "ccb", "citics", "cmb", "custom_html", "dewu", "dongfang", "fanruan", "feishu_jobs_browser", "fuyao", "gac_toyota", "gbits", "greenhouse", "hikvision", "hotjob", "huya", "jd", "kuaishou", "legacy", "leihuo", "lenovo", "lever", "lixiang", "lovol", "meituan", "mihoyo", "moka", "oppo", "papegames", "pdd", "sangfor", "sanqi", "sensetime", "tencent", "wind", "xiaohongshu", "xiaomi_jobs_browser", "yitu"],
+            ["alibaba", "anker", "apple", "baiwang", "beisen", "beisen_jobs_browser", "bilibili", "browser_json", "byd", "bytedance_ats", "ccb", "citics", "cmb", "ctrip", "custom_html", "dewu", "dongfang", "fanruan", "feishu_jobs_browser", "fuyao", "gac_toyota", "gbits", "greenhouse", "hikvision", "hotjob", "huya", "jd", "kuaishou", "legacy", "leihuo", "lenovo", "lever", "lixiang", "lovol", "meituan", "mihoyo", "moka", "oppo", "papegames", "pdd", "sangfor", "sanqi", "sensetime", "tencent", "wind", "xiaohongshu", "xiaomi_jobs_browser", "yitu"],
         )
         self.assertIs(registry.get("browser_json"), registry.get("feishu_jobs_browser"))
 

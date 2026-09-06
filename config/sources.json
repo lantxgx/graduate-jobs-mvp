@@ -318,6 +318,18 @@
     "enabled": true
   },
   {
+    "id": "ctrip-campus-api",
+    "company": "携程集团",
+    "name": "携程集团校园招聘（官网公开岗位 API）",
+    "url": "https://careers.ctrip.com/#/campus/jobList?kind=1",
+    "mode": "ctrip",
+    "adapter": "ctrip",
+    "max_jobs": 20,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "enabled": true
+  },
+  {
     "id": "iflytek-campus-roster",
     "company": "科大讯飞",
     "name": "科大讯飞校园招聘（名录执行）",
