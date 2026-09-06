@@ -107,6 +107,11 @@ VERIFIED_SOURCE_KEYS = {
     "ctrip-campus-api": "ctrip",
     "insta360-feishu-campus": "feishu_jobs_browser",
     "shlab-campus": "shlab",
+    "tsingtao-beisen-campus": "beisen",
+    "sany-beisen-campus": "beisen",
+    "mengniu-beisen-campus": "beisen",
+    "weichai-beisen-campus": "beisen",
+    "jmc-beisen-campus": "beisen",
 }
 
 COMPANY_CANONICAL_ALIASES = {

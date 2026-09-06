@@ -2055,5 +2055,105 @@
     "campus_only": true,
     "require_requirements": true,
     "enabled": true
+  },
+  {
+    "id": "tsingtao-beisen-campus",
+    "company": "青岛啤酒",
+    "name": "青岛啤酒校园招聘（官网北森公开岗位）",
+    "url": "https://tsingtao.zhiye.com/campus",
+    "mode": "beisen",
+    "adapter": "beisen",
+    "categories": [2],
+    "detail_routes": {
+      "2": "/campus/detail",
+      "3": "/intern/detail"
+    },
+    "page_size": 20,
+    "max_pages": 2,
+    "page_delay_ms": 700,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "require_requirements": true,
+    "enabled": true
+  },
+  {
+    "id": "sany-beisen-campus",
+    "company": "三一集团",
+    "name": "三一集团校园招聘（官网北森公开岗位）",
+    "url": "https://sany.zhiye.com/campus",
+    "mode": "beisen",
+    "adapter": "beisen",
+    "categories": [2],
+    "detail_routes": {
+      "2": "/campus/detail",
+      "3": "/intern/detail"
+    },
+    "page_size": 20,
+    "max_pages": 5,
+    "page_delay_ms": 700,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "require_requirements": true,
+    "enabled": true
+  },
+  {
+    "id": "mengniu-beisen-campus",
+    "company": "蒙牛",
+    "name": "蒙牛校园招聘（官网北森公开岗位）",
+    "url": "https://mengniu.zhiye.com/campus",
+    "mode": "beisen",
+    "adapter": "beisen",
+    "categories": [2],
+    "detail_routes": {
+      "2": "/campus/detail",
+      "3": "/intern/detail"
+    },
+    "page_size": 20,
+    "max_pages": 5,
+    "page_delay_ms": 700,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "require_requirements": true,
+    "enabled": true
+  },
+  {
+    "id": "weichai-beisen-campus",
+    "company": "潍柴集团",
+    "name": "潍柴集团校园招聘（官网北森公开岗位）",
+    "url": "https://weichai.zhiye.com/campus",
+    "mode": "beisen",
+    "adapter": "beisen",
+    "categories": [2],
+    "detail_routes": {
+      "2": "/campus/detail",
+      "3": "/intern/detail"
+    },
+    "page_size": 20,
+    "max_pages": 2,
+    "page_delay_ms": 700,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "require_requirements": true,
+    "enabled": true
+  },
+  {
+    "id": "jmc-beisen-campus",
+    "company": "江铃汽车",
+    "name": "江铃汽车校园招聘（官网北森公开岗位）",
+    "url": "https://jmc.zhiye.com/campus",
+    "mode": "beisen",
+    "adapter": "beisen",
+    "categories": [2],
+    "detail_routes": {
+      "2": "/campus/detail",
+      "3": "/intern/detail"
+    },
+    "page_size": 20,
+    "max_pages": 1,
+    "page_delay_ms": 700,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "require_requirements": true,
+    "enabled": true
   }
 ]
