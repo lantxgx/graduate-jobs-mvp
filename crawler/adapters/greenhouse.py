@@ -58,9 +58,26 @@ def _description_and_requirements(raw: dict[str, Any]) -> tuple[str, str]:
             "What you bring",
             "What you'll bring:",
             "What you'll bring",
+            "Who You Are:",
+            "Who you are:",
+            "Who You Are",
+            "Who you are",
+            "Preferred Qualifications:",
+            "Preferred qualifications:",
+            "Preferred Qualifications",
+            "Preferred qualifications",
+            "Basic Qualifications:",
+            "Basic qualifications:",
+            "Basic Qualifications",
+            "Basic qualifications",
+            "Minimum Requirements:",
+            "Minimum requirements:",
+            "Minimum Requirements",
+            "Minimum requirements",
             "Qualifications:",
         )
-        positions = [content.find(marker) for marker in markers if content.find(marker) >= 0]
+        folded_content = content.casefold()
+        positions = [folded_content.find(marker.casefold()) for marker in markers if folded_content.find(marker.casefold()) >= 0]
         if positions:
             split_at = min(positions)
             requirements = content[split_at:].strip()
@@ -138,8 +155,16 @@ class GreenhouseAdapter:
         records = payload.get("jobs") if isinstance(payload, dict) else payload
         if not isinstance(records, list):
             return CollectionResult([], False, response_urls, "greenhouse_jobs_payload_invalid")
+        title_keywords = [str(value).strip().casefold() for value in (source.get("title_keywords") or []) if str(value).strip()]
+        selected_records = records
+        if title_keywords:
+            selected_records = [
+                raw for raw in records
+                if isinstance(raw, dict)
+                and any(re.search(rf"\b{re.escape(keyword)}\b", _text(raw.get("title") or raw.get("name")).casefold()) for keyword in title_keywords)
+            ]
         items: list[ListingItem] = []
-        for raw in records[:max_jobs]:
+        for raw in selected_records[:max_jobs]:
             if not isinstance(raw, dict):
                 continue
             item = normalize_greenhouse_job(raw, source)

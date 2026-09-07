@@ -2,7 +2,7 @@
 
 - company: Stripe
 - source_id: `stripe-greenhouse-careers`
-- state: paused
+- state: integrated / sampled
 - adapter: existing Greenhouse adapter
 - baseline: 174 companies with active jobs; 7,718 active jobs
 - official career URL: `https://stripe.com/jobs`
@@ -20,6 +20,5 @@
 
 ## Result
 
-- One bounded worker run returned `crawl_produced_no_qualified_concrete_jobs`.
-- No jobs were created or updated; the source was paused with reason `adapter_mismatch`.
-- Do not retry without a confirmed Stripe-specific content mapping or new evidence.
+- After the Greenhouse adapter added title-keyword selection and case-insensitive requirement headings, one bounded worker run accepted 16 jobs; 16 created, 0 updated.
+- `snapshot_complete=false`; the public board was not claimed complete.
