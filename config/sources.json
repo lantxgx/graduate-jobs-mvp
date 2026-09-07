@@ -4318,5 +4318,35 @@
     "require_requirements": true,
     "enabled": false,
     "paused_reason": "crawl_produced_no_qualified_concrete_jobs; adapter_mismatch; do_not_retry_without_new_evidence"
+  },
+  {
+    "id": "samsara-greenhouse-careers",
+    "company": "Samsara",
+    "name": "Samsara careers（官方 Greenhouse 公共岗位）",
+    "url": "https://www.samsara.com/company/careers",
+    "mode": "greenhouse",
+    "adapter": "greenhouse",
+    "board_token": "samsara",
+    "max_jobs": 20,
+    "title_keywords": ["intern", "internship", "new grad", "graduate"],
+    "snapshot_complete": false,
+    "campus_only": false,
+    "require_requirements": true,
+    "enabled": true
+  },
+  {
+    "id": "toast-greenhouse-careers",
+    "company": "Toast",
+    "name": "Toast careers（官方 Greenhouse 公共岗位）",
+    "url": "https://careers.toasttab.com/",
+    "mode": "greenhouse",
+    "adapter": "greenhouse",
+    "board_token": "toast",
+    "max_jobs": 20,
+    "snapshot_complete": false,
+    "campus_only": false,
+    "require_requirements": true,
+    "enabled": false,
+    "paused_reason": "crawl_produced_no_qualified_concrete_jobs; adapter_mismatch; do_not_retry_without_new_evidence"
   }
 ]

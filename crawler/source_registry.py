@@ -47,6 +47,7 @@ VERIFIED_SOURCE_KEYS = {
     "stripe-greenhouse-careers": "greenhouse",
     "datadog-greenhouse-careers": "greenhouse",
     "airtable-greenhouse-careers": "greenhouse",
+    "samsara-greenhouse-careers": "greenhouse",
     "pengwin-moka-campus": "moka",
     "swhysc-moka-campus": "moka",
     "eastmoney-moka-campus": "moka",
