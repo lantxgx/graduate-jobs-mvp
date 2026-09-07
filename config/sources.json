@@ -3859,7 +3859,7 @@
     "snapshot_complete": false,
     "campus_only": true,
     "enabled": false,
-    "paused_reason": "bounded_probe_failed; no_qualified_concrete_jobs; do_not_retry_without_new_evidence"
+    "paused_reason": "timeout_in_moka_page_collection; do_not_retry_without_new_evidence"
   },
   {
     "id": "webank-moka-campus",
@@ -3874,7 +3874,7 @@
     "snapshot_complete": false,
     "campus_only": true,
     "enabled": false,
-    "paused_reason": "bounded_probe_failed; public_job_list_missing; do_not_retry_without_new_evidence"
+    "paused_reason": "public_job_list_missing; adapter_mismatch; do_not_retry_without_new_evidence"
   },
   {
     "id": "shzq-moka-campus",
@@ -4198,7 +4198,8 @@
     "snapshot_complete": false,
     "campus_only": false,
     "require_requirements": true,
-    "enabled": true
+    "enabled": false,
+    "paused_reason": "timeout_in_moka_page_collection; do_not_retry_without_new_evidence"
   },
   {
     "id": "duolingo-greenhouse-careers",
