@@ -47,6 +47,24 @@ def _location(raw: dict[str, Any]) -> str | None:
     return normalize_city(value or None)
 
 
+def _description_and_requirements(raw: dict[str, Any]) -> tuple[str, str]:
+    content = _text(raw.get("content") or raw.get("description") or raw.get("job_description"))
+    requirements = _text(raw.get("requirements") or raw.get("qualifications"))
+    if not requirements and content:
+        markers = (
+            "We'd love to hear from you if you have:",
+            "What we're looking for:",
+            "What you bring:",
+            "Qualifications:",
+        )
+        positions = [content.find(marker) for marker in markers if content.find(marker) >= 0]
+        if positions:
+            split_at = min(positions)
+            requirements = content[split_at:].strip()
+            content = content[:split_at].strip()
+    return content, requirements
+
+
 def normalize_greenhouse_job(raw: dict[str, Any], source: dict[str, Any]) -> dict[str, Any] | None:
     source_job_id = _text(raw.get("id") or raw.get("job_id"))
     title = _text(raw.get("title") or raw.get("name"))
@@ -54,8 +72,7 @@ def normalize_greenhouse_job(raw: dict[str, Any], source: dict[str, Any]) -> dic
     if not source_job_id or not title or not apply_url or not apply_url.startswith(("https://", "http://")):
         return None
 
-    description = _text(raw.get("content") or raw.get("description") or raw.get("job_description"))
-    requirements = _text(raw.get("requirements") or raw.get("qualifications"))
+    description, requirements = _description_and_requirements(raw)
     nature_raw = _text(raw.get("employment_type") or raw.get("job_type") or raw.get("recruitment_type"))
     nature = normalize_job_nature(nature_raw, title, f"{description} {requirements}")
     if nature is None:

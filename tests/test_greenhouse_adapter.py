@@ -30,6 +30,18 @@ class GreenhouseAdapterTests(unittest.TestCase):
         raw = {"id": 1, "title": "Software Engineering Intern", "employment_type": "Internship", "content": "Build tools."}
         self.assertIsNone(normalize_greenhouse_job(raw, self.SOURCE))
 
+    def test_requirements_heading_is_split_from_greenhouse_content(self):
+        raw = {
+            "id": 4,
+            "title": "Software Engineering Intern",
+            "employment_type": "Internship",
+            "absolute_url": "https://example/jobs/4",
+            "content": "Build useful tools. We'd love to hear from you if you have: Python experience.",
+        }
+        job = normalize_greenhouse_job(raw, self.SOURCE)
+        self.assertIn("Build useful tools", job["description"])
+        self.assertIn("Python experience", job["requirements"])
+
     def test_unknown_recruitment_type_is_rejected(self):
         raw = {"id": 2, "title": "Software Engineer", "absolute_url": "https://example/jobs/2", "content": "Build tools."}
         self.assertIsNone(normalize_greenhouse_job(raw, self.SOURCE))
