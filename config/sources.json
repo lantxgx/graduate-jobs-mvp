@@ -4244,5 +4244,20 @@
     "campus_only": false,
     "require_requirements": true,
     "enabled": true
+  },
+  {
+    "id": "stripe-greenhouse-careers",
+    "company": "Stripe",
+    "name": "Stripe careers（官方 Greenhouse 公共岗位）",
+    "url": "https://stripe.com/jobs",
+    "mode": "greenhouse",
+    "adapter": "greenhouse",
+    "board_token": "stripe",
+    "max_jobs": 20,
+    "snapshot_complete": false,
+    "campus_only": false,
+    "require_requirements": true,
+    "enabled": false,
+    "paused_reason": "crawl_produced_no_qualified_concrete_jobs; adapter_mismatch; do_not_retry_without_new_evidence"
   }
 ]
