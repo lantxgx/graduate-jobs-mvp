@@ -115,6 +115,16 @@ VERIFIED_SOURCE_KEYS = {
     "chery-beisen-campus": "beisen",
     "siasun-beisen-campus": "beisen",
     "tongwei-beisen-campus": "beisen",
+    "gotion-beisen-campus": "beisen",
+    "sunwoda-beisen-campus": "beisen",
+    "svolt-beisen-campus": "beisen",
+    "maxscend-beisen-campus": "beisen",
+    "inovance-beisen-campus": "beisen",
+    "hellobike-beisen-campus": "beisen",
+    "youzan-beisen-campus": "beisen",
+    "ke-beisen-campus": "beisen",
+    "yiche-beisen-campus": "beisen",
+    "galaxyspace-beisen-campus": "beisen",
 }
 
 COMPANY_CANONICAL_ALIASES = {
