@@ -153,6 +153,16 @@ VERIFIED_SOURCE_KEYS = {
     "siat-beisen-campus": "beisen",
     "nanxin-beisen-campus": "beisen",
     "csc108-beisen-campus": "beisen",
+    "smbccn-beisen-campus": "beisen",
+    "laiyifen-beisen-campus": "beisen",
+    "goke-beisen-campus": "beisen",
+    "popmart-beisen-campus": "beisen",
+    "fscut-beisen-campus": "beisen",
+    "novogene-beisen-campus": "beisen",
+    "chinacuc-beisen-campus": "beisen",
+    "cudt-beisen-campus": "beisen",
+    "jxrt-beisen-campus": "beisen",
+    "babybus-beisen-campus": "beisen",
 }
 
 COMPANY_CANONICAL_ALIASES = {

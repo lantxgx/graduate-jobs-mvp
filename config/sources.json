@@ -3601,5 +3601,230 @@
     "campus_only": true,
     "require_requirements": true,
     "enabled": true
+  },
+  {
+    "id": "jereh-beisen-campus",
+    "company": "杰瑞集团",
+    "name": "杰瑞集团校园招聘（北森公开门户）",
+    "url": "https://jereh.zhiye.com/campus",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": false
+  },
+  {
+    "id": "scement4-beisen-campus",
+    "company": "南方水泥",
+    "name": "南方水泥校园招聘（北森公开门户）",
+    "url": "https://scement4.zhiye.com/campus/jobs",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": false
+  },
+  {
+    "id": "cssc-beisen-campus",
+    "company": "中船集团",
+    "name": "中船集团校园招聘（北森公开门户）",
+    "url": "http://cssc.zhiye.com/campus",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": false
+  },
+  {
+    "id": "smbccn-beisen-campus",
+    "company": "三井住友银行（中国）",
+    "name": "三井住友银行校园招聘（北森公开门户）",
+    "url": "https://smbccn.zhiye.com/campus/jobs",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": true
+  },
+  {
+    "id": "crsec-beisen-campus",
+    "company": "国新证券",
+    "name": "国新证券校园招聘（北森公开门户）",
+    "url": "https://crsec.zhiye.com/campus",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": false
+  },
+  {
+    "id": "powerlong-beisen-campus",
+    "company": "宝龙集团",
+    "name": "宝龙集团校园招聘（北森公开门户）",
+    "url": "https://powerlong.zhiye.com/campus",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": false
+  },
+  {
+    "id": "nci-beisen-campus",
+    "company": "新华保险",
+    "name": "新华保险校园招聘（北森公开门户）",
+    "url": "https://nci.zhiye.com/campus",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": false
+  },
+  {
+    "id": "cmi-beisen-campus",
+    "company": "招商船舶",
+    "name": "招商船舶校园招聘（北森公开门户）",
+    "url": "https://cmi.zhiye.com/campus/jobs",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": false
+  },
+  {
+    "id": "laiyifen-beisen-campus",
+    "company": "来伊份",
+    "name": "来伊份校园招聘（北森公开门户）",
+    "url": "https://laiyifen.zhiye.com/campus/jobs",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": true
+  },
+  {
+    "id": "cmie-beisen-campus",
+    "company": "中机国际工程设计研究院",
+    "name": "中机国际工程设计研究院校园招聘（北森公开门户）",
+    "url": "https://cmie.zhiye.com/campus",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": false
+  },
+  {
+    "id": "goke-beisen-campus",
+    "company": "国科微",
+    "name": "国科微校园招聘（北森公开门户）",
+    "url": "https://goke.zhiye.com/campus",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": true
+  },
+  {
+    "id": "sokon-beisen-campus",
+    "company": "赛力斯集团",
+    "name": "赛力斯集团校园招聘（北森公开门户）",
+    "url": "https://sokon.zhiye.com/campus",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": false
+  },
+  {
+    "id": "popmart-beisen-campus",
+    "company": "泡泡玛特",
+    "name": "泡泡玛特校园招聘（北森公开门户）",
+    "url": "https://popmart.zhiye.com/campus",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": true
+  },
+  {
+    "id": "fscut-beisen-campus",
+    "company": "柏楚电子",
+    "name": "柏楚电子校园招聘（北森公开门户）",
+    "url": "https://fscut.zhiye.com/campus",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": true
+  },
+  {
+    "id": "novogene-beisen-campus",
+    "company": "诺禾致源",
+    "name": "诺禾致源校园招聘（北森公开门户）",
+    "url": "https://novogene.zhiye.com/Campus",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": true
+  },
+  {
+    "id": "chinacuc-beisen-campus",
+    "company": "中国联合工程有限公司",
+    "name": "中国联合工程校园招聘（北森公开门户）",
+    "url": "https://chinacuc.zhiye.com/campus",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": true
+  },
+  {
+    "id": "cscec-beisen-campus",
+    "company": "中国建筑",
+    "name": "中国建筑校园招聘（北森公开门户）",
+    "url": "https://cscec.zhiye.com/campus",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": false
+  },
+  {
+    "id": "hengdian-beisen-campus",
+    "company": "横店集团",
+    "name": "横店集团校园招聘（北森公开门户）",
+    "url": "https://hengdian.zhiye.com/campus",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": false
+  },
+  {
+    "id": "chinacdc-beisen-campus",
+    "company": "建发集团",
+    "name": "建发集团校园招聘（北森公开门户）",
+    "url": "https://chinacdc.zhiye.com/campus",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": false
+  },
+  {
+    "id": "hongfa-beisen-campus",
+    "company": "宏发股份",
+    "name": "宏发股份校园招聘（北森公开门户）",
+    "url": "https://hongfa.zhiye.com/campus",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": false
+  },
+  {
+    "id": "bocd-beisen-campus",
+    "company": "成都银行",
+    "name": "成都银行校园招聘（北森公开门户）",
+    "url": "https://bocd.zhiye.com/campus",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": false
+  },
+  {
+    "id": "cudt-beisen-campus",
+    "company": "联通数科",
+    "name": "联通数科校园招聘（北森公开门户）",
+    "url": "https://cudt.zhiye.com/campus",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": true
+  },
+  {
+    "id": "jxrt-beisen-campus",
+    "company": "融通供应链",
+    "name": "融通供应链校园招聘（北森公开门户）",
+    "url": "https://jxrt.zhiye.com/campus",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": true
+  },
+  {
+    "id": "genertec-beisen-campus",
+    "company": "通用技术集团",
+    "name": "通用技术集团校园招聘（北森公开门户）",
+    "url": "https://genertec.zhiye.com/campus",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": false
+  },
+  {
+    "id": "babybus-beisen-campus",
+    "company": "宝宝巴士",
+    "name": "宝宝巴士校园招聘（北森公开门户）",
+    "url": "https://babybus.zhiye.com/campus",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": true
   }
 ]
