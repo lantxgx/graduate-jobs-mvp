@@ -4425,7 +4425,6 @@
     "snapshot_complete": false,
     "campus_only": false,
     "require_requirements": true,
-    "enabled": false,
-    "paused_reason": "missing_independent_requirements_section; quality_gate_rejected; do_not_retry_without_new_evidence"
+    "enabled": true
   }
 ]

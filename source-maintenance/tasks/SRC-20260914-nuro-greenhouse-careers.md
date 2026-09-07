@@ -5,7 +5,7 @@
 - official careers page: `https://www.nuro.ai/careers`
 - public board: `https://boards-api.greenhouse.io/v1/boards/nuro/jobs?content=true`
 - adapter: existing Greenhouse adapter
-- state: candidate; bounded integration in progress
+- state: candidate; parser repair ready; awaiting normal crawl cooldown
 
 ## Evidence
 
@@ -23,4 +23,4 @@
 
 ## Decision
 
-Pause because the source needs a source-specific parser/quality decision. Do not retry under the fast-pass rule.
+The reusable Greenhouse parser now recognizes `About You` headings; focused tests pass and offline normalization accepts both Nuro campus-like records. The existing one-hour crawl cooldown is preserved, so the normal worker/scheduler can perform the next bounded run after cooldown without deleting failure evidence or forcing a retry.
