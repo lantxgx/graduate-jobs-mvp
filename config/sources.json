@@ -3241,5 +3241,23 @@
     "campus_only": true,
     "require_requirements": true,
     "enabled": false
+  },
+  {
+    "id": "sinotrans-beisen-campus",
+    "company": "中国外运",
+    "name": "中国外运校园招聘（北森公开门户）",
+    "url": "https://sinotrans.zhiye.com/campus",
+    "mode": "beisen",
+    "adapter": "beisen",
+    "page_size": 20,
+    "max_pages": 5,
+    "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"},
+    "categories": ["2", "3"],
+    "max_jobs": 20,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "require_requirements": true,
+    "enabled": false
   }
 ]
