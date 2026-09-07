@@ -125,6 +125,16 @@ VERIFIED_SOURCE_KEYS = {
     "ke-beisen-campus": "beisen",
     "yiche-beisen-campus": "beisen",
     "galaxyspace-beisen-campus": "beisen",
+    "longsys-beisen-campus": "beisen",
+    "pharmaron-beisen-campus": "beisen",
+    "miniso-beisen-campus": "beisen",
+    "hm-beisen-campus": "beisen",
+    "tenda-beisen-campus": "beisen",
+    "yuewen-beisen-campus": "beisen",
+    "huolala-beisen-campus": "beisen",
+    "deppon-beisen-campus": "beisen",
+    "skechers-beisen-campus": "beisen",
+    "dongpeng-beisen-campus": "beisen",
 }
 
 COMPANY_CANONICAL_ALIASES = {
