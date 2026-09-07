@@ -422,7 +422,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "roster-004",
@@ -446,7 +446,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "roster-014",
@@ -458,7 +458,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "roster-027",
@@ -470,7 +470,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "roster-043",
@@ -482,7 +482,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "roster-106",
@@ -494,7 +494,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "roster-122",
@@ -506,7 +506,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "roster-272",
@@ -566,7 +566,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "roster-024",
@@ -578,7 +578,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "huya-campus-api",
@@ -771,7 +771,7 @@
     "max_jobs": 20,
     "snapshot_complete": false,
     "campus_only": true,
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "wps-moka-roster",
