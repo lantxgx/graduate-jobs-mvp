@@ -4364,5 +4364,20 @@
     "require_requirements": true,
     "enabled": false,
     "paused_reason": "crawl_produced_no_qualified_concrete_jobs; adapter_mismatch; do_not_retry_without_new_evidence"
+  },
+  {
+    "id": "brex-greenhouse-careers",
+    "company": "Brex",
+    "name": "Brex careers（官方 Greenhouse 公共岗位）",
+    "url": "https://www.brex.com/careers",
+    "mode": "greenhouse",
+    "adapter": "greenhouse",
+    "board_token": "brex",
+    "max_jobs": 20,
+    "snapshot_complete": false,
+    "campus_only": false,
+    "require_requirements": true,
+    "enabled": false,
+    "paused_reason": "crawl_produced_no_qualified_concrete_jobs; adapter_mismatch; do_not_retry_without_new_evidence"
   }
 ]
