@@ -4379,5 +4379,21 @@
     "require_requirements": true,
     "enabled": false,
     "paused_reason": "crawl_produced_no_qualified_concrete_jobs; adapter_mismatch; do_not_retry_without_new_evidence"
+  },
+  {
+    "id": "cloudflare-greenhouse-careers",
+    "company": "Cloudflare",
+    "name": "Cloudflare careers（官方 Greenhouse 公共岗位）",
+    "url": "https://www.cloudflare.com/careers/jobs/",
+    "mode": "greenhouse",
+    "adapter": "greenhouse",
+    "board_token": "cloudflare",
+    "max_jobs": 20,
+    "title_keywords": ["intern", "new grad", "graduate"],
+    "snapshot_complete": false,
+    "campus_only": false,
+    "require_requirements": true,
+    "enabled": false,
+    "paused_reason": "crawl_produced_no_qualified_concrete_jobs; adapter_mismatch; do_not_retry_without_new_evidence"
   }
 ]
