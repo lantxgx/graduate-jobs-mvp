@@ -55,6 +55,9 @@ def _description_and_requirements(raw: dict[str, Any]) -> tuple[str, str]:
             "We'd love to hear from you if you have:",
             "What we're looking for:",
             "What you bring:",
+            "What you bring",
+            "What you'll bring:",
+            "What you'll bring",
             "Qualifications:",
         )
         positions = [content.find(marker) for marker in markers if content.find(marker) >= 0]

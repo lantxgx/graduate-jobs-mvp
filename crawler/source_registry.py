@@ -43,6 +43,7 @@ VERIFIED_SOURCE_KEYS = {
     "joyson-moka-campus": "moka",
     "astrazeneca-moka-campus": "moka",
     "genscript-moka-campus": "moka",
+    "robinhood-greenhouse-careers": "greenhouse",
     "pengwin-moka-campus": "moka",
     "swhysc-moka-campus": "moka",
     "eastmoney-moka-campus": "moka",

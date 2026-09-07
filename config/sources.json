@@ -4229,5 +4229,19 @@
     "require_requirements": true,
     "enabled": false,
     "paused_reason": "verification_page_detected; do_not_retry_without_new_evidence"
+  },
+  {
+    "id": "robinhood-greenhouse-careers",
+    "company": "Robinhood",
+    "name": "Robinhood careers（官方 Greenhouse 公共岗位）",
+    "url": "https://careers.robinhood.com/",
+    "mode": "greenhouse",
+    "adapter": "greenhouse",
+    "board_token": "robinhood",
+    "max_jobs": 20,
+    "snapshot_complete": false,
+    "campus_only": false,
+    "require_requirements": true,
+    "enabled": true
   }
 ]

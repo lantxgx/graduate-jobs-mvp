@@ -1,5 +1,5 @@
 const $=id=>document.getElementById(id), PAGE_SIZE=100;
-const nativeFetch=window.fetch.bind(window); window.fetch=(input,...args)=>{const url=String(input); return nativeFetch(url.endsWith('/jobs.json')&&!url.includes('?')?`${url}?v=20260906-intel-v1`:input,...args);};
+const nativeFetch=window.fetch.bind(window); window.fetch=(input,...args)=>{const url=String(input); return nativeFetch(url.endsWith('/jobs.json')&&!url.includes('?')?`${url}?v=20260908-robinhood-v1`:input,...args);};
 let allJobs=[],filteredJobs=[],shown=PAGE_SIZE,locationRecords=[];
 const fields={company:$('company'),country:$('country'),province:$('province'),city:$('city'),category:$('category'),major:$('major'),job_nature:$('jobNature'),degree:$('degree')};
 const clean=v=>String(v||'').replace(/\s+/g,' ').trim();
