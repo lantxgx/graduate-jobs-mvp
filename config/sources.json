@@ -2250,7 +2250,8 @@
     "snapshot_complete": false,
     "campus_only": true,
     "require_requirements": true,
-    "enabled": false
+    "enabled": false,
+    "paused_reason": "bounded_probe_failed; beisen_page_limit_before_source_count; do_not_retry_without_new_evidence"
   },
   {
     "id": "changan-new-beisen-campus",
@@ -2322,7 +2323,8 @@
     "snapshot_complete": false,
     "campus_only": true,
     "require_requirements": true,
-    "enabled": false
+    "enabled": false,
+    "paused_reason": "bounded_probe_failed; beisen_page_limit_before_source_count; do_not_retry_without_new_evidence"
   }
   ,{
     "id": "goodix-beisen-campus",
@@ -2340,7 +2342,8 @@
     "snapshot_complete": false,
     "campus_only": true,
     "require_requirements": true,
-    "enabled": false
+    "enabled": false,
+    "paused_reason": "bounded_probe_failed; public_job_page_request_failed; do_not_retry_without_new_evidence"
   },
   {
     "id": "maxscend-beisen-campus",
@@ -2394,7 +2397,8 @@
     "snapshot_complete": false,
     "campus_only": true,
     "require_requirements": true,
-    "enabled": false
+    "enabled": false,
+    "paused_reason": "bounded_probe_failed; crawl_produced_no_qualified_concrete_jobs; do_not_retry_without_new_evidence"
   }
   ,{
     "id": "leapmotor-beisen-campus",
@@ -2412,7 +2416,8 @@
     "snapshot_complete": false,
     "campus_only": true,
     "require_requirements": true,
-    "enabled": false
+    "enabled": false,
+    "paused_reason": "bounded_probe_failed; beisen_page_limit_before_source_count; do_not_retry_without_new_evidence"
   },
   {
     "id": "hellobike-beisen-campus",
@@ -2520,7 +2525,8 @@
     "snapshot_complete": false,
     "campus_only": true,
     "require_requirements": true,
-    "enabled": false
+    "enabled": false,
+    "paused_reason": "bounded_probe_failed; beisen_page_limit_before_source_count; do_not_retry_without_new_evidence"
   }
   ,{
     "id": "longshine-beisen-campus",
@@ -2610,7 +2616,8 @@
     "snapshot_complete": false,
     "campus_only": true,
     "require_requirements": true,
-    "enabled": false
+    "enabled": false,
+    "paused_reason": "bounded_probe_failed; beisen_page_limit_before_source_count; do_not_retry_without_new_evidence"
   },
   {
     "id": "starbucks-beisen-campus-new",
@@ -2628,7 +2635,8 @@
     "snapshot_complete": false,
     "campus_only": true,
     "require_requirements": true,
-    "enabled": false
+    "enabled": false,
+    "paused_reason": "bounded_probe_failed; crawl_produced_no_qualified_concrete_jobs; do_not_retry_without_new_evidence"
   },
   {
     "id": "marriott-beisen-campus",
@@ -2682,7 +2690,8 @@
     "snapshot_complete": false,
     "campus_only": true,
     "require_requirements": true,
-    "enabled": false
+    "enabled": false,
+    "paused_reason": "bounded_probe_failed; beisen_page_limit_before_source_count; do_not_retry_without_new_evidence"
   },
   {
     "id": "uniqlo-beisen-campus",
@@ -2700,7 +2709,8 @@
     "snapshot_complete": false,
     "campus_only": true,
     "require_requirements": true,
-    "enabled": false
+    "enabled": false,
+    "paused_reason": "bounded_probe_failed; beisen_page_limit_before_source_count; do_not_retry_without_new_evidence"
   },
   {
     "id": "hm-beisen-campus",

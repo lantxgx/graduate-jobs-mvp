@@ -28,6 +28,7 @@
 | `starbucks-beisen-campus-new` | 暂停 | `crawl_produced_no_qualified_concrete_jobs` |
 | `heytea-beisen-campus` | 暂停 | `beisen_page_limit_before_source_count` |
 | `uniqlo-beisen-campus` | 暂停 | `beisen_page_limit_before_source_count` |
+| `boe-beisen-campus-new` | 暂停 | `crawl_produced_no_qualified_concrete_jobs` |
 
 ## 运行命令
 
