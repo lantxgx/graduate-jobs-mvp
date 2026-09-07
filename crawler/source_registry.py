@@ -135,6 +135,14 @@ VERIFIED_SOURCE_KEYS = {
     "deppon-beisen-campus": "beisen",
     "skechers-beisen-campus": "beisen",
     "dongpeng-beisen-campus": "beisen",
+    "henlius-beisen-campus": "beisen",
+    "3sbio-beisen-campus": "beisen",
+    "horizon-hotjob-campus": "hotjob",
+    "fuyao-campus": "fuyao",
+    "digitalchina-beisen-campus": "beisen",
+    "michelin-beisen-campus": "beisen",
+    "mediatek-beisen-campus": "beisen",
+    "chinaunicom-beisen-campus-new": "beisen",
 }
 
 COMPANY_CANONICAL_ALIASES = {
