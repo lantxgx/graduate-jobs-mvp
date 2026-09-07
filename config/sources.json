@@ -3867,6 +3867,58 @@
     "paused_reason": "bounded_probe_failed; public_job_list_missing; do_not_retry_without_new_evidence"
   },
   {
+    "id": "shzq-moka-campus",
+    "company": "上海证券有限责任公司",
+    "name": "上海证券校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/shzq/94541",
+    "mode": "moka", "adapter": "moka", "org_id": "shzq", "site_id": 94541,
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": false,
+    "paused_reason": "bounded_probe_failed; public_job_list_missing; do_not_retry_without_new_evidence"
+  },
+  {
+    "id": "joyson-moka-campus",
+    "company": "均胜集团",
+    "name": "均胜集团校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/joyson/94311",
+    "mode": "moka", "adapter": "moka", "org_id": "joyson", "site_id": 94311,
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": true
+  },
+  {
+    "id": "astrazeneca-moka-campus",
+    "company": "阿斯利康",
+    "name": "阿斯利康校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/astrazeneca/148833",
+    "mode": "moka", "adapter": "moka", "org_id": "astrazeneca", "site_id": 148833,
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": false,
+    "paused_reason": "quality_gate_rejected; no_active_jobs_after_quarantine; do_not_retry_without_new_evidence"
+  },
+  {
+    "id": "jomoo-moka-campus",
+    "company": "九牧集团",
+    "name": "九牧集团校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/jomoo/142937",
+    "mode": "moka", "adapter": "moka", "org_id": "jomoo", "site_id": 142937,
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": false,
+    "paused_reason": "bounded_probe_failed; no_qualified_concrete_jobs; do_not_retry_without_new_evidence"
+  },
+  {
+    "id": "genscript-moka-campus",
+    "company": "南京金斯瑞生物科技有限公司",
+    "name": "金斯瑞校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/genscript/101964",
+    "mode": "moka", "adapter": "moka", "org_id": "genscript", "site_id": 101964,
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": true
+  },
+  {
+    "id": "bosch-moka-campus",
+    "company": "博世（中国）投资有限公司",
+    "name": "博世中国校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/bosch/75909",
+    "mode": "moka", "adapter": "moka", "org_id": "bosch", "site_id": 75909,
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": false,
+    "paused_reason": "bounded_probe_failed; no_qualified_concrete_jobs; do_not_retry_without_new_evidence"
+  },
+  {
     "id": "tal-moka-campus",
     "company": "好未来",
     "name": "好未来校园招聘（官方 Moka 门户）",
@@ -4070,5 +4122,57 @@
     "snapshot_complete": false,
     "campus_only": true,
     "enabled": true
+  }
+  ,{
+    "id": "pengwin-moka-campus", "company": "鹏鼎控股", "name": "鹏鼎控股校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/pengwin/145331", "mode": "moka", "adapter": "moka",
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": true
+  },
+  {
+    "id": "swhysc-moka-campus", "company": "深圳市盐田港股份有限公司", "name": "盐田港校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/swhysc-job/166086", "mode": "moka", "adapter": "moka",
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": true
+  },
+  {
+    "id": "yhfund-moka-campus", "company": "易方达基金", "name": "易方达基金校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/yhfund/78005", "mode": "moka", "adapter": "moka",
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": true
+  },
+  {
+    "id": "eastmoney-moka-campus", "company": "东方财富", "name": "东方财富校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/eastmoney/92400", "mode": "moka", "adapter": "moka",
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": true
+  },
+  {
+    "id": "chinatelecomai-moka-campus", "company": "中国电信人工智能科技有限公司", "name": "中国电信人工智能校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/chinatelecomai/144822", "mode": "moka", "adapter": "moka",
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": true
+  },
+  {
+    "id": "jingweihengrun-moka-campus", "company": "经纬恒润", "name": "经纬恒润校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/jingweihengrun/168294", "mode": "moka", "adapter": "moka",
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": true
+  },
+  {
+    "id": "jinguangapp-moka-campus", "company": "金光纸业", "name": "金光纸业校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/jinguangapp/144102", "mode": "moka", "adapter": "moka",
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": true
+  },
+  {
+    "id": "wison-moka-campus", "company": "惠生集团", "name": "惠生集团校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/wison/115998", "mode": "moka", "adapter": "moka",
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": true
+  },
+  {
+    "id": "cestc-moka-campus", "company": "中国电子科技集团有限公司", "name": "中国电科校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/cestc/92629", "mode": "moka", "adapter": "moka",
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": false,
+    "paused_reason": "bounded_probe_failed; public_job_list_missing; do_not_retry_without_new_evidence"
+  }
+  ,{
+    "id": "mayair-moka-campus", "company": "美亚柏科", "name": "美亚柏科校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/mayair/142334", "mode": "moka", "adapter": "moka",
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": false,
+    "paused_reason": "quality_gate_rejected; fewer_than_3_active_jobs_after_quarantine; do_not_retry_without_new_evidence"
   }
 ]
