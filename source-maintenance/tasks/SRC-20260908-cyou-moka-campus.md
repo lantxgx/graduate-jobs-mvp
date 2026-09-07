@@ -8,8 +8,17 @@
 - Adapter: reuse existing `moka` adapter.
 - Scope: bounded sample up to 20 jobs; `snapshot_complete=false` until full traversal is proven.
 
-## Result
+## First bounded attempt
 
 - Worker completed without access-control errors but returned `crawl_produced_no_qualified_concrete_jobs`.
 - Jobs created: 0; existing data unchanged.
-- Source disabled with `do_not_retry_without_new_evidence`.
+
+## Follow-up bounded attempt
+
+- A later single sequential worker attempt was started: `python -m crawler.worker --source cyou-moka-campus`.
+- It produced no result within approximately 60 seconds and was stopped.
+- No jobs were accepted, changed, or published from this attempt.
+
+## Decision
+
+The source remains disabled with `do_not_retry_without_new_evidence`. Continue with easier, responsive public sources.
