@@ -4411,5 +4411,21 @@
     "require_requirements": true,
     "enabled": false,
     "paused_reason": "no_qualified_campus_jobs; keyword_false_positive_internal; do_not_retry_without_new_evidence"
+  },
+  {
+    "id": "nuro-greenhouse-careers",
+    "company": "Nuro",
+    "name": "Nuro careers（官方 Greenhouse 公共岗位）",
+    "url": "https://www.nuro.ai/careers",
+    "mode": "greenhouse",
+    "adapter": "greenhouse",
+    "board_token": "nuro",
+    "max_jobs": 20,
+    "title_keywords": ["intern", "new grad", "graduate"],
+    "snapshot_complete": false,
+    "campus_only": false,
+    "require_requirements": true,
+    "enabled": false,
+    "paused_reason": "missing_independent_requirements_section; quality_gate_rejected; do_not_retry_without_new_evidence"
   }
 ]
