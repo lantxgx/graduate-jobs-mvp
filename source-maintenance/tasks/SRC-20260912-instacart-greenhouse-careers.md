@@ -11,14 +11,14 @@
 
 - The official Instacart careers domain is reachable over HTTPS.
 - The public Greenhouse board returns Instacart-branded postings and concrete apply URLs.
-- The bounded board response contains one internship-like title; the source is limited to `intern`, `new grad`, or `graduate` titles and remains `snapshot_complete=false`.
+- A naive external keyword check found one `intern` substring, but the concrete title is `Director IT, Internal Audit`; it is not an internship or new-grad role. The adapter's word-boundary filter correctly excluded it.
 
 ## Bounded result
 
 - Worker command: `python -m crawler.worker --source instacart-greenhouse-careers`.
-- Result: `crawl_produced_no_qualified_concrete_jobs`.
+- Result: `crawl_produced_no_qualified_concrete_jobs` because the public board contains no qualified campus role in the bounded response.
 - Jobs created: 0; existing data unchanged.
 
 ## Decision
 
-Pause this source as an adapter mismatch. Do not retry without new parser evidence.
+Pause this source as having no qualified campus jobs. Do not retry without new public evidence.

@@ -4410,6 +4410,6 @@
     "campus_only": false,
     "require_requirements": true,
     "enabled": false,
-    "paused_reason": "crawl_produced_no_qualified_concrete_jobs; adapter_mismatch; do_not_retry_without_new_evidence"
+    "paused_reason": "no_qualified_campus_jobs; keyword_false_positive_internal; do_not_retry_without_new_evidence"
   }
 ]
