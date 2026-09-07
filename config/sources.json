@@ -4303,5 +4303,20 @@
     "campus_only": false,
     "require_requirements": true,
     "enabled": true
+  },
+  {
+    "id": "affirm-greenhouse-careers",
+    "company": "Affirm",
+    "name": "Affirm careers（官方 Greenhouse 公共岗位）",
+    "url": "https://www.affirm.com/careers",
+    "mode": "greenhouse",
+    "adapter": "greenhouse",
+    "board_token": "affirm",
+    "max_jobs": 20,
+    "snapshot_complete": false,
+    "campus_only": false,
+    "require_requirements": true,
+    "enabled": false,
+    "paused_reason": "crawl_produced_no_qualified_concrete_jobs; adapter_mismatch; do_not_retry_without_new_evidence"
   }
 ]
