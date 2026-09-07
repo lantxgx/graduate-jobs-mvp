@@ -3826,5 +3826,249 @@
     "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
     "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
     "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": true
+  },
+  {
+    "id": "chinaums-beisen-campus",
+    "company": "银联商务",
+    "name": "银联商务校园招聘（北森公开门户）",
+    "url": "https://chinaums.zhiye.com/campus",
+    "mode": "beisen", "adapter": "beisen", "page_size": 20, "max_pages": 5, "page_delay_ms": 500,
+    "detail_routes": {"2": "/campus/detail", "3": "/intern/detail"}, "categories": ["2", "3"], "max_jobs": 20,
+    "snapshot_complete": false, "campus_only": true, "require_requirements": true, "enabled": true
+  },
+  {
+    "id": "anta-moka-campus",
+    "company": "安踏集团",
+    "name": "安踏集团校园招聘（官方 Moka 门户）",
+    "url": "https://campus.anta.com/",
+    "mode": "moka",
+    "adapter": "moka",
+    "max_jobs": 20,
+    "max_detail": 20,
+    "job_delay_ms": 1200,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "enabled": false,
+    "paused_reason": "bounded_probe_failed; no_qualified_concrete_jobs; do_not_retry_without_new_evidence"
+  },
+  {
+    "id": "webank-moka-campus",
+    "company": "微众银行",
+    "name": "微众银行校园招聘（官方 Moka 门户）",
+    "url": "https://campus.webank.com/m/campus-recruitment/webankhr/18005",
+    "mode": "moka",
+    "adapter": "moka",
+    "max_jobs": 10,
+    "max_detail": 10,
+    "job_delay_ms": 1200,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "enabled": false,
+    "paused_reason": "bounded_probe_failed; public_job_list_missing; do_not_retry_without_new_evidence"
+  },
+  {
+    "id": "tal-moka-campus",
+    "company": "好未来",
+    "name": "好未来校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/tal/146099",
+    "mode": "moka", "adapter": "moka", "org_id": "tal", "site_id": 146099,
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": true
+  },
+  {
+    "id": "znszy-moka-campus",
+    "company": "中国市政工程中南设计研究总院有限公司",
+    "name": "中国市政工程中南设计研究总院有限公司校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/znszy/98600",
+    "mode": "moka", "adapter": "moka", "org_id": "znszy", "site_id": 98600,
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": false,
+    "paused_reason": "quality_gate_failed; no_qualified_jobs; do_not_retry_without_new_evidence"
+  },
+  {
+    "id": "gsrobot-moka-campus",
+    "company": "上海高仙自动化科技发展有限公司",
+    "name": "高仙自动化校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/gsrobot/47232",
+    "mode": "moka", "adapter": "moka", "org_id": "gsrobot", "site_id": 47232,
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": false,
+    "paused_reason": "bounded_probe_failed; public_job_list_missing; do_not_retry_without_new_evidence"
+  },
+  {
+    "id": "robosense-moka-campus",
+    "company": "RoboSense速腾聚创",
+    "name": "RoboSense速腾聚创校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/robosense/69887",
+    "mode": "moka", "adapter": "moka", "org_id": "robosense", "site_id": 69887,
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": true
+  },
+  {
+    "id": "baai-moka-campus",
+    "company": "北京智源人工智能研究院",
+    "name": "北京智源人工智能研究院校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/baai/42174",
+    "mode": "moka", "adapter": "moka", "org_id": "baai", "site_id": 42174,
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": false,
+    "paused_reason": "bounded_probe_failed; no_qualified_concrete_jobs; do_not_retry_without_new_evidence"
+  },
+  {
+    "id": "step-moka-campus",
+    "company": "阶跃星辰",
+    "name": "阶跃星辰校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/step/141903",
+    "mode": "moka", "adapter": "moka", "org_id": "step", "site_id": 141903,
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": true
+  },
+  {
+    "id": "yanfeng-moka-campus",
+    "company": "延锋",
+    "name": "延锋校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/yanfeng/45086",
+    "mode": "moka", "adapter": "moka", "org_id": "yanfeng", "site_id": 45086,
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": false,
+    "paused_reason": "bounded_probe_failed; no_qualified_concrete_jobs; do_not_retry_without_new_evidence"
+  },
+  {
+    "id": "tuya-moka-campus",
+    "company": "涂鸦智能",
+    "name": "涂鸦智能校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/tuya/147434",
+    "mode": "moka", "adapter": "moka", "org_id": "tuya", "site_id": 147434,
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": true
+  },
+  {
+    "id": "lowpowersemi-moka-campus",
+    "company": "微源半导体",
+    "name": "微源半导体校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/lowpowersemi/168412",
+    "mode": "moka", "adapter": "moka", "org_id": "lowpowersemi", "site_id": 168412,
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": true
+  },
+  {
+    "id": "nvidia-moka-campus",
+    "company": "NVIDIA",
+    "name": "NVIDIA校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/nvidia/47111",
+    "mode": "moka", "adapter": "moka", "org_id": "nvidia", "site_id": 47111,
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": true
+  },
+  {
+    "id": "jsfund-moka-campus",
+    "company": "嘉实基金",
+    "name": "嘉实基金校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/jsfund/43906",
+    "mode": "moka", "adapter": "moka", "org_id": "jsfund", "site_id": 43906,
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": false,
+    "paused_reason": "quality_gate_failed; fewer_than_3_qualified_jobs; do_not_retry_without_new_evidence"
+  },
+  {
+    "id": "yatsenglobal-moka-campus",
+    "company": "逸仙电商",
+    "name": "逸仙电商校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/yatsenglobal-campus/99995",
+    "mode": "moka", "adapter": "moka", "org_id": "yatsenglobal-campus", "site_id": 99995,
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": false,
+    "paused_reason": "bounded_probe_failed; public_job_list_missing; do_not_retry_without_new_evidence"
+  },
+  {
+    "id": "hq-moka-campus",
+    "company": "华勤集团",
+    "name": "华勤集团校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/hq/44757",
+    "mode": "moka", "adapter": "moka", "org_id": "hq", "site_id": 44757,
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": false,
+    "paused_reason": "bounded_probe_failed; no_qualified_concrete_jobs; do_not_retry_without_new_evidence"
+  },
+  {
+    "id": "qianxin-moka-campus",
+    "company": "奇安信",
+    "name": "奇安信校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/qianxin/29182",
+    "mode": "moka", "adapter": "moka", "org_id": "qianxin", "site_id": 29182,
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": false,
+    "paused_reason": "bounded_probe_failed; no_qualified_concrete_jobs; do_not_retry_without_new_evidence"
+  },
+  {
+    "id": "ubiquant-moka-campus",
+    "company": "UBITALENT",
+    "name": "UBITALENT校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/ubiquantrecruit/37031",
+    "mode": "moka", "adapter": "moka", "org_id": "ubiquantrecruit", "site_id": 37031,
+    "max_jobs": 20, "max_detail": 20, "snapshot_complete": false, "campus_only": true, "enabled": false,
+    "paused_reason": "bounded_probe_failed; no_qualified_concrete_jobs; do_not_retry_without_new_evidence"
+  },
+  {
+    "id": "tesla-moka-campus",
+    "company": "特斯拉中国",
+    "name": "特斯拉中国校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/tesla/41460",
+    "mode": "moka",
+    "adapter": "moka",
+    "org_id": "tesla",
+    "site_id": 41460,
+    "max_jobs": 20,
+    "max_detail": 20,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "enabled": true
+  },
+  {
+    "id": "hjsd-moka-campus",
+    "company": "欢聚集团",
+    "name": "欢聚集团校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/apply/hjsd/48",
+    "mode": "moka",
+    "adapter": "moka",
+    "org_id": "hjsd",
+    "site_id": 48,
+    "max_jobs": 20,
+    "max_detail": 20,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "enabled": true
+  },
+  {
+    "id": "shopee-moka-campus",
+    "company": "Shopee",
+    "name": "Shopee校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/shopee/2962",
+    "mode": "moka",
+    "adapter": "moka",
+    "org_id": "shopee",
+    "site_id": 2962,
+    "max_jobs": 20,
+    "max_detail": 20,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "enabled": false,
+    "paused_reason": "bounded_probe_failed; no_qualified_concrete_jobs; do_not_retry_without_new_evidence"
+  },
+  {
+    "id": "cyou-moka-campus",
+    "company": "搜狐畅游",
+    "name": "搜狐畅游校园招聘（官方 Moka 门户）",
+    "url": "https://app.mokahr.com/campus-recruitment/cyou-inc/42233",
+    "mode": "moka",
+    "adapter": "moka",
+    "org_id": "cyou-inc",
+    "site_id": 42233,
+    "max_jobs": 20,
+    "max_detail": 20,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "enabled": false,
+    "paused_reason": "bounded_probe_failed; no_qualified_concrete_jobs; do_not_retry_without_new_evidence"
+  },
+  {
+    "id": "hypergryph-moka-campus",
+    "company": "鹰角网络",
+    "name": "鹰角网络校园招聘（官方 Moka 门户）",
+    "url": "https://campus.hypergryph.com/campus_apply/hypergryph/26326",
+    "mode": "moka",
+    "adapter": "moka",
+    "max_jobs": 10,
+    "max_detail": 10,
+    "job_delay_ms": 1200,
+    "snapshot_complete": false,
+    "campus_only": true,
+    "enabled": true
   }
 ]

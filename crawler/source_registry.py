@@ -163,6 +163,18 @@ VERIFIED_SOURCE_KEYS = {
     "cudt-beisen-campus": "beisen",
     "jxrt-beisen-campus": "beisen",
     "babybus-beisen-campus": "beisen",
+    "chinaums-beisen-campus": "beisen",
+    "hypergryph-moka-campus": "moka",
+    "hjsd-moka-campus": "moka",
+    "tesla-moka-campus": "moka",
+    "nvidia-moka-campus": "moka",
+    "jsfund-moka-campus": "moka",
+    "robosense-moka-campus": "moka",
+    "step-moka-campus": "moka",
+    "tuya-moka-campus": "moka",
+    "lowpowersemi-moka-campus": "moka",
+    "znszy-moka-campus": "moka",
+    "tal-moka-campus": "moka",
 }
 
 COMPANY_CANONICAL_ALIASES = {
