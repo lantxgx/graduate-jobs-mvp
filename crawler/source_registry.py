@@ -143,6 +143,16 @@ VERIFIED_SOURCE_KEYS = {
     "michelin-beisen-campus": "beisen",
     "mediatek-beisen-campus": "beisen",
     "chinaunicom-beisen-campus-new": "beisen",
+    "ymtc-beisen-campus": "beisen",
+    "ddmcxz-beisen-campus": "beisen",
+    "banma-beisen-campus": "beisen",
+    "t-ray-beisen-campus": "beisen",
+    "ubtrobot-beisen-campus": "beisen",
+    "asymchem-beisen-campus": "beisen",
+    "ecolifeglobal-beisen-campus": "beisen",
+    "siat-beisen-campus": "beisen",
+    "nanxin-beisen-campus": "beisen",
+    "csc108-beisen-campus": "beisen",
 }
 
 COMPANY_CANONICAL_ALIASES = {
