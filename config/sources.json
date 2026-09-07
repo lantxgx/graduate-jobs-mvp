@@ -4274,5 +4274,34 @@
     "campus_only": false,
     "require_requirements": true,
     "enabled": true
+  },
+  {
+    "id": "asana-greenhouse-careers",
+    "company": "Asana",
+    "name": "Asana careers（官方 Greenhouse 公共岗位）",
+    "url": "https://asana.com/jobs",
+    "mode": "greenhouse",
+    "adapter": "greenhouse",
+    "board_token": "asana",
+    "max_jobs": 20,
+    "snapshot_complete": false,
+    "campus_only": false,
+    "require_requirements": true,
+    "enabled": false,
+    "paused_reason": "crawl_produced_no_qualified_concrete_jobs; adapter_mismatch; do_not_retry_without_new_evidence"
+  },
+  {
+    "id": "airtable-greenhouse-careers",
+    "company": "Airtable",
+    "name": "Airtable careers（官方 Greenhouse 公共岗位）",
+    "url": "https://www.airtable.com/careers",
+    "mode": "greenhouse",
+    "adapter": "greenhouse",
+    "board_token": "airtable",
+    "max_jobs": 20,
+    "snapshot_complete": false,
+    "campus_only": false,
+    "require_requirements": true,
+    "enabled": true
   }
 ]
