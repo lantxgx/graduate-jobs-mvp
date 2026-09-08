@@ -20,4 +20,5 @@
 - Changed files: config/sources.json; this task file
 - Single-source command: worker produced no qualified concrete jobs
 - `validate_source.py`: failed; no active jobs
-- Outcome: candidate / reachable / analyzing; paused, do not retry without new evidence
+- Outcome: candidate / reachable / analyzing; worker returned `crawl_produced_no_qualified_concrete_jobs`; paused, do not retry without new evidence.
+- Exact next action: none until adapter evidence changes.

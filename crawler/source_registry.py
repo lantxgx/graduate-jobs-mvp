@@ -92,6 +92,7 @@ VERIFIED_SOURCE_KEYS = {
     "spacex-greenhouse-careers": "greenhouse",
     "postscript-greenhouse-careers": "greenhouse",
     "salsify-greenhouse-careers": "greenhouse",
+    "launchdarkly-greenhouse-careers": "greenhouse",
     "instawork-greenhouse-careers": "greenhouse",
     "betterment-greenhouse-careers": "greenhouse",
     "amperity-greenhouse-careers": "greenhouse",

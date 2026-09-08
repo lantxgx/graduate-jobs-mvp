@@ -4425,7 +4425,8 @@
     "snapshot_complete": false,
     "campus_only": false,
     "require_requirements": true,
-    "enabled": true
+    "enabled": false,
+    "paused_reason": "fewer_than_3_qualified_jobs; retain_observed_rows; do_not_retry_without_new_evidence"
   },
   {
     "id": "intercom-greenhouse-careers",
@@ -5064,8 +5065,7 @@
     "snapshot_complete": false,
     "campus_only": false,
     "require_requirements": true,
-    "enabled": false,
-    "paused_reason": "worker_process_missing_after_launch; do_not_retry_without_new_evidence"
+    "enabled": true
   },
   {
     "id": "pinterest-greenhouse-careers",
