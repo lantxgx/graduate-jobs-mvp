@@ -1,10 +1,9 @@
 # SRC-20260908-honeycomb-greenhouse-careers
 
-- State: partial / paused
+- State: blocked
 - Company: Honeycomb
 - Source ID: honeycomb-greenhouse-careers
-- Official career URL: https://www.honeycomb.io/careers
-- Public feed: https://boards-api.greenhouse.io/v1/boards/honeycomb/jobs?content=true
-- Evidence: official careers page and public Greenhouse feed reachable without login/CAPTCHA/403/429.
-- Collection: max_jobs=20; snapshot_complete=false; 1 accepted/created.
-- Outcome: one real job retained as observed; below the normal integration gate, so paused without retry.
+- Official evidence: https://www.honeycomb.io/careers → https://boards-api.greenhouse.io/v1/boards/honeycomb/jobs?content=true (HTTP 200, 14 public rows; no login/CAPTCHA/403/429).
+- Collection: Greenhouse public feed; max_jobs=20; `snapshot_complete=false`.
+- Result: only 1 accepted row was observed and it updated an existing record; no new company coverage was added.
+- Outcome: paused; do not retry without new evidence.

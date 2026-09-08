@@ -1,24 +1,9 @@
 # SRC-20260908-hightouch-greenhouse-careers
 
-- State: blocked
+- State: deferred
 - Company: Hightouch
 - Source ID: hightouch-greenhouse-careers
-- Owner/agent: Codex
-- Started at: 2026-09-08
-- Target scope: campus full-time | campus internship
-
-## Official evidence
-- Official company site: https://hightouch.com/careers (HTTP 200)
-- ATS/platform: Greenhouse; public list: https://boards-api.greenhouse.io/v1/boards/hightouch/jobs?content=true
-- Bounded probe: 82 public jobs observed; no login/CAPTCHA/403/429.
-
-## Collection contract
-- Stable source job ID: Greenhouse numeric job ID; detail URL is the returned absolute official application URL.
-- Intentional cap: max_jobs=20; `snapshot_complete=false`.
-
-## Implementation and validation
-- Changed files: config/sources.json; this task file
-- Single-source command: worker produced no qualified concrete jobs
-- `validate_source.py`: failed; no active jobs
-- Outcome: candidate / reachable / analyzing; worker returned `crawl_produced_no_qualified_concrete_jobs`; paused, do not retry without new evidence.
-- Exact next action: none until adapter evidence changes.
+- Official evidence: https://hightouch.com/careers → https://boards-api.greenhouse.io/v1/boards/hightouch/jobs?content=true (HTTP 200, 82 public rows observed during bounded probe; no login/CAPTCHA/403/429).
+- Collection: worker did not issue a repeat fetch because an existing source cooldown was active.
+- Result: deferred without a duplicate request; no new jobs claimed.
+- Outcome: paused for this sweep; revisit only with an explicit new evidence window.
