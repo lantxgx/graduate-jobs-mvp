@@ -26,6 +26,12 @@ class GreenhouseAdapterTests(unittest.TestCase):
         self.assertEqual(internship["apply_url"], "https://boards.greenhouse.io/example/jobs/88101")
         self.assertIn("Python", internship["description"])
 
+    def test_metadata_employment_type_is_explicitly_normalized(self):
+        payload = json.loads((ROOT / "metadata.json").read_text(encoding="utf-8"))
+        job = normalize_greenhouse_job(payload, self.SOURCE)
+        self.assertIsNotNone(job)
+        self.assertEqual(job["job_nature"], JOB_NATURE_INTERNSHIP)
+
     def test_missing_absolute_url_is_rejected_without_guessing(self):
         raw = {"id": 1, "title": "Software Engineering Intern", "employment_type": "Internship", "content": "Build tools."}
         self.assertIsNone(normalize_greenhouse_job(raw, self.SOURCE))

@@ -47,6 +47,24 @@ def _location(raw: dict[str, Any]) -> str | None:
     return normalize_city(value or None)
 
 
+def _employment_type(raw: dict[str, Any]) -> str:
+    """Read the explicit employment type from top-level or Greenhouse metadata."""
+    direct = _text(raw.get("employment_type") or raw.get("job_type") or raw.get("recruitment_type"))
+    if direct:
+        return direct
+    metadata = raw.get("metadata")
+    if isinstance(metadata, list):
+        for item in metadata:
+            if not isinstance(item, dict):
+                continue
+            name = _text(item.get("name") or item.get("label"))
+            if re.search(r"employment\s*type|job\s*type|招聘类型", name, re.IGNORECASE):
+                value = _text(item.get("value") or item.get("values"))
+                if value:
+                    return value
+    return ""
+
+
 def _description_and_requirements(raw: dict[str, Any]) -> tuple[str, str]:
     content = _text(raw.get("content") or raw.get("description") or raw.get("job_description"))
     requirements = _text(raw.get("requirements") or raw.get("qualifications"))
@@ -97,7 +115,7 @@ def normalize_greenhouse_job(raw: dict[str, Any], source: dict[str, Any]) -> dic
         return None
 
     description, requirements = _description_and_requirements(raw)
-    nature_raw = _text(raw.get("employment_type") or raw.get("job_type") or raw.get("recruitment_type"))
+    nature_raw = _employment_type(raw)
     nature = normalize_job_nature(nature_raw, title, f"{description} {requirements}")
     if nature is None:
         return None

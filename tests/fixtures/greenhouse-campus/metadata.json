@@ -1,0 +1,11 @@
+{
+  "id": 88103,
+  "title": "Hardware Engineering Intern",
+  "location": {"name": "Somerville, MA"},
+  "metadata": [
+    {"name": "Employment Type", "value": "Intern", "value_type": "single_select"},
+    {"name": "Time Type", "value": "Full time", "value_type": "single_select"}
+  ],
+  "absolute_url": "https://careers.formlabs.com/job/88103/apply/?gh_jid=88103",
+  "content": "Build hardware systems. Qualifications: Currently pursuing an engineering degree."
+}
