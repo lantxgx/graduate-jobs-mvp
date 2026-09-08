@@ -99,6 +99,8 @@ VERIFIED_SOURCE_KEYS = {
     "abnormalsecurity-greenhouse-careers": "greenhouse",
     "applovin-greenhouse-careers": "greenhouse",
     "appdirect-greenhouse-careers": "greenhouse",
+    "avetta-greenhouse-careers": "greenhouse",
+    "edmentum-greenhouse-careers": "greenhouse",
     "instawork-greenhouse-careers": "greenhouse",
     "betterment-greenhouse-careers": "greenhouse",
     "amperity-greenhouse-careers": "greenhouse",
