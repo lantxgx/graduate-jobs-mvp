@@ -3,8 +3,7 @@
 - State: blocked
 - Company: Muck Rack
 - Source ID: muckrack-greenhouse-careers
-- Owner/agent: Codex
-- Official evidence: https://muckrack.com/careers → public Greenhouse list https://boards-api.greenhouse.io/v1/boards/muckrack/jobs?content=true (200, 9 rows; no login/CAPTCHA/403/429).
-- Collection: Greenhouse numeric IDs and returned absolute URLs; max_jobs=20; `snapshot_complete=false`.
-- Result: current call stopped by cooldown; the source has no accepted active jobs and remains paused after the prior failed run.
-- Outcome: do not retry without new adapter evidence.
+- Official evidence: https://muckrack.com/careers → https://boards-api.greenhouse.io/v1/boards/muckrack/jobs?content=true (HTTP 200, 9 public rows; no login/CAPTCHA/403/429).
+- Collection: Greenhouse public feed; max_jobs=20; `snapshot_complete=false`.
+- Result: worker returned `crawl_produced_no_qualified_concrete_jobs`; 0 active jobs accepted.
+- Outcome: paused; do not retry without new adapter evidence.
